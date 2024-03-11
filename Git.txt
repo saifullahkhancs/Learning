@@ -1,0 +1,14 @@
+Make new folder
+git init   :- to intilize the git
+git remote add origin https://github.com/dsmegloballinks/iHart-Backend-.Net.git   :- to add remote rpository
+git fetch --all
+git pull origin main
+
+it will bring the new changes to your local repository
+
+create your own branch 
+git checkout -b "branchname"
+
+git add --all
+git commit       : - to add the changes
+git push origin "branchname"
