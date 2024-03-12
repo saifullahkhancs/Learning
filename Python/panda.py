@@ -42,3 +42,6 @@ print(df.loc[[0, 1]])
 
 df_index = pd.DataFrame(data, index = ["day1" , "day2" , "day3" ])
 print(df_index)
+print(df_index)
+
+# i started leraning git and this is a commit changes practice for the commit.
