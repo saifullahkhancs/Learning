@@ -1,12 +1,16 @@
 static class Solution {
     static int RemoveDuplicates(int[] ref nums)
      {
-        // var len = length(nums);
-
-        // while 
+         var len = length(nums);
+ 
+        index = 0
         foreach(int num in nums)
         {
-            for()
+            for (int i = index; i < len; i++)
+            {
+                if()
+                
+            }
             
         }
 

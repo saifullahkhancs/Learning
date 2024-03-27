@@ -98,3 +98,8 @@ linked_list.reverse()
 
 print("Reversed linked list:")
 linked_list.print_list()
+
+Q1: - What is difference between the quick sort and merge sort what are their best cases?
+Q2:- What is diferenece between the patch and put? 
+Q3:- What are the Cors?
+Q4:- 

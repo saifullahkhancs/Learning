@@ -1,6 +1,6 @@
 # Aggregation: Aggregation is a specialized form of  association, where one class represents a "whole" 
-#and another class represents a "part." The part  class can exist independently of the whole class. 
-#It is represented by a diamond-shaped arrow  pointing from the part class to the whole class.
+# and another class represents a "part." The part  class can exist independently of the whole class. 
+# It is represented by a diamond-shaped arrow  pointing from the part class to the whole class.
 
 class Book:
     def __init__(self, title, author):

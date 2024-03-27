@@ -6,7 +6,7 @@
 # 4:- Polymorphism 
 
 # Data Abstraction 
-# it is the processof hiding unnecessary details of an object's internal stricture. 
+# it is the process of hiding unnecessary details of an object's internal structure. 
 # By abstracting the an objects data, its structure and behavior can be kept separate and more easily understood 
 
 # Encapsulation 
@@ -39,12 +39,12 @@
 
 
 # Overriding                                                 
-# 1:- Occurs betwenn a parent and child class.
+# 1:- Occurs between a parent and child class.
 # 2:- Involves a method in the child class with the same name and parameters as a method 
 #     in the parent class.
 # 3:- Decision is made at runtime(dynamic binding)
 # 4:- The return type must be the same or subtype in the child class.
-# 5:- Requires an inheritance relationship betwenn the parent and child classes.
+# 5:- Requires an inheritance relationship between the parent and child classes.
 # 6:- Overriding allows child classes to provide specific implementations for inherited methods.
 # 7:- Method parameter must have the same type , order and number in both parent and child classes.
 # 8:- Method overriding is achieved by using the @Override annotation in the child class.

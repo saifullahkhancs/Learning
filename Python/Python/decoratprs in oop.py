@@ -34,10 +34,14 @@ class Circle(Shape):
         return 3.14 * self.radius ** 2
 
     def display(self):
-        print(f"Circle with radius {self.radius}")
+         print(f"Circle with radius {self.radius}")
+
+    def anyy(self):
+
+        print("anyway")
 
 # Attempting to create an instance of the abstract class (Shape)
-shape = Shape()  # Output: TypeError: Can't instantiate abstract class Shape with abstract methods calculate_area, display
+#shape = Shape()  # Output: TypeError: Can't instantiate abstract class Shape with abstract methods calculate_area, display
 
 # Creating an instance of the derived class (Circle)
 circle = Circle(5)

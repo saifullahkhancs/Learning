@@ -1,8 +1,8 @@
-#Polymorphism in object-oriented programming refers to the ability of objects to 
-#exhibit different behaviors based on their specific class or type, allowing them 
-#to be used interchangeably and providing code flexibility and reusability
+#  Polymorphism in object-oriented programming refers to the ability of objects to 
+#  exhibit different behaviors based on their specific class or type, allowing them 
+#  to be used interchangeably and providing code flexibility and reusability.
 
-  #POlymorphism basically refer to the methoid over laoding and overriding
+#  Polymorphism basically refer to the method over laoding and overriding
 
 
 class Animal:
