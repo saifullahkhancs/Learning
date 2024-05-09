@@ -52,7 +52,7 @@
 # 10:- Overriding methods must have the same or higher access modifier in the child class.
 
 
-Q:- What is the difference between the static and class methods?
+# Q:- What is the difference between the static and class methods?
 # Ans:- A class method can access or modify the class state while a static method can't access or modify it. I
 # n general, static methods know nothing about the class state. They are utility-type methods that take some parameters
 #  and work upon those parameters. On the other hand class methods must have class as a parameter
