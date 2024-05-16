@@ -25,3 +25,49 @@ Q:- Use of the thenInclude() ?
 
 Q:- What is meant by the partial class?
 
+
+// Q:- What is origin?
+// In web development, an origin refers to the combination of the protocol (such as http or https), domain, and port number of a URL. This combination identifies the source of a web page or web application. Here are some examples of origins:
+
+// https://www.example.com: This is a secure origin (https://) with the domain www.example.com. It's accessed over the default HTTPS port (443).
+
+// http://sub.example.com:8080: This is an insecure origin (http://) with the subdomain sub.example.com. It's accessed over a non-standard port (8080).
+
+
+Q:- What is the different between the HTTP and HTTPS?
+
+// The main difference between HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure) lies in their security mechanisms:
+
+// Security:
+
+// HTTP: It transmits data in plain text format, making it susceptible to interception and manipulation by malicious parties. This lack of encryption 
+//        means that sensitive information like passwords, credit card details, and personal data can be easily intercepted.
+// HTTPS: It encrypts the data transferred between the client (browser) and the server using SSL/TLS (Secure Sockets Layer/Transport Layer Security) 
+//        encryption protocols. This encryption ensures that even if intercepted, the data cannot be easily read or manipulated.
+
+// Data Integrity:
+
+// HTTP: Since data is transmitted in plain text, there's no inherent mechanism to verify if the data remains unchanged during transmission.
+// HTTPS: The encryption ensures data integrity by providing mechanisms to detect if the data has been tampered with during transit. Any alteration 
+// to the encrypted data would render it unreadable upon decryption.
+
+// Authentication:
+
+// HTTP: It does not provide any mechanism for server authentication. This means that a client can't be certain it's communicating 
+//       with the intended server, making it vulnerable to man-in-the-middle attacks.
+// HTTPS: It employs SSL/TLS certificates to verify the identity of the server. This provides assurance to the client that
+//       it's communicating with the intended server and not an impostor.
+
+What is CORS??? Imp
+// "CORS, or Cross-Origin Resource Sharing, is a security feature implemented by web browsers to protect users from malicious attacks.
+//  It restricts web pages or web applications from making requests to a different origin than the one it was served from. 
+//   An origin is essentially the combination of the scheme (like http or https), domain, and port number of a URL.
+
+// For example, if your backend API is hosted at 'api.example.com' and your frontend is hosted at 'frontend.example.com', any requests made from the 
+// frontend to the backend are considered cross-origin requests. If the backend doesn't explicitly allow requests
+//  from the frontend domain, the browser will block these requests due to CORS policy.
+
+// To handle CORS, you typically configure your backend server to include specific HTTP headers in its responses that inform the browser 
+// that it's okay to allow cross-origin requests from certain domains. These headers include 'Access-Control-Allow-Origin', which specifies 
+// the domains allowed to make requests, and other related headers like 'Access-Control-Allow-Methods' and 'Access-Control-Allow-Headers' 
+// to further control the types of requests allowed.
