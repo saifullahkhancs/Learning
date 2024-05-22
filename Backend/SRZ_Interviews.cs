@@ -126,4 +126,6 @@ Q:- What is thee difference between the Session Storage and Local Storage?
 // Use Cases:
 //      Session Storage is useful for storing temporary data, such as shopping cart items, form data, or authentication tokens, that is only needed for the current session.
 
-
+// todo  
+Q:-  What is the sql injection and their approaches?
+Ans:- 
