@@ -12,3 +12,12 @@ git checkout -b "branchname"
 git add --all
 git commit       : - to add the changes
 git push origin "branchname"
+
+
+how to push changes to the other branch like I am on Saifullah_develop
+
+git checkout main 
+git merge Saifullah_develop
+git push origin Saifullah_develop
+
+ 

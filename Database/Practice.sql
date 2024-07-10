@@ -180,7 +180,26 @@ ATOMICITY : - All transcations units must be executed successfully. IF one is fa
 
 CONSISTENCY:- The databse changes state only when a transcation will be committed successfully , protecting the data from crashing
 
-ISOLATION:- Operations in tyhe transcations unt operates independently 
+ISOLATION:- Operations in the transcations can  operates independently 
 			.. set isolation level
 
 DURABILITY:- This property generates the resily of committed transacations persists permentaly even  if the system carashes or failed 
+
+9. How do you implement pagination in SQL queries?
+Pagination in SQL queries can be implemented using the LIMIT and OFFSET clauses (in MySQL, PostgreSQL) or the FETCH NEXT and OFFSET clauses (in SQL Server, Oracle 12c+). For example, to retrieve the second set of 10 records:
+
+MySQL/PostgreSQL:
+sql
+
+SELECT * FROM table_name
+
+LIMIT 10 OFFSET 10;
+
+SQL Server:
+sql
+
+SELECT * FROM table_name
+
+ORDER BY column_name
+
+OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY;
