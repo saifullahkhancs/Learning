@@ -22,8 +22,13 @@ Q:- What is the idenetity insert in tbe mysql?
 // when you insert a new row into a table with an identity column, 
 // SQL Server automatically generates a unique value for that column. This is useful for ensuring uniqueness and maintaining referential integrity.
 
-Q:- What is meant by the partial class?
+ Q:- What is meant by the partial class?
+// For instance, when working with LINQ to SQL and creating a DBML file. When we copy and paste a table, it will create a partial class in designer.cs. 
+// // So to not add new columns, we can create a separate source file for the class,which will act as a partial class.
 
+// A partial class is a special feature of C#. It provides a special ability to implement the functionality of a single class into multiple files and all
+// these files are combined into a single class file when the application is compiled. A partial class is created by using a partial keyword. This keyword
+// is also useful to split the functionality of methods, interfaces, or structure into multiple files.
 
 Q:- What is origin?
 // In web development, an origin refers to the combination of the protocol (such as http or https), domain, and port number of a URL. This combination identifies the source 
@@ -58,7 +63,7 @@ Q:- What is the different between the HTTP and HTTPS?
 // HTTPS: It employs SSL/TLS certificates to verify the identity of the server. This provides assurance to the client that
 //       it's communicating with the intended server and not an impostor.
 
-What is CORS??? Imp
+q:- What is CORS??? Imp
 // "CORS, or Cross-Origin Resource Sharing, is a security feature implemented by web browsers to protect users from malicious attacks.
 //  It restricts web pages or web applications from making requests to a different origin than the one it was served from. 
 //   An origin is essentially the combination of the scheme (like http or https), domain, and port number of a URL.
@@ -71,3 +76,47 @@ What is CORS??? Imp
 // that it's okay to allow cross-origin requests from certain domains. These headers include 'Access-Control-Allow-Origin', which specifies 
 // the domains allowed to make requests, and other related headers like 'Access-Control-Allow-Methods' and 'Access-Control-Allow-Headers' 
 // to further control the types of requests allowed.
+
+Q:- What is the SQL Injection ?
+// SQL injection, also known as SQLI, is a common attack vector that uses malicious SQL code for backend database manipulation to access 
+// information that was not intended to be displayed. This information may include any number of items, including sensitive company data,
+//  user lists or private customer details.
+  examples 
+//   1:- SELECT * FROM Users WHERE UserId = 105 OR 1=1;
+
+//   2:- Here is an example of a user login on a web site:
+
+//         Username: John Doe
+//         Password: myPass
+
+//         SELECT * FROM Users WHERE Name ="John Doe" AND Pass ="myPass" .
+
+//   3:- A hacker might get access to user names and passwords in a database by simply inserting " OR ""=" into the user name or password
+//   text box:
+
+//         User Name:
+//         " or ""="
+
+//         Password:
+//         " or ""="
+
+//         The code at the server will create a valid SQL statement like this:
+
+//         SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""
+
+
+Q:- How we can avoid sql injection? 
+// 1:- Use SQL Parameters for Protection
+// To protect a web site from SQL injection, you can use SQL parameters.
+// SQL parameters are values that are added to an SQL query at execution time, in a controlled manner.
+
+//     txtUserId = getRequestString("UserId");
+//     txtSQL = "SELECT * FROM Users WHERE UserId = @0";
+//     db.Execute(txtSQL,txtUserId);
+// Note that parameters are represented in the SQL statement by a @ marker.
+// The SQL engine checks each parameter to ensure that it is correct for its column and are treated literally, and not as part of the SQL to 
+// be executed.
+
+// 2:- The first step is input validation (a.k.a. sanitization), which is the practice of writing code that can identify illegitimate user inputs.
+
+

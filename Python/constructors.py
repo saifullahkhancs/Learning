@@ -57,7 +57,7 @@ person.display_info()   # Output: Name: Alice, Age: 25
 
 # factory methood ......................
 # different from comstructor is that it is a static method isnide
-# a class which intilize a obeject from the class
+# a class which intilize a object from the class
 
 class Person:
     def __init__(self, name, age):

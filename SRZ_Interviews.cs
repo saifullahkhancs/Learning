@@ -23,12 +23,11 @@
 //   grid-column and grid-row to position items within the grid, and grid-gap to add space between grid items.
 
 
-
-// Relational Databases: 
+ Relational Databases: 
 //      Relational databases store data in tables consisting of rows and columns. Each row represents a record, and each column represents an attribute or 
 //       field of that record. Data in relational databases is organized in a structured manner, and relationships between tables are established using keys.
 
-// Object-Oriented Programming (OOP): 
+ Object-Oriented Programming (OOP): 
 //      In object-oriented programming languages like Python, Java, or C#, data is organized into objects, each containing attributes 
 //       (properties or fields) and methods (functions or behaviors). Objects can represent real-world entities and encapsulate both data and behavior.
   
