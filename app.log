@@ -1,0 +1,64 @@
+2024-08-22 17:52 - WARNING - Remain Calm!
+2024-08-22 17:52 - DEBUG - This is a debug message
+2024-08-22 17:52 - INFO - This is an info message
+2024-08-22 17:52 - WARNING - This is a warning message
+2024-08-22 17:52 - ERROR - This is an error message
+2024-08-22 17:52 - CRITICAL - This is a critical message
+2024-08-22 17:52 - DEBUG - This will get logged.
+2024-08-22 17:52 - WARNING - Remain Calm!
+2024-08-22 17:52 - DEBUG - This is a debug message
+2024-08-22 17:52 - INFO - This is an info message
+2024-08-22 17:52 - WARNING - This is a warning message
+2024-08-22 17:52 - ERROR - This is an error message
+2024-08-22 17:52 - CRITICAL - This is a critical message
+2024-08-22 17:52 - DEBUG - This will get logged.
+2024-08-22 17:54 - WARNING - Remain Calm!
+2024-08-22 17:54 - DEBUG - This is a debug message
+2024-08-22 17:54 - INFO - This is an info message
+2024-08-22 17:54 - WARNING - This is a warning message
+2024-08-22 17:54 - ERROR - This is an error message
+2024-08-22 17:54 - CRITICAL - This is a critical message
+2024-08-22 17:54 - DEBUG - This will get logged.
+2024-08-22 17:54 - DEBUG - saif
+2024-08-22 17:54 - WARNING - Remain Calm!
+2024-08-22 17:54 - DEBUG - This is a debug message
+2024-08-22 17:54 - INFO - This is an info message
+2024-08-22 17:54 - WARNING - This is a warning message
+2024-08-22 17:54 - ERROR - This is an error message
+2024-08-22 17:54 - CRITICAL - This is a critical message
+2024-08-22 17:54 - DEBUG - This will get logged.
+2024-08-22 17:54 - DEBUG - name='saif'
+2024-08-22 18:04 - WARNING - Remain Calm!
+2024-08-22 18:04 - DEBUG - This is a debug message
+2024-08-22 18:04 - INFO - This is an info message
+2024-08-22 18:04 - WARNING - This is a warning message
+2024-08-22 18:04 - ERROR - This is an error message
+2024-08-22 18:04 - CRITICAL - This is a critical message
+2024-08-22 18:04 - DEBUG - This will get logged.
+2024-08-22 18:04 - DEBUG - name='saif'
+2024-08-22 18:04 - ERROR - Can't divide by zero
+Traceback (most recent call last):
+  File "C:\Users\SaifUllahKhan\Desktop\Learning\Logging.py", line 77, in <module>
+    donuts_per_guest = donuts/guests
+                       ~~~~~~^~~~~~~
+ZeroDivisionError: division by zero
+2024-08-22 18:11 - WARNING - Remain Calm!
+2024-08-22 18:11 - DEBUG - This is a debug message
+2024-08-22 18:11 - INFO - This is an info message
+2024-08-22 18:11 - WARNING - This is a warning message
+2024-08-22 18:11 - ERROR - This is an error message
+2024-08-22 18:11 - CRITICAL - This is a critical message
+2024-08-22 18:11 - DEBUG - This will get logged.
+2024-08-22 18:11 - DEBUG - name='saif'
+2024-08-22 18:11 - ERROR - Can't divide by zero
+Traceback (most recent call last):
+  File "C:\Users\SaifUllahKhan\Desktop\Learning\Logging.py", line 77, in <module>
+    donuts_per_guest = donuts/guests
+                       ~~~~~~^~~~~~~
+ZeroDivisionError: division by zero
+2024-08-22 18:11 - ERROR - DonutCalculationError
+Traceback (most recent call last):
+  File "C:\Users\SaifUllahKhan\Desktop\Learning\Logging.py", line 82, in <module>
+    donuts_per_guest = donuts / guests
+                       ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
