@@ -1,8 +1,7 @@
 import asyncio
 
-
-# coroutine function 
-async def main( ):
+ 
+async def main( ):   # coroutine function
     print('start of couratine')
 
 #  **********  async main()*******************
@@ -10,8 +9,10 @@ async def main( ):
 
 #  main() it will generate the error because main as define as a croutine object 
 
-# run the main coroutine
-asyncio.run(main())
+asyncio.run(main())  # run the main coroutine
+
+
+
 
 
 
@@ -21,7 +22,6 @@ async def fetch_data(delay):
     await asyncio.sleep(delay)    # simulate an I/O operation with a sleep 
     print("Data fetched")
     return {"data" : "Some Data"}
-
 
 
 # define another coroutine that calls the first couritine
@@ -37,11 +37,10 @@ async def coroutine_caller():
     result = await task
     
     print(f"Recieved Result: {result}")
-    
     print("End of caller after wait ")
 
-
 asyncio.run((coroutine_caller()))
+
 
 
 
@@ -69,15 +68,37 @@ async def coroutine_caller_mulitiple():
 
 asyncio.run((coroutine_caller_mulitiple()))
 
-
 # as we see from the above implementation i get that for the 2nd task have to wait for the 1st to complete
-# 
+#  
 # So there is something called  *** Tasks** we use them 
 
+# So they basically tasks do is waiting but move toward forward like the total time is not 6 but it is 2 
+
+import asyncio
+async def fetch_data_tasks(id, sleep_time):
+    print (f"Coroutine {id} starting to fetch data.")
+    await asyncio.sleep(sleep_time)
+    return {"id": id, "data": f"Sample data from coroutine {id}"}
 
 
+async def main_task():
+# Create tasks for running coroutines concurrently
+    task1= asyncio.create_task(fetch_data_tasks(1, 2))
+    task2= asyncio.create_task(fetch_data_tasks(2, 2))
+    task3 = asyncio.create_task(fetch_data_tasks(3, 2))
+    result1= await task1
+    result2 = await task2
+    result3 = await task3
+
+    print(result1, result2, result3)
+
+
+asyncio.run(main_task())
  
 
+# Rather running the all coroutines concurrently manually using task we can use gather 
+# it is not good at error handling  as it would not handle the errors if the error is occured in the
+# single courtrine
 
 async def func1():
 	print("Function 1 started..")
