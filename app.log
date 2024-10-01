@@ -1,0 +1,80 @@
+2024-09-04 11:42 - WARNING - Remain Calm!
+2024-09-04 11:42 - DEBUG - This is a debug message
+2024-09-04 11:42 - INFO - This is an info message
+2024-09-04 11:42 - WARNING - This is a warning message
+2024-09-04 11:42 - ERROR - This is an error message
+2024-09-04 11:42 - CRITICAL - This is a critical message
+2024-09-04 11:42 - DEBUG - This will get logged.
+2024-09-04 11:42 - DEBUG - name='saif'
+2024-09-04 11:42 - ERROR - Can't divide by zero
+Traceback (most recent call last):
+  File "c:\Users\SaifUllahKhan\Desktop\Learning\Technogenics_Learning\AdvancePython\Logging.py", line 77, in <module>
+    donuts_per_guest = donuts/guests
+                       ~~~~~~^~~~~~~
+ZeroDivisionError: division by zero
+2024-09-04 11:42 - ERROR - DonutCalculationError
+Traceback (most recent call last):
+  File "c:\Users\SaifUllahKhan\Desktop\Learning\Technogenics_Learning\AdvancePython\Logging.py", line 82, in <module>
+    donuts_per_guest = donuts / guests
+                       ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2024-09-04 11:42 - WARNING - Remain Calm!
+2024-09-04 11:42 - DEBUG - This is a debug message
+2024-09-04 11:42 - INFO - This is an info message
+2024-09-04 11:42 - WARNING - This is a warning message
+2024-09-04 11:42 - ERROR - This is an error message
+2024-09-04 11:42 - CRITICAL - This is a critical message
+2024-09-04 11:42 - DEBUG - This will get logged.
+2024-09-04 11:42 - DEBUG - name='saif'
+2024-09-04 11:42 - ERROR - Can't divide by zero
+Traceback (most recent call last):
+  File "c:\Users\SaifUllahKhan\Desktop\Learning\Technogenics_Learning\AdvancePython\Logging.py", line 77, in <module>
+    donuts_per_guest = donuts/guests
+                       ~~~~~~^~~~~~~
+ZeroDivisionError: division by zero
+2024-09-04 11:42 - ERROR - DonutCalculationError
+Traceback (most recent call last):
+  File "c:\Users\SaifUllahKhan\Desktop\Learning\Technogenics_Learning\AdvancePython\Logging.py", line 82, in <module>
+    donuts_per_guest = donuts / guests
+                       ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2024-09-04 11:42 - WARNING - Remain Calm!
+2024-09-04 11:42 - DEBUG - This is a debug message
+2024-09-04 11:42 - INFO - This is an info message
+2024-09-04 11:42 - WARNING - This is a warning message
+2024-09-04 11:42 - ERROR - This is an error message
+2024-09-04 11:42 - CRITICAL - This is a critical message
+2024-09-04 11:42 - DEBUG - This will get logged.
+2024-09-04 11:42 - DEBUG - name='saif'
+2024-09-04 11:42 - ERROR - Can't divide by zero
+Traceback (most recent call last):
+  File "c:\Users\SaifUllahKhan\Desktop\Learning\Technogenics_Learning\AdvancePython\Logging.py", line 77, in <module>
+    donuts_per_guest = donuts/guests
+                       ~~~~~~^~~~~~~
+ZeroDivisionError: division by zero
+2024-09-04 11:42 - ERROR - DonutCalculationError
+Traceback (most recent call last):
+  File "c:\Users\SaifUllahKhan\Desktop\Learning\Technogenics_Learning\AdvancePython\Logging.py", line 82, in <module>
+    donuts_per_guest = donuts / guests
+                       ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
+2024-09-04 11:43 - WARNING - Remain Calm!
+2024-09-04 11:43 - DEBUG - This is a debug message
+2024-09-04 11:43 - INFO - This is an info message
+2024-09-04 11:43 - WARNING - This is a warning message
+2024-09-04 11:43 - ERROR - This is an error message
+2024-09-04 11:43 - CRITICAL - This is a critical message
+2024-09-04 11:43 - DEBUG - This will get logged.
+2024-09-04 11:43 - DEBUG - name='saif'
+2024-09-04 11:43 - ERROR - Can't divide by zero
+Traceback (most recent call last):
+  File "c:\Users\SaifUllahKhan\Desktop\Learning\Technogenics_Learning\AdvancePython\Logging.py", line 77, in <module>
+    donuts_per_guest = donuts/guests
+                       ~~~~~~^~~~~~~
+ZeroDivisionError: division by zero
+2024-09-04 11:43 - ERROR - DonutCalculationError
+Traceback (most recent call last):
+  File "c:\Users\SaifUllahKhan\Desktop\Learning\Technogenics_Learning\AdvancePython\Logging.py", line 82, in <module>
+    donuts_per_guest = donuts / guests
+                       ~~~~~~~^~~~~~~~
+ZeroDivisionError: division by zero
