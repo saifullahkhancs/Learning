@@ -2,20 +2,31 @@ from http.client import responses
 from math import trunc
 import logging
 import json
+
 from flask import Flask, redirect, url_for , request, render_template , jsonify
 from elasticsearch import Elasticsearch,helpers
+from elasticsearch.exceptions import TransportError, ConnectionError
 app = Flask(__name__)
 
 # Initilize the Elastic Search CLient
 es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
-                   basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
+                 )
+
+# es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
+#                    basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
+
+try:
+    if es.ping():
+        print("Connected to Elasticsearch!")
+    else:
+        print("Failed to connect to Elasticsearch.")
+except Exception as e:
+    print(f"Error connecting to Elasticsearch: {e}")
 
 
-
-
-@app.route('/')
-def start():
-    resp = es.search(index='myindex')
+@app.route('/<index>')
+def start(index):
+    resp = es.search(index=index)
     print(resp['hits']['hits'])
 
     # The _source of each hit contains the original JSON object 
@@ -24,7 +35,36 @@ def start():
     return jsonify(resp['hits']['hits']), 200
 
     
+@app.route('/delete/<doc_id>', methods=['DELETE'])
+def delete_doc(doc_id):
+    try:
+        # Perform the deletion by document ID
+        print(doc_id)
+        resp = es.delete(index='intelligence_kb_artifact_object', id=doc_id)
+        return jsonify(resp), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 400
 
+
+@app.route("/indexes")
+def get_indexes():
+    try:
+        # Get a list of all indices in JSON format
+        resp = es.cat.indices(format='json')
+        
+        # Extract index names from the response
+        index_names = [index['index'] for index in resp]
+        
+        # Return the list of index names as JSON response with status code 200
+        return jsonify(index_names), 200
+
+    except (TransportError, ConnectionError) as e:
+        # Handle any Elasticsearch-related errors
+        return jsonify({"error": str(e)}), 500
+
+    except Exception as e:
+        # Handle any other exceptions
+        return jsonify({"error": "An unexpected error occurred: " + str(e)}), 500
 
 
 @app.route('/match')
