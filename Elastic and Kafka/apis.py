@@ -66,27 +66,33 @@ def BuildQuery(start_timestamp, log_level , end_timestamp , message_value):
 
 @app.post("/get_logs")
 def  log_search(body : LogSearch ) :
-    query= {}
-    index='log_data' , 
-    start_timestamp = body.start_timestamp
-    log_level  = body.log_level
-    end_timestamp = body.end_timestamp
-    message_value  = body.message_value
+    try:
+        query= {}
+        index='log_data' , 
+        start_timestamp = body.start_timestamp
+        log_level  = body.log_level
+        end_timestamp = body.end_timestamp
+        message_value  = body.message_value
 
-    print(start_timestamp, log_level , end_timestamp , message_value)
-    if start_timestamp is None and log_level is None and end_timestamp is None and message_value is None:
-        
-        query= {
-                "match_all": {}
-            }
-        
-    else:
-        query = BuildQuery(start_timestamp, log_level , end_timestamp , message_value)
+        print(start_timestamp, log_level , end_timestamp , message_value)
+        if start_timestamp is None and log_level is None and end_timestamp is None and message_value is None:
+            
+            query= {
+                    "match_all": {}
+                }
+            
+        else:
+            query = BuildQuery(start_timestamp, log_level , end_timestamp , message_value)
 
-    print(query)
-    resp = es.search(index=index , query= query)
-    print(resp['hits']['hits'])
-    return JSONResponse(content=resp['hits']['hits'])
+        print(query)
+        resp = es.search(index=index , query= query)
+        print(resp['hits']['hits'])
+        return JSONResponse(content=resp['hits']['hits'])
+    except Exception as e:
+        return JSONResponse({"error" : e})
+
+
+
     return JSONResponse(resp['hits']['hits']).body, 200
     
 
