@@ -9,7 +9,7 @@ from elasticsearch.exceptions import TransportError, ConnectionError
 app = Flask(__name__)
 
 # Initilize the Elastic Search CLient
-es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
+es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http://'}],
                  )
 
 # es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
