@@ -11,7 +11,6 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
                    basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
-
 try:
     if es.ping():
         print("Connected to Elasticsearch!")
@@ -20,12 +19,11 @@ try:
 except Exception as e:
     print(f"Error connecting to Elasticsearch: {e}")
 
-
 app  = FastAPI( debug=True)
 
-@app.get("/")
-def start():
-    return("Hello World")
+
+
+
 
 
 def BuildQuery(start_timestamp, log_level , end_timestamp , message_value):

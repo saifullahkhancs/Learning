@@ -1,7 +1,6 @@
 import logging
 import sys
 
-
 def get_logger(name, debug=False):
     fmt = logging.Formatter("{asctime} {msecs:03.0f} | "
                             "{levelname} | "
