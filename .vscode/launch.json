@@ -1,18 +1,18 @@
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Python Debugger: Current File",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Python Debugger: Python File",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${file}"
-        }
-    ]
-}
+
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: Debug App",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/Elastic and Kafka/app.py",
+                "console": "integratedTerminal",
+                "python": "${workspaceFolder}/Elastic and Kafka/env/Scripts/python"  // Adjust if you're using a different system (e.g., for macOS, it could be env/bin/python)
+            }
+        ]
+    }
+    
