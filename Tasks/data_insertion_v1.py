@@ -39,7 +39,7 @@ def generate_id(IdList):
         IdList.append(id)
         return id
 
-with open("Person.csv" , 'w' , newline= "") as file:
+with open("Person_v1.csv" , 'w' , newline= "") as file:
     writer = csv.writer(file)
     field = [ "id" ,"name", "age", "country"]
     writer.writerow(field)
@@ -52,7 +52,7 @@ with open("Person.csv" , 'w' , newline= "") as file:
 roles = ["Manager" , "Assistant_Manger" , "Employee", "Worker", "Staff"]
 grades = {"Manager": 19 , "Assistant_Manger":17 , "Employee":15 , "Worker" : 13, "Staff":10} 
 
-with open("User.csv" , 'w' , newline= "") as file:
+with open("User_v1.csv" , 'w' , newline= "") as file:
     writer = csv.writer(file)
     field = [ "id", "role", "grade"]
     writer.writerow(field)
@@ -63,7 +63,7 @@ with open("User.csv" , 'w' , newline= "") as file:
         writer.writerow([id ,role , grades[role]])
 
 start_date = datetime(2024, 10, 1, 0, 0, 0) 
-with open("Message.csv" , 'w' , newline= "") as file:
+with open("Message_v1.csv" , 'w' , newline= "") as file:
     writer = csv.writer(file)
     field = [ "id", "value", "time"]
     writer.writerow(field)
@@ -73,7 +73,7 @@ with open("Message.csv" , 'w' , newline= "") as file:
         role = random.choice(roles)
         writer.writerow([id ,generate_message() , generate_random_datetime(start_date)])
 
-with open("Group.csv" , 'w' , newline= "") as file:
+with open("Group_v1.csv" , 'w' , newline= "") as file:
     writer = csv.writer(file)
     field = [ "id", "name", "restrication"]
     writer.writerow(field)
@@ -83,12 +83,9 @@ with open("Group.csv" , 'w' , newline= "") as file:
         role = random.choice(roles)
         writer.writerow([id ,generate_name() , random.choice(["true" , "false"]) ])
 
-
-    
-
-with open("User_Message.csv" , 'w' , newline= "") as file:
+with open("User_Message_v1.csv" , 'w' , newline= "") as file:
     writer = csv.writer(file)
-    field = [ "id", "source_label","source_id","target_label" , "target_id", "relation"]
+    field = [ "id", "source", "target" , "relation"]
     writer.writerow(field)
     receiver_msg =[]
     message_list = msg_ids.copy()
@@ -100,19 +97,19 @@ with open("User_Message.csv" , 'w' , newline= "") as file:
         receiver_msg.append(message_id)
         user_id =  random.choice(user_list)
         user_list.remove(user_id)
-        writer.writerow([i+1 ,"USER" , str(user_id) , "MESSAGE" , str(message_id) , "sender" ])
-        writer.writerow([i+1 ,"MESSAGE" , str(message_id) ,"USER" , str(user_id) , "send_by" ])
+        writer.writerow([i+1 ,"USER_V1_"+ str(user_id) , "MESSAGE_V1_" + str(message_id) , "sender" ])
+        writer.writerow([i+1 ,"MESSAGE_V1_" + str(message_id) ,"USER_V1_"+ str(user_id) , "send_by" ])
     print(len(receiver_msg))
     for i in range(500):
         message_id = random.choice(receiver_msg)
         user_id = random.choice(user_ids)
-        writer.writerow([i+1 ,"USER" ,  str(user_id) ,"MESSAGE" ,  str(message_id) , "reciever" ])
-        writer.writerow([i+1 ,"MESSAGE" , str(message_id) ,"USER" , str(user_id) , "recied_by" ])
+        writer.writerow([i+1 ,"USER_V1_"+ str(user_id) ,"MESSAGE_V1_" + str(message_id) , "reciever" ])
+        writer.writerow([i+1 ,"MESSAGE_V1_" +str(message_id) ,"USER_V1_"+ str(user_id) , "recied_by" ])
         receiver_msg.remove(message_id)
 
-with open("User_Person.csv" , 'w' , newline= "") as file:
+with open("User_Person_v1.csv" , 'w' , newline= "") as file:
     writer = csv.writer(file)
-    field = [ "id", "source_label","source_id","target_label" , "target_id", "relation"]
+    field = [ "id", "source", "target" , "relation"]
     writer.writerow(field)
     person_list = person_ids.copy()
     user_list = user_ids.copy()
@@ -121,13 +118,13 @@ with open("User_Person.csv" , 'w' , newline= "") as file:
         user_id = random.choice(user_list)
         person_list.remove(person_id)
         user_list.remove(user_id)
-        writer.writerow([i+1 ,"USER" , str(user_id) ,"PERSON" ,  str(person_id) , "has_profile" ])
-        writer.writerow([i+1 ,"PERSON" , str(person_id), "USER" ,  str(user_id) , "has_account" ])
+        writer.writerow([i+1 ,"USER_V1_"+ str(user_id) ,"PERSON_V1_"+ str(person_id) , "has_profile" ])
+        writer.writerow([i+1 ,"PERSON_V1_"+str(person_id), "USER_V1_"+ str(user_id) , "has_account" ])
      
 
-with open("User_Group.csv" , 'w' , newline= "") as file:
+with open("User_Group_v1.csv" , 'w' , newline= "") as file:
     writer = csv.writer(file)
-    field = [ "id", "source_label","source_id","target_label" , "target_id", "relation"]
+    field = [ "id", "source", "target" , "relation"]
     writer.writerow(field)
     group_list = group_ids.copy()
     user_list = user_ids.copy()
@@ -136,8 +133,8 @@ with open("User_Group.csv" , 'w' , newline= "") as file:
         user_id =  random.choice(user_list)
         group_list.remove(group_id)
         user_list.remove(user_id)
-        writer.writerow([i+1 ,"USER" , str(user_id) ,"GROUP" , str(group_id) , "belong_to" ])
-        writer.writerow([i+1 ,"GROUP" ,  str(group_id) , "USER"  , str(user_id) , "part_off" ])
+        writer.writerow([i+1 ,"USER_V1_"+str(user_id) ,"GROUP_V1_"+ str(group_id) , "belong_to" ])
+        writer.writerow([i+1 ,"GROUP_V1_"+ str(group_id) , "USER_V1_"+str(user_id) , "part_off" ])
 
 # with open("Sample.csv" , 'w' , newline= "") as file:
 #     writer = csv.writer(file)

@@ -17,17 +17,10 @@ if len(sys.argv) < 3:
     print("Usage: python your_script.py <file> <type>")
     sys.exit(1)
 
-
+file1 = sys.argv[1]
 file = sys.argv[1]
 type = sys.argv[2]
-
-# if type == "relation":
-#         if len(sys.argv) < 3:
-#                 print("Error: Please provide both Labels")
-#                 print("Usage: python your_script.py <file> <label1> <label2> <relation>")
-#         label1 = sys.argv[3]
-#         label2 = sys.argv[4]
-print(file)
+print(file1)
 print(type)
 
 node_name = (os.path.splitext(os.path.basename(file))[0]).upper()
@@ -48,42 +41,38 @@ except Exception as e:
 try:
     with driver.session() as session:
         with open(file, mode='r') as file:
-            csv_reader = csv.DictReader(file)
-            headers = csv_reader.fieldnames
+            csv_reader = csv.reader(file)
+            headers = next(csv_reader)
+            print(headers)
+           
             if type == "node":
-                for row in csv_reader:
-                        properties = {header: row[header] for header in headers}
-                        cypher_query = f"CREATE (p:{node_name} $properties)"
-                        session.run(
-                        cypher_query,
-                        properties=properties
-                        )
-                        print(properties.values())
-            else:
-                for row in csv_reader:
-                        source_label, source_id = row["source"].split("_")
-                        target_label, target_id = row["target"].split("_")
-                        # source_id=int(source_id)
-                        # target_id=int(target_id) 
-                        relationship_type = row["relation"].upper()
-                        cypher_query = f"""
-                                MATCH (source:{source_label} {{id:"{source_id}"}})
-                                MATCH (target:{target_label} {{id:"{target_id}"}})
-                                MERGE (source)-[r:{relationship_type.upper()}]->(target)
+                        properties = "{"
+                        for i in headers:
+                                properties += f"{i}:row.{i}, "
+                        properties_string = properties[:-2]
+                        properties_string += "}"
+                        print(properties_string)
+                        query = f"""LOAD CSV WITH HEADERS FROM 'file:///{file1}' AS row
+                                WITH  row
+                                MERGE (a:{node_name} {properties_string})
                                 """
-                        print(f"Executing query: {cypher_query}")
+                       
+                        session.run(
+                                query,
+                        )
+                        print(query)
+            else:
+                        cypher_query =f"""LOAD CSV WITH HEADERS FROM 'file:///{file1}' AS row
+                                        WITH row, toUpper(row.relation) AS relationType
+                                        CALL apoc.merge.node([row.source_label], {{id: toString(row.source_id)}}) YIELD node AS source
+                                        CALL apoc.merge.node([row.target_label], {{id: toString(row.target_id)}}) YIELD node AS target
+                                        CALL apoc.create.relationship(source, relationType, {{}}, target) YIELD rel
+                                        RETURN source, rel, target"""
                         # Execute the Cypher query
-                        rsp = session.run(
-                                cypher_query,
-                                source_label=source_label,
-                                target_label=target_label,
-                                source_id = source_id,
-                                target_id = target_id,
-                                relationship_type=relationship_type
-                                )
-                        
-        
-        driver.close()       
-
+                        session.run(cypher_query,).consume()     
+                        print(f"Executing query: {cypher_query}")      
+        # driver.close()       
+except Exception as e:
+        print(f"An error occurred: {e}")
 finally:
     driver.close()
