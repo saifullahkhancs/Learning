@@ -37,7 +37,8 @@ except ServiceUnavailable:
 except Exception as e:
         print(f"An error occurred: {e}")
 
-
+current_dir = os.path.abspath(os.path.dirname(__file__))
+file_path = os.path.join(current_dir, file).replace("\\", "/")
 try:
     with driver.session() as session:
         with open(file, mode='r') as file:
@@ -60,7 +61,7 @@ try:
                         session.run(
                                 query,
                         )
-                        print(query)
+                        # print(query)
             else:
                         cypher_query =f"""LOAD CSV WITH HEADERS FROM 'file:///{file1}' AS row
                                         WITH row, toUpper(row.relation) AS relationType
@@ -70,7 +71,7 @@ try:
                                         RETURN source, rel, target"""
                         # Execute the Cypher query
                         session.run(cypher_query,).consume()     
-                        print(f"Executing query: {cypher_query}")      
+                        # print(f"Executing query: {cypher_query}")      
         # driver.close()       
 except Exception as e:
         print(f"An error occurred: {e}")

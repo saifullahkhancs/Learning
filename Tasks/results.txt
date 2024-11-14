@@ -1,0 +1,2 @@
+                          Batch Processing  Results
+Node :- 110,000  Relations :-81,996       Time : 2994.69s => 49 min 54.69 sec

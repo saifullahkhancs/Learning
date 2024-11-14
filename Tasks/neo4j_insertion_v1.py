@@ -8,10 +8,8 @@ NEO4J_URI = "bolt://localhost:7687"  # Change if your Neo4j instance is on a dif
 USERNAME = "neo4j"  # Replace with your Neo4j username
 PASSWORD = "saifkhan"  # Replace with your Neo4j password
 
-# Initialize the driver
 driver = GraphDatabase.driver(NEO4J_URI, auth=(USERNAME, PASSWORD))
 
-# Check if both arguments are provided
 if len(sys.argv) < 3:
     print("Error: Please provide both 'file' and 'type' arguments.")
     print("Usage: python your_script.py <file> <type>")
