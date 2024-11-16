@@ -39,7 +39,6 @@ except Exception as e:
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
 file_path = os.path.join(current_dir, file).replace("\\", "/")
-print(file_path)
 try:
     with driver.session() as session:
         with open(file, mode='r') as file:
@@ -55,21 +54,17 @@ try:
                         properties_string += "}"
                         print(properties_string)
 
-                        query = f"""LOAD CSV WITH HEADERS FROM 'file:///C:/Learning/Tasks/{file1}' AS row
+                        query = f"""LOAD CSV WITH HEADERS FROM 'file:///C:/Learning/Task2/{file1}' AS row
                                 WITH  row
                                 MERGE (a:{node_name} {properties_string})
                                 """
-                        # query = f"""LOAD CSV WITH HEADERS FROM 'file:///{file1}' AS row
-                        #         WITH  row
-                        #         MERGE (a:{node_name} {properties_string})
-                        #         """
                        
                         session.run(
                                 query,
                         )
                         # print(query)
             else:
-                        cypher_query =f"""LOAD CSV WITH HEADERS FROM 'file:///{file1}' AS row
+                        cypher_query =f"""LOAD CSV WITH HEADERS FROM 'file:///C:/Learning/Task2/{file1}' AS row
                                         WITH row, toUpper(row.relation) AS relationType
                                         CALL apoc.merge.node([row.source_label], {{id: toString(row.source_id)}}) YIELD node AS source
                                         CALL apoc.merge.node([row.target_label], {{id: toString(row.target_id)}}) YIELD node AS target

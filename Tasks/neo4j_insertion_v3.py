@@ -54,27 +54,32 @@ try:
                         properties_string = properties[:-2]
                         properties_string += "}"
                         print(properties_string)
-
-                        query = f"""LOAD CSV WITH HEADERS FROM 'file:///C:/Learning/Tasks/{file1}' AS row
-                                WITH  row
-                                MERGE (a:{node_name} {properties_string})
+                        query = f"""
+                                CALL apoc.periodic.iterate(
+                                'LOAD CSV WITH HEADERS FROM "file:///C:/Learning/Task2/{file1}" AS row RETURN row', 
+                                'MERGE (a:{node_name} {properties_string})', 
+                                {{batchSize: 1000, parallel: true}}
+                                )
                                 """
-                        # query = f"""LOAD CSV WITH HEADERS FROM 'file:///{file1}' AS row
-                        #         WITH  row
-                        #         MERGE (a:{node_name} {properties_string})
-                        #         """
-                       
-                        session.run(
-                                query,
-                        )
-                        # print(query)
+                      
+                        result = session.run(query)
+                        for rec in result:
+                                print(rec)
             else:
-                        cypher_query =f"""LOAD CSV WITH HEADERS FROM 'file:///{file1}' AS row
+                        cypher_query =f"""
+                                        CALL apoc.periodic.iterate(
+                                        'LOAD CSV WITH HEADERS FROM "file:///C:/Learning/Task2/{file1}" AS row return row',
+                                        '
                                         WITH row, toUpper(row.relation) AS relationType
                                         CALL apoc.merge.node([row.source_label], {{id: toString(row.source_id)}}) YIELD node AS source
                                         CALL apoc.merge.node([row.target_label], {{id: toString(row.target_id)}}) YIELD node AS target
                                         CALL apoc.merge.relationship(source, relationType, {{id: row.id}}, {{}}, target) YIELD rel
-                                        RETURN source, rel, target"""
+                                        RETURN source, rel, target
+                                        ',
+                                       {{batchSize: 1000, parallel: true}}
+                                        )
+
+                                        """
                         # Execute the Cypher query
                         session.run(cypher_query,).consume()     
                         # print(f"Executing query: {cypher_query}")      

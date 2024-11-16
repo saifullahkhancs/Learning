@@ -56,16 +56,14 @@ try:
                         # print(properties.values())
             else:
                 for row in csv_reader:
-                        source_label , source_id = row["source"].split("_V1_")
-                        target_label , target_id = row["target"].split("_V1_")
-                        # source_id=int(source_id)
-                        # target_id=int(target_id) 
-                        source_label = source_label + "_V1"
-                        target_label = target_label + "_V1"
+                        source_label = row["source_label"]
+                        source_id = row ["source_id"]
+                        target_label = row["target_label"]
+                        target_id = row["target_id"] 
                         relationship_type = row["relation"].upper()
                         cypher_query = f"""
-                                MATCH (source:{source_label} {{id:"{source_id}"}})
-                                MATCH (target:{target_label} {{id:"{target_id}"}})
+                                MERGE (source:{source_label} {{id:"{source_id}"}})
+                                MERGE (target:{target_label} {{id:"{target_id}"}})
                                 MERGE (source)-[r:{relationship_type.upper()}]->(target)
                                 """
                         # print(f"Executing query: {cypher_query}")
