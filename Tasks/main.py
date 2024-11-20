@@ -24,4 +24,4 @@ subprocess.run([sys.executable, "neo4j_insertion.py" , "User_Person.csv" ,"type"
 
 end_time = time.time()
 elapsed_time = end_time - start_time
-print(f"Time taken to run the nodes and relation scripts: {elapsed_time:.2f} seconds")
+print(f"Time taken to run the  relation scripts: {elapsed_time:.2f} seconds")

@@ -55,18 +55,18 @@ env = os.environ.copy()
 
 # Execute insertion scripts for each JSON file
 start_time = time.time()
-# subprocess.run([sys.executable, "neo4j_insertion_v1.py", "Group.csv", "node"])
-# subprocess.run([sys.executable, "neo4j_insertion_v1.py", "Message.csv", "node"])
-subprocess.run([sys.executable, "neo4j_insertion_v1.py", "Person.csv", "node"])
-subprocess.run([sys.executable, "neo4j_insertion_v1.py", "User.csv", "node"])
+# subprocess.run([sys.executable, "neo4j_insertion_v3.py", "Group.csv", "node"])
+# subprocess.run([sys.executable, "neo4j_insertion_v3.py", "Message.csv", "node"])
+subprocess.run([sys.executable, "neo4j_insertion_v3.py", "Person.csv", "node"])
+subprocess.run([sys.executable, "neo4j_insertion_v3.py", "User.csv", "node"])
 end_time = time.time()
 elapsed_time = end_time - start_time
 print(f"Time taken to run the script to add nodes: {elapsed_time:.2f} seconds")
 start_time = time.time()
 # start_time = time.time()
-# subprocess.run([sys.executable, "neo4j_insertion_v1.py", "User_Group.csv", "type"])
-# subprocess.run([sys.executable, "neo4j_insertion_v1.py", "User_Message.csv", "type"])
-subprocess.run([sys.executable, "neo4j_insertion_v1.py", "User_Person.csv", "type"])
+# subprocess.run([sys.executable, "neo4j_insertion_v3.py", "User_Group.csv", "type"])
+# subprocess.run([sys.executable, "neo4j_insertion_v3.py", "User_Message.csv", "type"])
+subprocess.run([sys.executable, "neo4j_insertion_v3.py", "User_Person.csv", "type"])
 
 
 

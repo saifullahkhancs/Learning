@@ -23,6 +23,7 @@ print(type)
 
 node_name = (os.path.splitext(os.path.basename(file))[0]).upper()
 print(f"Reading file: {node_name}")
+
 try:
         with driver.session() as session:
             result = session.run("RETURN 'Neo4j connection successful!' AS message")

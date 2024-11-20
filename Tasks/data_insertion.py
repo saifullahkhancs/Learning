@@ -44,7 +44,7 @@ with open("Person.csv" , 'w' , newline= "") as file:
     field = [ "id" ,"name", "age", "country"]
     writer.writerow(field)
     person_ids= []
-    for i in range(10000):
+    for i in range(300):
         id = generate_id(person_ids)
         writer.writerow([id ,generate_name(), random.randint(18,60), random.choice(countries)])
 
@@ -57,7 +57,7 @@ with open("User.csv" , 'w' , newline= "") as file:
     field = [ "id", "role", "grade"]
     writer.writerow(field)
     user_ids = []
-    for i in range(10000):
+    for i in range(300):
         role = random.choice(roles)
         id = generate_id(user_ids)
         writer.writerow([id ,role , grades[role]])
@@ -68,7 +68,7 @@ with open("Message.csv" , 'w' , newline= "") as file:
     field = [ "id", "value", "time"]
     writer.writerow(field)
     msg_ids = []
-    for i in range(10000):
+    for i in range(300):
         id = generate_id(msg_ids)
         role = random.choice(roles)
         writer.writerow([id ,generate_message() , generate_random_datetime(start_date)])
@@ -78,7 +78,7 @@ with open("Group.csv" , 'w' , newline= "") as file:
     field = [ "id", "name", "restrication"]
     writer.writerow(field)
     group_ids = []
-    for i in range(10000):
+    for i in range(300):
         id = generate_id(group_ids)
         role = random.choice(roles)
         writer.writerow([id ,generate_name() , random.choice(["true" , "false"]) ])
@@ -94,7 +94,7 @@ with open("User_Message.csv" , 'w' , newline= "") as file:
     message_list = msg_ids.copy()
     user_list =  user_ids.copy()
     user_message_ids = []
-    for i in range(4000):
+    for i in range(40):
         message_id = random.choice(message_list)
         message_list.remove(message_id) 
         receiver_msg.append(message_id)
@@ -103,7 +103,7 @@ with open("User_Message.csv" , 'w' , newline= "") as file:
         writer.writerow([i+1 ,"USER" , str(user_id) , "MESSAGE" , str(message_id) , "sender" ])
         writer.writerow([i+1 ,"MESSAGE" , str(message_id) ,"USER" , str(user_id) , "send_by" ])
     print(len(receiver_msg))
-    for i in range(4000):
+    for i in range(40):
         message_id = random.choice(receiver_msg)
         user_id = random.choice(user_ids)
         writer.writerow([i+1 ,"USER" ,  str(user_id) ,"MESSAGE" ,  str(message_id) , "reciever" ])
@@ -116,7 +116,7 @@ with open("User_Person.csv" , 'w' , newline= "") as file:
     writer.writerow(field)
     person_list = person_ids.copy()
     user_list = user_ids.copy()
-    for i in range(5000):
+    for i in range(100):
         person_id =  random.choice(person_list)
         user_id = random.choice(user_list)
         person_list.remove(person_id)
@@ -131,7 +131,7 @@ with open("User_Group.csv" , 'w' , newline= "") as file:
     writer.writerow(field)
     group_list = group_ids.copy()
     user_list = user_ids.copy()
-    for i in range(4000):
+    for i in range(40):
         group_id = random.choice(group_list) 
         user_id =  random.choice(user_list)
         group_list.remove(group_id)

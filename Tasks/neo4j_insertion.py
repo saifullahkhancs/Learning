@@ -37,6 +37,8 @@ except ServiceUnavailable:
 except Exception as e:
         print(f"An error occurred: {e}")
 
+# we can use this path as it is become the generic  
+
 current_dir = os.path.abspath(os.path.dirname(__file__))
 file_path = os.path.join(current_dir, file).replace("\\", "/")
 print(file_path)
@@ -55,7 +57,7 @@ try:
                         properties_string += "}"
                         print(properties_string)
 
-                        query = f"""LOAD CSV WITH HEADERS FROM 'file:///C:/Learning/Tasks/{file1}' AS row
+                        query = f"""LOAD CSV WITH HEADERS FROM 'file:///{file_path}' AS row
                                 WITH  row
                                 MERGE (a:{node_name} {properties_string})
                                 """
@@ -69,7 +71,7 @@ try:
                         )
                         # print(query)
             else:
-                        cypher_query =f"""LOAD CSV WITH HEADERS FROM 'file:///{file1}' AS row
+                        cypher_query =f"""LOAD CSV WITH HEADERS FROM 'file:///{file_path}' AS row
                                         WITH row, toUpper(row.relation) AS relationType
                                         CALL apoc.merge.node([row.source_label], {{id: toString(row.source_id)}}) YIELD node AS source
                                         CALL apoc.merge.node([row.target_label], {{id: toString(row.target_id)}}) YIELD node AS target

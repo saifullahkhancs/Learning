@@ -64,12 +64,12 @@ end_time = time.time()
 elapsed_time = end_time - start_time
 print(f"Time taken to run the nodes script: {elapsed_time:.2f} seconds")
 start_time = time.time()
-subprocess.run([sys.executable, "neo4j_insertion_v2.py", "User_Group.json", "type"])
-subprocess.run([sys.executable, "neo4j_insertion_v2.py", "User_Message.json", "type"])
-subprocess.run([sys.executable, "neo4j_insertion_v2.py", "User_Person.json", "type"])
+subprocess.run([sys.executable, "neo4j_insertion_v2.py", "User_Group.json", "relation"])
+subprocess.run([sys.executable, "neo4j_insertion_v2.py", "User_Message.json", "relation"])
+subprocess.run([sys.executable, "neo4j_insertion_v2.py", "User_Person.json", "relation"])
 
 
 
 end_time = time.time()
 elapsed_time = end_time - start_time
-print(f"Time taken to run the script: {elapsed_time:.2f} seconds")
+print(f"Time taken to run the relations script: {elapsed_time:.2f} seconds")
