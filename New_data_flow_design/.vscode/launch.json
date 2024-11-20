@@ -1,0 +1,8 @@
+{
+    "name": "Python: Debug App",
+    "type": "python",
+    "request": "launch",
+    "program": "${workspaceFolder}/app.py",
+    "console": "integratedTerminal",
+    "envFile": "${workspaceFolder}/.env"
+}

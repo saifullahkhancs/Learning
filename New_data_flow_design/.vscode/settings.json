@@ -1,0 +1,5 @@
+{
+    "python.createEnvironment.contentButton": "show",
+    "debugpy.showPythonInlineValues": true,
+    "debug.allowBreakpointsEverywhere": true
+}

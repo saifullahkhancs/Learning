@@ -1,0 +1,22 @@
+import logging 
+
+from environs import Env
+
+env = Env()
+
+WORKER_ENV = env('WORKER_ENV', 'local')
+
+if WORKER_ENV == 'local':
+    env.read_env()
+
+TOPIC = env("TOPIC" , None)
+DEBUG = env.bool('DEBUG', False)
+KAFKA_INTERNAL_BOOTSTRAP_SERVERS = env('KAFKA_INTERNAL_BOOTSTRAP_SERVERS')
+KAFKA_INTERNAL_USER = env('KAFKA_INTERNAL_USER')
+KAFKA_INTERNAL_PASSWORD = env('KAFKA_INTERNAL_PASSWORD')
+KAFKA_INTERNAL_GROUP = env('KAFKA_INTERNAL_GROUP', None)
+KAFKA_BOOTSTRAP_SERVERS = env('KAFKA_BOOTSTRAP_SERVERS')
+CLOUD_PROVIDER = env('CLOUD_PROVIDER')
+
+def get_log_level():
+    return logging.DEBUG if DEBUG else logging.INFO
