@@ -186,5 +186,31 @@ def search_data():
 
 
 
+@app.route('/delete_all/<index>', methods=['DELETE'])
+def delete_all(index):
+    try:
+        # Delete all documents in the specified index
+        response = es.delete_by_query(index=index, body={
+            "query": {
+                "match_all": {}
+            }
+        })
+        # Convert the response to a dictionary
+        response_dict = {
+            "deleted": response['deleted'],
+            "took": response['took'],
+            "timed_out": response['timed_out'],
+            "total": response['total'],
+            "failures": response['failures']
+        }
+
+        return jsonify(response_dict), 200  
+
+        # return jsonify(response), 200  # Return the response with a 200 OK status
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500 
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

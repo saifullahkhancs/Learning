@@ -1,0 +1,2244 @@
+[
+    {
+        "mitre_id": "TA0006",
+        "name": "Credential Access",
+        "display": false,
+        "techniques_count": 30,
+        "techniques": [
+            {
+                "mitre_id": "T1557",
+                "name": "Adversary-in-the-Middle",
+                "display": false
+            },
+            {
+                "mitre_id": "T1003",
+                "name": "OS Credential Dumping",
+                "display": false
+            },
+            {
+                "mitre_id": "T1171",
+                "name": "LLMNR/NBT-NS Poisoning and Relay",
+                "display": false
+            },
+            {
+                "mitre_id": "T1539",
+                "name": "Steal Web Session Cookie",
+                "display": false
+            },
+            {
+                "mitre_id": "T1522",
+                "name": "Cloud Instance Metadata API",
+                "display": false
+            },
+            {
+                "mitre_id": "T1167",
+                "name": "Securityd Memory",
+                "display": false
+            },
+            {
+                "mitre_id": "T1214",
+                "name": "Credentials in Registry",
+                "display": false
+            },
+            {
+                "mitre_id": "T1040",
+                "name": "Network Sniffing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1558",
+                "name": "Steal or Forge Kerberos Tickets",
+                "display": false
+            },
+            {
+                "mitre_id": "T1555",
+                "name": "Credentials from Password Stores",
+                "display": false
+            },
+            {
+                "mitre_id": "T1552",
+                "name": "Unsecured Credentials",
+                "display": false
+            },
+            {
+                "mitre_id": "T1139",
+                "name": "Bash History",
+                "display": false
+            },
+            {
+                "mitre_id": "T1503",
+                "name": "Credentials from Web Browsers",
+                "display": false
+            },
+            {
+                "mitre_id": "T1145",
+                "name": "Private Keys",
+                "display": false
+            },
+            {
+                "mitre_id": "T1179",
+                "name": "Hooking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1649",
+                "name": "Steal or Forge Authentication Certificates",
+                "display": false
+            },
+            {
+                "mitre_id": "T1528",
+                "name": "Steal Application Access Token",
+                "display": false
+            },
+            {
+                "mitre_id": "T1141",
+                "name": "Input Prompt",
+                "display": false
+            },
+            {
+                "mitre_id": "T1606",
+                "name": "Forge Web Credentials",
+                "display": false
+            },
+            {
+                "mitre_id": "T1621",
+                "name": "Multi-Factor Authentication Request Generation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1212",
+                "name": "Exploitation for Credential Access",
+                "display": false
+            },
+            {
+                "mitre_id": "T1142",
+                "name": "Keychain",
+                "display": false
+            },
+            {
+                "mitre_id": "T1110",
+                "name": "Brute Force",
+                "display": false
+            },
+            {
+                "mitre_id": "T1208",
+                "name": "Kerberoasting",
+                "display": false
+            },
+            {
+                "mitre_id": "T1187",
+                "name": "Forced Authentication",
+                "display": false
+            },
+            {
+                "mitre_id": "T1174",
+                "name": "Password Filter DLL",
+                "display": false
+            },
+            {
+                "mitre_id": "T1081",
+                "name": "Credentials in Files",
+                "display": false
+            },
+            {
+                "mitre_id": "T1056",
+                "name": "Input Capture",
+                "display": false
+            },
+            {
+                "mitre_id": "T1111",
+                "name": "Multi-Factor Authentication Interception",
+                "display": false
+            },
+            {
+                "mitre_id": "T1556",
+                "name": "Modify Authentication Process",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0002",
+        "name": "Execution",
+        "display": false,
+        "techniques_count": 36,
+        "techniques": [
+            {
+                "mitre_id": "T1047",
+                "name": "Windows Management Instrumentation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1129",
+                "name": "Shared Modules",
+                "display": false
+            },
+            {
+                "mitre_id": "T1121",
+                "name": "Regsvcs/Regasm",
+                "display": false
+            },
+            {
+                "mitre_id": "T1053",
+                "name": "Scheduled Task/Job",
+                "display": false
+            },
+            {
+                "mitre_id": "T1106",
+                "name": "Native API",
+                "display": false
+            },
+            {
+                "mitre_id": "T1153",
+                "name": "Source",
+                "display": false
+            },
+            {
+                "mitre_id": "T1152",
+                "name": "Launchctl",
+                "display": false
+            },
+            {
+                "mitre_id": "T1610",
+                "name": "Deploy Container",
+                "display": false
+            },
+            {
+                "mitre_id": "T1155",
+                "name": "AppleScript",
+                "display": false
+            },
+            {
+                "mitre_id": "T1085",
+                "name": "Rundll32",
+                "display": false
+            },
+            {
+                "mitre_id": "T1117",
+                "name": "Regsvr32",
+                "display": false
+            },
+            {
+                "mitre_id": "T1177",
+                "name": "LSASS Driver",
+                "display": false
+            },
+            {
+                "mitre_id": "T1059",
+                "name": "Command and Scripting Interpreter",
+                "display": false
+            },
+            {
+                "mitre_id": "T1175",
+                "name": "Component Object Model and Distributed COM",
+                "display": false
+            },
+            {
+                "mitre_id": "T1609",
+                "name": "Container Administration Command",
+                "display": false
+            },
+            {
+                "mitre_id": "T1191",
+                "name": "CMSTP",
+                "display": false
+            },
+            {
+                "mitre_id": "T1064",
+                "name": "Scripting",
+                "display": false
+            },
+            {
+                "mitre_id": "T1204",
+                "name": "User Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1196",
+                "name": "Control Panel Items",
+                "display": false
+            },
+            {
+                "mitre_id": "T1072",
+                "name": "Software Deployment Tools",
+                "display": false
+            },
+            {
+                "mitre_id": "T1170",
+                "name": "Mshta",
+                "display": false
+            },
+            {
+                "mitre_id": "T1061",
+                "name": "Graphical User Interface",
+                "display": false
+            },
+            {
+                "mitre_id": "T1559",
+                "name": "Inter-Process Communication",
+                "display": false
+            },
+            {
+                "mitre_id": "T1154",
+                "name": "Trap",
+                "display": false
+            },
+            {
+                "mitre_id": "T1203",
+                "name": "Exploitation for Client Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1168",
+                "name": "Local Job Scheduling",
+                "display": false
+            },
+            {
+                "mitre_id": "T1028",
+                "name": "Windows Remote Management",
+                "display": false
+            },
+            {
+                "mitre_id": "T1569",
+                "name": "System Services",
+                "display": false
+            },
+            {
+                "mitre_id": "T1223",
+                "name": "Compiled HTML File",
+                "display": false
+            },
+            {
+                "mitre_id": "T1651",
+                "name": "Cloud Administration Command",
+                "display": false
+            },
+            {
+                "mitre_id": "T1151",
+                "name": "Space after Filename",
+                "display": false
+            },
+            {
+                "mitre_id": "T1648",
+                "name": "Serverless Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1173",
+                "name": "Dynamic Data Exchange",
+                "display": false
+            },
+            {
+                "mitre_id": "T1035",
+                "name": "Service Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1086",
+                "name": "PowerShell",
+                "display": false
+            },
+            {
+                "mitre_id": "T1118",
+                "name": "InstallUtil",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0040",
+        "name": "Impact",
+        "display": false,
+        "techniques_count": 19,
+        "techniques": [
+            {
+                "mitre_id": "T1492",
+                "name": "Stored Data Manipulation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1561",
+                "name": "Disk Wipe",
+                "display": false
+            },
+            {
+                "mitre_id": "T1489",
+                "name": "Service Stop",
+                "display": false
+            },
+            {
+                "mitre_id": "T1487",
+                "name": "Disk Structure Wipe",
+                "display": false
+            },
+            {
+                "mitre_id": "T1491",
+                "name": "Defacement",
+                "display": false
+            },
+            {
+                "mitre_id": "T1657",
+                "name": "Financial Theft",
+                "display": false
+            },
+            {
+                "mitre_id": "T1565",
+                "name": "Data Manipulation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1531",
+                "name": "Account Access Removal",
+                "display": false
+            },
+            {
+                "mitre_id": "T1486",
+                "name": "Data Encrypted for Impact",
+                "display": false
+            },
+            {
+                "mitre_id": "T1488",
+                "name": "Disk Content Wipe",
+                "display": false
+            },
+            {
+                "mitre_id": "T1499",
+                "name": "Endpoint Denial of Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1494",
+                "name": "Runtime Data Manipulation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1493",
+                "name": "Transmitted Data Manipulation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1496",
+                "name": "Resource Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1485",
+                "name": "Data Destruction",
+                "display": false
+            },
+            {
+                "mitre_id": "T1498",
+                "name": "Network Denial of Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1495",
+                "name": "Firmware Corruption",
+                "display": false
+            },
+            {
+                "mitre_id": "T1490",
+                "name": "Inhibit System Recovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1529",
+                "name": "System Shutdown/Reboot",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0003",
+        "name": "Persistence",
+        "display": false,
+        "techniques_count": 71,
+        "techniques": [
+            {
+                "mitre_id": "T1156",
+                "name": "Malicious Shell Modification",
+                "display": false
+            },
+            {
+                "mitre_id": "T1067",
+                "name": "Bootkit",
+                "display": false
+            },
+            {
+                "mitre_id": "T1037",
+                "name": "Boot or Logon Initialization Scripts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1161",
+                "name": "LC_LOAD_DYLIB Addition",
+                "display": false
+            },
+            {
+                "mitre_id": "T1150",
+                "name": "Plist Modification",
+                "display": false
+            },
+            {
+                "mitre_id": "T1044",
+                "name": "File System Permissions Weakness",
+                "display": false
+            },
+            {
+                "mitre_id": "T1501",
+                "name": "Systemd Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1543",
+                "name": "Create or Modify System Process",
+                "display": false
+            },
+            {
+                "mitre_id": "T1133",
+                "name": "External Remote Services",
+                "display": false
+            },
+            {
+                "mitre_id": "T1109",
+                "name": "Component Firmware",
+                "display": false
+            },
+            {
+                "mitre_id": "T1163",
+                "name": "Rc.common",
+                "display": false
+            },
+            {
+                "mitre_id": "T1547",
+                "name": "Boot or Logon Autostart Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1013",
+                "name": "Port Monitors",
+                "display": false
+            },
+            {
+                "mitre_id": "T1180",
+                "name": "Screensaver",
+                "display": false
+            },
+            {
+                "mitre_id": "T1165",
+                "name": "Startup Items",
+                "display": false
+            },
+            {
+                "mitre_id": "T1137",
+                "name": "Office Application Startup",
+                "display": false
+            },
+            {
+                "mitre_id": "T1103",
+                "name": "AppInit DLLs",
+                "display": false
+            },
+            {
+                "mitre_id": "T1053",
+                "name": "Scheduled Task/Job",
+                "display": false
+            },
+            {
+                "mitre_id": "T1162",
+                "name": "Login Item",
+                "display": false
+            },
+            {
+                "mitre_id": "T1176",
+                "name": "Browser Extensions",
+                "display": false
+            },
+            {
+                "mitre_id": "T1058",
+                "name": "Service Registry Permissions Weakness",
+                "display": false
+            },
+            {
+                "mitre_id": "T1205",
+                "name": "Traffic Signaling",
+                "display": false
+            },
+            {
+                "mitre_id": "T1038",
+                "name": "DLL Search Order Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1050",
+                "name": "New Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1062",
+                "name": "Hypervisor",
+                "display": false
+            },
+            {
+                "mitre_id": "T1182",
+                "name": "AppCert DLLs",
+                "display": false
+            },
+            {
+                "mitre_id": "T1525",
+                "name": "Implant Internal Image",
+                "display": false
+            },
+            {
+                "mitre_id": "T1004",
+                "name": "Winlogon Helper DLL",
+                "display": false
+            },
+            {
+                "mitre_id": "T1131",
+                "name": "Authentication Package",
+                "display": false
+            },
+            {
+                "mitre_id": "T1152",
+                "name": "Launchctl",
+                "display": false
+            },
+            {
+                "mitre_id": "T1183",
+                "name": "Image File Execution Options Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1031",
+                "name": "Modify Existing Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1179",
+                "name": "Hooking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1019",
+                "name": "System Firmware",
+                "display": false
+            },
+            {
+                "mitre_id": "T1042",
+                "name": "Change Default File Association",
+                "display": false
+            },
+            {
+                "mitre_id": "T1164",
+                "name": "Re-opened Applications",
+                "display": false
+            },
+            {
+                "mitre_id": "T1108",
+                "name": "Redundant Access",
+                "display": false
+            },
+            {
+                "mitre_id": "T1215",
+                "name": "Kernel Modules and Extensions",
+                "display": false
+            },
+            {
+                "mitre_id": "T1101",
+                "name": "Security Support Provider",
+                "display": false
+            },
+            {
+                "mitre_id": "T1177",
+                "name": "LSASS Driver",
+                "display": false
+            },
+            {
+                "mitre_id": "T1504",
+                "name": "PowerShell Profile",
+                "display": false
+            },
+            {
+                "mitre_id": "T1198",
+                "name": "SIP and Trust Provider Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1138",
+                "name": "Application Shimming",
+                "display": false
+            },
+            {
+                "mitre_id": "T1542",
+                "name": "Pre-OS Boot",
+                "display": false
+            },
+            {
+                "mitre_id": "T1060",
+                "name": "Registry Run Keys / Startup Folder",
+                "display": false
+            },
+            {
+                "mitre_id": "T1554",
+                "name": "Compromise Host Software Binary",
+                "display": false
+            },
+            {
+                "mitre_id": "T1023",
+                "name": "Shortcut Modification",
+                "display": false
+            },
+            {
+                "mitre_id": "T1122",
+                "name": "Component Object Model Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1015",
+                "name": "Accessibility Features",
+                "display": false
+            },
+            {
+                "mitre_id": "T1098",
+                "name": "Account Manipulation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1157",
+                "name": "Dylib Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1574",
+                "name": "Hijack Execution Flow",
+                "display": false
+            },
+            {
+                "mitre_id": "T1078",
+                "name": "Valid Accounts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1154",
+                "name": "Trap",
+                "display": false
+            },
+            {
+                "mitre_id": "T1546",
+                "name": "Event Triggered Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1128",
+                "name": "Netsh Helper DLL",
+                "display": false
+            },
+            {
+                "mitre_id": "T1168",
+                "name": "Local Job Scheduling",
+                "display": false
+            },
+            {
+                "mitre_id": "T1166",
+                "name": "Setuid and Setgid",
+                "display": false
+            },
+            {
+                "mitre_id": "T1100",
+                "name": "Web Shell",
+                "display": false
+            },
+            {
+                "mitre_id": "T1034",
+                "name": "Path Interception",
+                "display": false
+            },
+            {
+                "mitre_id": "T1197",
+                "name": "BITS Jobs",
+                "display": false
+            },
+            {
+                "mitre_id": "T1519",
+                "name": "Emond",
+                "display": false
+            },
+            {
+                "mitre_id": "T1505",
+                "name": "Server Software Component",
+                "display": false
+            },
+            {
+                "mitre_id": "T1158",
+                "name": "Hidden Files and Directories",
+                "display": false
+            },
+            {
+                "mitre_id": "T1209",
+                "name": "Time Providers",
+                "display": false
+            },
+            {
+                "mitre_id": "T1159",
+                "name": "Launch Agent",
+                "display": false
+            },
+            {
+                "mitre_id": "T1136",
+                "name": "Create Account",
+                "display": false
+            },
+            {
+                "mitre_id": "T1084",
+                "name": "Windows Management Instrumentation Event Subscription",
+                "display": false
+            },
+            {
+                "mitre_id": "T1160",
+                "name": "Launch Daemon",
+                "display": false
+            },
+            {
+                "mitre_id": "T1653",
+                "name": "Power Settings",
+                "display": false
+            },
+            {
+                "mitre_id": "T1556",
+                "name": "Modify Authentication Process",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0004",
+        "name": "Privilege Escalation",
+        "display": false,
+        "techniques_count": 41,
+        "techniques": [
+            {
+                "mitre_id": "T1037",
+                "name": "Boot or Logon Initialization Scripts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1150",
+                "name": "Plist Modification",
+                "display": false
+            },
+            {
+                "mitre_id": "T1044",
+                "name": "File System Permissions Weakness",
+                "display": false
+            },
+            {
+                "mitre_id": "T1514",
+                "name": "Elevated Execution with Prompt",
+                "display": false
+            },
+            {
+                "mitre_id": "T1543",
+                "name": "Create or Modify System Process",
+                "display": false
+            },
+            {
+                "mitre_id": "T1178",
+                "name": "SID-History Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1547",
+                "name": "Boot or Logon Autostart Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1013",
+                "name": "Port Monitors",
+                "display": false
+            },
+            {
+                "mitre_id": "T1206",
+                "name": "Sudo Caching",
+                "display": false
+            },
+            {
+                "mitre_id": "T1165",
+                "name": "Startup Items",
+                "display": false
+            },
+            {
+                "mitre_id": "T1103",
+                "name": "AppInit DLLs",
+                "display": false
+            },
+            {
+                "mitre_id": "T1053",
+                "name": "Scheduled Task/Job",
+                "display": false
+            },
+            {
+                "mitre_id": "T1058",
+                "name": "Service Registry Permissions Weakness",
+                "display": false
+            },
+            {
+                "mitre_id": "T1055",
+                "name": "Process Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1038",
+                "name": "DLL Search Order Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1050",
+                "name": "New Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1611",
+                "name": "Escape to Host",
+                "display": false
+            },
+            {
+                "mitre_id": "T1182",
+                "name": "AppCert DLLs",
+                "display": false
+            },
+            {
+                "mitre_id": "T1181",
+                "name": "Extra Window Memory Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1183",
+                "name": "Image File Execution Options Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1179",
+                "name": "Hooking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1548",
+                "name": "Abuse Elevation Control Mechanism",
+                "display": false
+            },
+            {
+                "mitre_id": "T1504",
+                "name": "PowerShell Profile",
+                "display": false
+            },
+            {
+                "mitre_id": "T1138",
+                "name": "Application Shimming",
+                "display": false
+            },
+            {
+                "mitre_id": "T1015",
+                "name": "Accessibility Features",
+                "display": false
+            },
+            {
+                "mitre_id": "T1502",
+                "name": "Parent PID Spoofing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1169",
+                "name": "Sudo",
+                "display": false
+            },
+            {
+                "mitre_id": "T1098",
+                "name": "Account Manipulation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1157",
+                "name": "Dylib Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1574",
+                "name": "Hijack Execution Flow",
+                "display": false
+            },
+            {
+                "mitre_id": "T1078",
+                "name": "Valid Accounts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1068",
+                "name": "Exploitation for Privilege Escalation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1546",
+                "name": "Event Triggered Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1166",
+                "name": "Setuid and Setgid",
+                "display": false
+            },
+            {
+                "mitre_id": "T1100",
+                "name": "Web Shell",
+                "display": false
+            },
+            {
+                "mitre_id": "T1034",
+                "name": "Path Interception",
+                "display": false
+            },
+            {
+                "mitre_id": "T1088",
+                "name": "Bypass User Account Control",
+                "display": false
+            },
+            {
+                "mitre_id": "T1519",
+                "name": "Emond",
+                "display": false
+            },
+            {
+                "mitre_id": "T1134",
+                "name": "Access Token Manipulation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1160",
+                "name": "Launch Daemon",
+                "display": false
+            },
+            {
+                "mitre_id": "T1484",
+                "name": "Domain or Tenant Policy Modification",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0008",
+        "name": "Lateral Movement",
+        "display": false,
+        "techniques_count": 20,
+        "techniques": [
+            {
+                "mitre_id": "T1080",
+                "name": "Taint Shared Content",
+                "display": false
+            },
+            {
+                "mitre_id": "T1527",
+                "name": "Application Access Token",
+                "display": false
+            },
+            {
+                "mitre_id": "T1017",
+                "name": "Application Deployment Software",
+                "display": false
+            },
+            {
+                "mitre_id": "T1091",
+                "name": "Replication Through Removable Media",
+                "display": false
+            },
+            {
+                "mitre_id": "T1550",
+                "name": "Use Alternate Authentication Material",
+                "display": false
+            },
+            {
+                "mitre_id": "T1076",
+                "name": "Remote Desktop Protocol",
+                "display": false
+            },
+            {
+                "mitre_id": "T1021",
+                "name": "Remote Services",
+                "display": false
+            },
+            {
+                "mitre_id": "T1563",
+                "name": "Remote Service Session Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1175",
+                "name": "Component Object Model and Distributed COM",
+                "display": false
+            },
+            {
+                "mitre_id": "T1051",
+                "name": "Shared Webroot",
+                "display": false
+            },
+            {
+                "mitre_id": "T1072",
+                "name": "Software Deployment Tools",
+                "display": false
+            },
+            {
+                "mitre_id": "T1210",
+                "name": "Exploitation of Remote Services",
+                "display": false
+            },
+            {
+                "mitre_id": "T1534",
+                "name": "Internal Spearphishing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1097",
+                "name": "Pass the Ticket",
+                "display": false
+            },
+            {
+                "mitre_id": "T1570",
+                "name": "Lateral Tool Transfer",
+                "display": false
+            },
+            {
+                "mitre_id": "T1184",
+                "name": "SSH Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1075",
+                "name": "Pass the Hash",
+                "display": false
+            },
+            {
+                "mitre_id": "T1028",
+                "name": "Windows Remote Management",
+                "display": false
+            },
+            {
+                "mitre_id": "T1506",
+                "name": "Web Session Cookie",
+                "display": false
+            },
+            {
+                "mitre_id": "T1077",
+                "name": "Windows Admin Shares",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0005",
+        "name": "Defense Evasion",
+        "display": false,
+        "techniques_count": 89,
+        "techniques": [
+            {
+                "mitre_id": "T1066",
+                "name": "Indicator Removal from Tools",
+                "display": false
+            },
+            {
+                "mitre_id": "T1143",
+                "name": "Hidden Window",
+                "display": false
+            },
+            {
+                "mitre_id": "T1150",
+                "name": "Plist Modification",
+                "display": false
+            },
+            {
+                "mitre_id": "T1148",
+                "name": "HISTCONTROL",
+                "display": false
+            },
+            {
+                "mitre_id": "T1006",
+                "name": "Direct Volume Access",
+                "display": false
+            },
+            {
+                "mitre_id": "T1014",
+                "name": "Rootkit",
+                "display": false
+            },
+            {
+                "mitre_id": "T1109",
+                "name": "Component Firmware",
+                "display": false
+            },
+            {
+                "mitre_id": "T1099",
+                "name": "Timestomp",
+                "display": false
+            },
+            {
+                "mitre_id": "T1578",
+                "name": "Modify Cloud Compute Infrastructure",
+                "display": false
+            },
+            {
+                "mitre_id": "T1116",
+                "name": "Code Signing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1093",
+                "name": "Process Hollowing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1600",
+                "name": "Weaken Encryption",
+                "display": false
+            },
+            {
+                "mitre_id": "T1121",
+                "name": "Regsvcs/Regasm",
+                "display": false
+            },
+            {
+                "mitre_id": "T1564",
+                "name": "Hide Artifacts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1527",
+                "name": "Application Access Token",
+                "display": false
+            },
+            {
+                "mitre_id": "T1089",
+                "name": "Disabling Security Tools",
+                "display": false
+            },
+            {
+                "mitre_id": "T1202",
+                "name": "Indirect Command Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1536",
+                "name": "Revert Cloud Instance",
+                "display": false
+            },
+            {
+                "mitre_id": "T1140",
+                "name": "Deobfuscate/Decode Files or Information",
+                "display": false
+            },
+            {
+                "mitre_id": "T1562",
+                "name": "Impair Defenses",
+                "display": false
+            },
+            {
+                "mitre_id": "T1036",
+                "name": "Masquerading",
+                "display": false
+            },
+            {
+                "mitre_id": "T1055",
+                "name": "Process Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1205",
+                "name": "Traffic Signaling",
+                "display": false
+            },
+            {
+                "mitre_id": "T1218",
+                "name": "System Binary Proxy Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1038",
+                "name": "DLL Search Order Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1620",
+                "name": "Reflective Code Loading",
+                "display": false
+            },
+            {
+                "mitre_id": "T1009",
+                "name": "Binary Padding",
+                "display": false
+            },
+            {
+                "mitre_id": "T1550",
+                "name": "Use Alternate Authentication Material",
+                "display": false
+            },
+            {
+                "mitre_id": "T1181",
+                "name": "Extra Window Memory Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1152",
+                "name": "Launchctl",
+                "display": false
+            },
+            {
+                "mitre_id": "T1207",
+                "name": "Rogue Domain Controller",
+                "display": false
+            },
+            {
+                "mitre_id": "T1610",
+                "name": "Deploy Container",
+                "display": false
+            },
+            {
+                "mitre_id": "T1107",
+                "name": "File Deletion",
+                "display": false
+            },
+            {
+                "mitre_id": "T1112",
+                "name": "Modify Registry",
+                "display": false
+            },
+            {
+                "mitre_id": "T1535",
+                "name": "Unused/Unsupported Cloud Regions",
+                "display": false
+            },
+            {
+                "mitre_id": "T1183",
+                "name": "Image File Execution Options Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1085",
+                "name": "Rundll32",
+                "display": false
+            },
+            {
+                "mitre_id": "T1222",
+                "name": "File and Directory Permissions Modification",
+                "display": false
+            },
+            {
+                "mitre_id": "T1548",
+                "name": "Abuse Elevation Control Mechanism",
+                "display": false
+            },
+            {
+                "mitre_id": "T1117",
+                "name": "Regsvr32",
+                "display": false
+            },
+            {
+                "mitre_id": "T1054",
+                "name": "Indicator Blocking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1108",
+                "name": "Redundant Access",
+                "display": false
+            },
+            {
+                "mitre_id": "T1144",
+                "name": "Gatekeeper Bypass",
+                "display": false
+            },
+            {
+                "mitre_id": "T1045",
+                "name": "Software Packing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1198",
+                "name": "SIP and Trust Provider Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1070",
+                "name": "Indicator Removal",
+                "display": false
+            },
+            {
+                "mitre_id": "T1647",
+                "name": "Plist File Modification",
+                "display": false
+            },
+            {
+                "mitre_id": "T1191",
+                "name": "CMSTP",
+                "display": false
+            },
+            {
+                "mitre_id": "T1542",
+                "name": "Pre-OS Boot",
+                "display": false
+            },
+            {
+                "mitre_id": "T1064",
+                "name": "Scripting",
+                "display": false
+            },
+            {
+                "mitre_id": "T1612",
+                "name": "Build Image on Host",
+                "display": false
+            },
+            {
+                "mitre_id": "T1497",
+                "name": "Virtualization/Sandbox Evasion",
+                "display": false
+            },
+            {
+                "mitre_id": "T1480",
+                "name": "Execution Guardrails",
+                "display": false
+            },
+            {
+                "mitre_id": "T1196",
+                "name": "Control Panel Items",
+                "display": false
+            },
+            {
+                "mitre_id": "T1122",
+                "name": "Component Object Model Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1502",
+                "name": "Parent PID Spoofing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1149",
+                "name": "LC_MAIN Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1170",
+                "name": "Mshta",
+                "display": false
+            },
+            {
+                "mitre_id": "T1601",
+                "name": "Modify System Image",
+                "display": false
+            },
+            {
+                "mitre_id": "T1574",
+                "name": "Hijack Execution Flow",
+                "display": false
+            },
+            {
+                "mitre_id": "T1078",
+                "name": "Valid Accounts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1073",
+                "name": "DLL Side-Loading",
+                "display": false
+            },
+            {
+                "mitre_id": "T1027",
+                "name": "Obfuscated Files or Information",
+                "display": false
+            },
+            {
+                "mitre_id": "T1599",
+                "name": "Network Boundary Bridging",
+                "display": false
+            },
+            {
+                "mitre_id": "T1553",
+                "name": "Subvert Trust Controls",
+                "display": false
+            },
+            {
+                "mitre_id": "T1186",
+                "name": "Process Doppelg\u00e4nging",
+                "display": false
+            },
+            {
+                "mitre_id": "T1506",
+                "name": "Web Session Cookie",
+                "display": false
+            },
+            {
+                "mitre_id": "T1197",
+                "name": "BITS Jobs",
+                "display": false
+            },
+            {
+                "mitre_id": "T1656",
+                "name": "Impersonation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1088",
+                "name": "Bypass User Account Control",
+                "display": false
+            },
+            {
+                "mitre_id": "T1147",
+                "name": "Hidden Users",
+                "display": false
+            },
+            {
+                "mitre_id": "T1500",
+                "name": "Compile After Delivery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1223",
+                "name": "Compiled HTML File",
+                "display": false
+            },
+            {
+                "mitre_id": "T1146",
+                "name": "Clear Command History",
+                "display": false
+            },
+            {
+                "mitre_id": "T1130",
+                "name": "Install Root Certificate",
+                "display": false
+            },
+            {
+                "mitre_id": "T1158",
+                "name": "Hidden Files and Directories",
+                "display": false
+            },
+            {
+                "mitre_id": "T1221",
+                "name": "Template Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1134",
+                "name": "Access Token Manipulation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1151",
+                "name": "Space after Filename",
+                "display": false
+            },
+            {
+                "mitre_id": "T1622",
+                "name": "Debugger Evasion",
+                "display": false
+            },
+            {
+                "mitre_id": "T1126",
+                "name": "Network Share Connection Removal",
+                "display": false
+            },
+            {
+                "mitre_id": "T1484",
+                "name": "Domain or Tenant Policy Modification",
+                "display": false
+            },
+            {
+                "mitre_id": "T1220",
+                "name": "XSL Script Processing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1096",
+                "name": "NTFS File Attributes",
+                "display": false
+            },
+            {
+                "mitre_id": "T1556",
+                "name": "Modify Authentication Process",
+                "display": false
+            },
+            {
+                "mitre_id": "T1216",
+                "name": "System Script Proxy Execution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1118",
+                "name": "InstallUtil",
+                "display": false
+            },
+            {
+                "mitre_id": "T1211",
+                "name": "Exploitation for Defense Evasion",
+                "display": false
+            },
+            {
+                "mitre_id": "T1127",
+                "name": "Trusted Developer Utilities Proxy Execution",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0010",
+        "name": "Exfiltration",
+        "display": false,
+        "techniques_count": 11,
+        "techniques": [
+            {
+                "mitre_id": "T1567",
+                "name": "Exfiltration Over Web Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1029",
+                "name": "Scheduled Transfer",
+                "display": false
+            },
+            {
+                "mitre_id": "T1011",
+                "name": "Exfiltration Over Other Network Medium",
+                "display": false
+            },
+            {
+                "mitre_id": "T1020",
+                "name": "Automated Exfiltration",
+                "display": false
+            },
+            {
+                "mitre_id": "T1041",
+                "name": "Exfiltration Over C2 Channel",
+                "display": false
+            },
+            {
+                "mitre_id": "T1048",
+                "name": "Exfiltration Over Alternative Protocol",
+                "display": false
+            },
+            {
+                "mitre_id": "T1002",
+                "name": "Data Compressed",
+                "display": false
+            },
+            {
+                "mitre_id": "T1030",
+                "name": "Data Transfer Size Limits",
+                "display": false
+            },
+            {
+                "mitre_id": "T1537",
+                "name": "Transfer Data to Cloud Account",
+                "display": false
+            },
+            {
+                "mitre_id": "T1022",
+                "name": "Data Encrypted",
+                "display": false
+            },
+            {
+                "mitre_id": "T1052",
+                "name": "Exfiltration Over Physical Medium",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0007",
+        "name": "Discovery",
+        "display": false,
+        "techniques_count": 33,
+        "techniques": [
+            {
+                "mitre_id": "T1033",
+                "name": "System Owner/User Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1613",
+                "name": "Container and Resource Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1069",
+                "name": "Permission Groups Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1615",
+                "name": "Group Policy Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1652",
+                "name": "Device Driver Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1063",
+                "name": "Security Software Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1007",
+                "name": "System Service Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1040",
+                "name": "Network Sniffing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1135",
+                "name": "Network Share Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1120",
+                "name": "Peripheral Device Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1082",
+                "name": "System Information Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1010",
+                "name": "Application Window Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1580",
+                "name": "Cloud Infrastructure Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1217",
+                "name": "Browser Information Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1016",
+                "name": "System Network Configuration Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1087",
+                "name": "Account Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1482",
+                "name": "Domain Trust Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1083",
+                "name": "File and Directory Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1049",
+                "name": "System Network Connections Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1497",
+                "name": "Virtualization/Sandbox Evasion",
+                "display": false
+            },
+            {
+                "mitre_id": "T1619",
+                "name": "Cloud Storage Object Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1654",
+                "name": "Log Enumeration",
+                "display": false
+            },
+            {
+                "mitre_id": "T1057",
+                "name": "Process Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1201",
+                "name": "Password Policy Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1012",
+                "name": "Query Registry",
+                "display": false
+            },
+            {
+                "mitre_id": "T1614",
+                "name": "System Location Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1526",
+                "name": "Cloud Service Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1018",
+                "name": "Remote System Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1046",
+                "name": "Network Service Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1518",
+                "name": "Software Discovery",
+                "display": false
+            },
+            {
+                "mitre_id": "T1538",
+                "name": "Cloud Service Dashboard",
+                "display": false
+            },
+            {
+                "mitre_id": "T1622",
+                "name": "Debugger Evasion",
+                "display": false
+            },
+            {
+                "mitre_id": "T1124",
+                "name": "System Time Discovery",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0009",
+        "name": "Collection",
+        "display": false,
+        "techniques_count": 17,
+        "techniques": [
+            {
+                "mitre_id": "T1113",
+                "name": "Screen Capture",
+                "display": false
+            },
+            {
+                "mitre_id": "T1557",
+                "name": "Adversary-in-the-Middle",
+                "display": false
+            },
+            {
+                "mitre_id": "T1602",
+                "name": "Data from Configuration Repository",
+                "display": false
+            },
+            {
+                "mitre_id": "T1123",
+                "name": "Audio Capture",
+                "display": false
+            },
+            {
+                "mitre_id": "T1114",
+                "name": "Email Collection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1025",
+                "name": "Data from Removable Media",
+                "display": false
+            },
+            {
+                "mitre_id": "T1119",
+                "name": "Automated Collection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1115",
+                "name": "Clipboard Data",
+                "display": false
+            },
+            {
+                "mitre_id": "T1530",
+                "name": "Data from Cloud Storage",
+                "display": false
+            },
+            {
+                "mitre_id": "T1005",
+                "name": "Data from Local System",
+                "display": false
+            },
+            {
+                "mitre_id": "T1560",
+                "name": "Archive Collected Data",
+                "display": false
+            },
+            {
+                "mitre_id": "T1185",
+                "name": "Browser Session Hijacking",
+                "display": false
+            },
+            {
+                "mitre_id": "T1125",
+                "name": "Video Capture",
+                "display": false
+            },
+            {
+                "mitre_id": "T1074",
+                "name": "Data Staged",
+                "display": false
+            },
+            {
+                "mitre_id": "T1039",
+                "name": "Data from Network Shared Drive",
+                "display": false
+            },
+            {
+                "mitre_id": "T1056",
+                "name": "Input Capture",
+                "display": false
+            },
+            {
+                "mitre_id": "T1213",
+                "name": "Data from Information Repositories",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0042",
+        "name": "Resource Development",
+        "display": false,
+        "techniques_count": 8,
+        "techniques": [
+            {
+                "mitre_id": "T1583",
+                "name": "Acquire Infrastructure",
+                "display": false
+            },
+            {
+                "mitre_id": "T1584",
+                "name": "Compromise Infrastructure",
+                "display": false
+            },
+            {
+                "mitre_id": "T1586",
+                "name": "Compromise Accounts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1608",
+                "name": "Stage Capabilities",
+                "display": false
+            },
+            {
+                "mitre_id": "T1585",
+                "name": "Establish Accounts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1588",
+                "name": "Obtain Capabilities",
+                "display": false
+            },
+            {
+                "mitre_id": "T1650",
+                "name": "Acquire Access",
+                "display": false
+            },
+            {
+                "mitre_id": "T1587",
+                "name": "Develop Capabilities",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0043",
+        "name": "Reconnaissance",
+        "display": false,
+        "techniques_count": 10,
+        "techniques": [
+            {
+                "mitre_id": "T1592",
+                "name": "Gather Victim Host Information",
+                "display": false
+            },
+            {
+                "mitre_id": "T1594",
+                "name": "Search Victim-Owned Websites",
+                "display": false
+            },
+            {
+                "mitre_id": "T1589",
+                "name": "Gather Victim Identity Information",
+                "display": false
+            },
+            {
+                "mitre_id": "T1596",
+                "name": "Search Open Technical Databases",
+                "display": false
+            },
+            {
+                "mitre_id": "T1595",
+                "name": "Active Scanning",
+                "display": false
+            },
+            {
+                "mitre_id": "T1591",
+                "name": "Gather Victim Org Information",
+                "display": false
+            },
+            {
+                "mitre_id": "T1590",
+                "name": "Gather Victim Network Information",
+                "display": false
+            },
+            {
+                "mitre_id": "T1593",
+                "name": "Search Open Websites/Domains",
+                "display": false
+            },
+            {
+                "mitre_id": "T1597",
+                "name": "Search Closed Sources",
+                "display": false
+            },
+            {
+                "mitre_id": "T1598",
+                "name": "Phishing for Information",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0011",
+        "name": "Command and Control",
+        "display": false,
+        "techniques_count": 28,
+        "techniques": [
+            {
+                "mitre_id": "T1172",
+                "name": "Domain Fronting",
+                "display": false
+            },
+            {
+                "mitre_id": "T1071",
+                "name": "Application Layer Protocol",
+                "display": false
+            },
+            {
+                "mitre_id": "T1024",
+                "name": "Custom Cryptographic Protocol",
+                "display": false
+            },
+            {
+                "mitre_id": "T1219",
+                "name": "Remote Access Software",
+                "display": false
+            },
+            {
+                "mitre_id": "T1079",
+                "name": "Multilayer Encryption",
+                "display": false
+            },
+            {
+                "mitre_id": "T1659",
+                "name": "Content Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1205",
+                "name": "Traffic Signaling",
+                "display": false
+            },
+            {
+                "mitre_id": "T1032",
+                "name": "Standard Cryptographic Protocol",
+                "display": false
+            },
+            {
+                "mitre_id": "T1572",
+                "name": "Protocol Tunneling",
+                "display": false
+            },
+            {
+                "mitre_id": "T1483",
+                "name": "Domain Generation Algorithms",
+                "display": false
+            },
+            {
+                "mitre_id": "T1092",
+                "name": "Communication Through Removable Media",
+                "display": false
+            },
+            {
+                "mitre_id": "T1090",
+                "name": "Proxy",
+                "display": false
+            },
+            {
+                "mitre_id": "T1568",
+                "name": "Dynamic Resolution",
+                "display": false
+            },
+            {
+                "mitre_id": "T1188",
+                "name": "Multi-hop Proxy",
+                "display": false
+            },
+            {
+                "mitre_id": "T1102",
+                "name": "Web Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1104",
+                "name": "Multi-Stage Channels",
+                "display": false
+            },
+            {
+                "mitre_id": "T1026",
+                "name": "Multiband Communication",
+                "display": false
+            },
+            {
+                "mitre_id": "T1001",
+                "name": "Data Obfuscation",
+                "display": false
+            },
+            {
+                "mitre_id": "T1571",
+                "name": "Non-Standard Port",
+                "display": false
+            },
+            {
+                "mitre_id": "T1573",
+                "name": "Encrypted Channel",
+                "display": false
+            },
+            {
+                "mitre_id": "T1095",
+                "name": "Non-Application Layer Protocol",
+                "display": false
+            },
+            {
+                "mitre_id": "T1065",
+                "name": "Uncommonly Used Port",
+                "display": false
+            },
+            {
+                "mitre_id": "T1132",
+                "name": "Data Encoding",
+                "display": false
+            },
+            {
+                "mitre_id": "T1105",
+                "name": "Ingress Tool Transfer",
+                "display": false
+            },
+            {
+                "mitre_id": "T1665",
+                "name": "Hide Infrastructure",
+                "display": false
+            },
+            {
+                "mitre_id": "T1008",
+                "name": "Fallback Channels",
+                "display": false
+            },
+            {
+                "mitre_id": "T1094",
+                "name": "Custom Command and Control Protocol",
+                "display": false
+            },
+            {
+                "mitre_id": "T1043",
+                "name": "Commonly Used Port",
+                "display": false
+            }
+        ]
+    },
+    {
+        "mitre_id": "TA0001",
+        "name": "Initial Access",
+        "display": false,
+        "techniques_count": 13,
+        "techniques": [
+            {
+                "mitre_id": "T1133",
+                "name": "External Remote Services",
+                "display": false
+            },
+            {
+                "mitre_id": "T1192",
+                "name": "Spearphishing Link",
+                "display": false
+            },
+            {
+                "mitre_id": "T1091",
+                "name": "Replication Through Removable Media",
+                "display": false
+            },
+            {
+                "mitre_id": "T1195",
+                "name": "Supply Chain Compromise",
+                "display": false
+            },
+            {
+                "mitre_id": "T1190",
+                "name": "Exploit Public-Facing Application",
+                "display": false
+            },
+            {
+                "mitre_id": "T1659",
+                "name": "Content Injection",
+                "display": false
+            },
+            {
+                "mitre_id": "T1193",
+                "name": "Spearphishing Attachment",
+                "display": false
+            },
+            {
+                "mitre_id": "T1199",
+                "name": "Trusted Relationship",
+                "display": false
+            },
+            {
+                "mitre_id": "T1566",
+                "name": "Phishing",
+                "display": false
+            },
+            {
+                "mitre_id": "T1078",
+                "name": "Valid Accounts",
+                "display": false
+            },
+            {
+                "mitre_id": "T1194",
+                "name": "Spearphishing via Service",
+                "display": false
+            },
+            {
+                "mitre_id": "T1200",
+                "name": "Hardware Additions",
+                "display": false
+            },
+            {
+                "mitre_id": "T1189",
+                "name": "Drive-by Compromise",
+                "display": false
+            }
+        ]
+    }
+]

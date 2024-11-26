@@ -25,7 +25,7 @@ async def process_logs(message: ConsumerRecord):
     try:
         data = message.value
         print(data)
-        index = "log_data"
+        index = "url_data"
         res = es.index(index = index , body = data) 
         logger.info(f' the responce after saving the data is : - {res} ')
     except Exception as e:
