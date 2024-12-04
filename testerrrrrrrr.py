@@ -8,40 +8,29 @@ sorted_colors = sorted(list, key=lambda color: sorted_dict[color])
 print(sorted_colors)
 
 
-# new_sorted_dict ={}
-# index = 0
-# for i in list:
-#     value = sorted_dict[i]
-#     print(value)
 
-
-
-{
-    "meta": {
-        "ver": 1
-    },
-    "data": {
-        "value": "metamask.tokenim.ink",
-        "type": "domain",
-        "confidence": "high",
+ip_event = {
+        "value": "45.86.74.243",
+        "type": "ipv4",
+        "confidence": "medium",
         "sources": [
             {
-                "id": "12",
-                "name": "phishtank",
-                "display_name": "PhishTank",
-                "url": "http://www.phishtank.com/phish_detail.php?phish_id=8376954",
-                "confidence": "high",
+                "id": "26",
+                "name": "rstcloud",
+                "display_name": "RST Cloud",
+                "url": "https://raw.githubusercontent.com/rstcloud/rstthreats/master/feeds/full/random100_ioc_ip_latest.json",
+                "confidence": "medium",
                 "type": "open_feed",
-                "time": "2023-12-02T19:25:03.278296"
+                "time": "2023-12-13T00:03:37.288355"
             }
         ],
-        "score": 80,
-        "verdict": "malicious",
+        "score": 68,
+        "verdict": "suspicious",
         "approved": False,
         "malwares": [
             {
                 "reported_source": {
-                    "name": "phishtank",
+                    "name": "rstcloud",
                     "sr_reviewed": None,
                     "reported_time": "2024-01-07T11:31:21.220030",
                     "type": "open_feed",
@@ -55,7 +44,7 @@ print(sorted_colors)
                 "value": "Follina",
                 "reported_cves": "CVE-2022-0732",
                 "reported_source": {
-                    "name": "phishtank",
+                    "name": "rstcloud",
                     "reported_time": "2024-02-15T21:21:30.153664",
                     "confidence": "low",
                     "type": "open_feed",
@@ -67,7 +56,7 @@ print(sorted_colors)
             {
                 "value": "LV Ransomware Group",
                 "reported_source": {
-                    "name": "phishtank",
+                    "name": "rstcloud",
                     "reported_time": "2023-03-29T11:36:56.951523",
                     "confidence": "high",
                     "type": "open_feed",
@@ -79,7 +68,7 @@ print(sorted_colors)
             {
                 "stage": "",
                 "reported_source": {
-                    "name": "phishtank",
+                    "name": "rstcloud",
                     "reported_time": "2023-12-02T19:25:03.278393",
                     "confidence": "high",
                     "type": "open_feed",
@@ -93,7 +82,7 @@ print(sorted_colors)
                 "reported_source": {
                     "sr_reviewed": None,
                     "confidence": "high",
-                    "name": "phishtank",
+                    "name": "rstcloud",
                     "reported_time": "2023-12-02T15:10:33.417572",
                     "type": "open_feed"
                 },
@@ -104,88 +93,126 @@ print(sorted_colors)
             "STA4090"
         ],
         "tags": [
-            "cobalt_strike"
+            "cobalt_strike",
+            "malware"
         ],
-        "first_seen": "2023-11-27T21:58:03.600000",
-        "last_seen": "2023-11-27T22:23:04.700000",
+        "first_seen": "2023-03-13T00:00:00.909823",
+        "last_seen": "2023-12-10T00:00:00.746659",
         "raw": [
             {
-                "phishtank": {
-                    "phish_id": 8376954,
-                    "url": "http://metamask.tokenim.ink",
-                    "phish_detail_url": "http://www.phishtank.com/phish_detail.php?phish_id=8376954",
-                    "submission_time": "2023-11-27T21:58:36+00:00",
-                    "verified": "yes",
-                    "verification_time": "2023-11-27T22:23:47+00:00",
-                    "online": "yes",
-                    "details": [
-                        {
-                            "ip_address": "194.124.216.137",
-                            "cidr_block": "194.124.216.0/24",
-                            "announcing_network": "3214",
-                            "rir": "ripencc",
-                            "country": "DE",
-                            "detail_time": "2023-11-27T22:13:29+00:00"
-                        }
+                "RST_Cloud_IP": {
+                    "ip": {
+                        "v4": "45.86.74.243",
+                        "num": 760630003
+                    },
+                    "ports": [
+                        8080
                     ],
-                    "target": "Other"
+                    "fseen": 1678665600,
+                    "lseen": 1702166400,
+                    "collect": 1702252800,
+                    "src": {
+                        "name": [
+                            "github_repos"
+                        ],
+                        "report": "https://github.com/stamparm/maltrail"
+                    },
+                    "tags": {
+                        "str": [
+                            "malware"
+                        ],
+                        "codes": [
+                            10
+                        ]
+                    },
+                    "asn": {
+                        "num": 44477,
+                        "firstip": {
+                            "netv4": "45.86.74.0",
+                            "num": 760629760
+                        },
+                        "lastip": {
+                            "netv4": "45.86.79.255",
+                            "num": 760631295
+                        },
+                        "cloud": "",
+                        "domains": 55899,
+                        "org": "",
+                        "isp": "STARKINDUSTRIES"
+                    },
+                    "geo": {
+                        "city": "Manila",
+                        "country": "Philippines",
+                        "region": "Metro Manila"
+                    },
+                    "related": {
+                        "domains": []
+                    },
+                    "score": {
+                        "total": 6,
+                        "src": 68.04,
+                        "tags": 0.89,
+                        "frequency": 0.1
+                    },
+                    "fp": {
+                        "alarm": "False",
+                        "descr": ""
+                    },
+                    "threat": [
+                        "cobalt_strike"
+                    ],
+                    "cve": [],
+                    "industry": [],
+                    "ttp": [],
+                    "id": "90e8a60a-a026-30fc-9d4e-33f4f361ce5b",
+                    "title": "RST Threat feed. IOC: 45.86.74.243",
+                    "description": "IOC with tags: malware. Related threats: cobalt_strike"
                 }
             }
         ],
         "analysis": {
-            "status": [
+            "status": [],
+            "verdict": [
                 {
-                    "value": "online",
+                    "value": "suspicious",
                     "reported_source": {
-                        "name": "phishtank",
-                        "reported_time": "2023-12-02T19:25:03.278478",
-                        "confidence": "high",
+                        "name": "rstcloud",
+                        "reported_time": "2023-12-13T00:03:37.288491",
+                        "confidence": "medium",
                         "type": "open_feed",
                         "sr_reviewed": False
                     }
                 }
             ],
-            "verdict": [
-                {
-                    "value": "malicious",
-                    "reported_source": {
-                        "name": "phishtank",
-                        "reported_time": "2023-12-02T19:25:03.278517",
-                        "confidence": "high",
-                        "type": "open_feed",
-                        "sr_reviewed": True
-                    }
-                }
-            ],
             "confidence": [
                 {
-                    "value": "high",
+                    "value": "medium",
                     "reported_source": {
-                        "name": "phishtank",
-                        "reported_time": "2023-12-02T19:25:03.278555",
-                        "confidence": "high",
+                        "name": "rstcloud",
+                        "reported_time": "2023-12-13T00:03:37.288537",
+                        "confidence": "medium",
                         "type": "open_feed",
-                        "sr_reviewed": True
+                        "sr_reviewed": False
                     }
                 }
             ],
             "score": [
                 {
-                    "value": "80",
+                    "value": "68.04",
                     "reported_source": {
-                        "name": "phishtank",
-                        "reported_time": "2023-12-02T19:25:03.278603",
-                        "confidence": "high",
+                        "name": "rstcloud",
+                        "reported_time": "2023-12-13T00:03:37.288567",
+                        "confidence": "medium",
                         "type": "open_feed",
-                        "sr_reviewed": True
+                        "sr_reviewed": False
                     }
                 }
             ]
         },
         "presence_index": {},
         "mitigation_rules": [],
-        "first_crawled": "2023-12-02T19:25:03.806660",
-        "last_crawled": "2023-12-02T19:25:03.806663",
+        "first_crawled": "2023-12-13T00:03:37.288582",
+        "last_crawled": "2023-12-13T00:03:37.288582",
         "mitre_ttp": [
             {
                 "tac_id": "TA0008",
@@ -240,25 +267,76 @@ print(sorted_colors)
                 ]
             }
         ],
-        "dga_info": {},
-        "domain_reputation": [],
-        "infrastructure_info": {
-            "cousin_domains": None,
-            "resolving_ip": [
-                {
-                    "ip": {
-                        "value": "194.124.216.137",
-                        "time": "2023-12-02T19:25:03.278688"
-                    }
-                }
-            ],
-            "dnsbl_info": None,
-            "infra_tag": None,
-            "mx_info": None,
-            "ns_reputation": None,
-            "sibling_domains": None
+        "status": "offline",
+        "infra_info": {},
+        "location_info": {
+            "continent_code": "NA",
+            "continent_name": "North America",
+            "country_code": "US",
+            "country_name": "United States",
+            "country_is_in_european_union": None,
+            "city": "Los Angeles",
+            "region": "",
+            "region_code": "",
+            "country_code_iso3": "",
+            "country_capital": "",
+            "country_tld": "",
+            "postal": "90009",
+            "latitude": 34.0544,
+            "longitude": -118.244,
+            "timezone": "America/Los_Angeles",
+            "utc_offset": "",
+            "country_calling_code": "",
+            "currency": "",
+            "currency_name": "",
+            "languages": [],
+            "country_area": None,
+            "country_population": None
         },
-        "status": "online",
+        "ip_type": "public",
+        "ip_class": "A",
+        "ip_history": [],
+        "infra_security": {},
+        "os_fingerprinting": {},
+        "subnet_info": {
+            "subnet": "45.86.64.0/20",
+            "subnet_allocation_age": None,
+            "subnet_allocation_date": "",
+            "subnet_reputation": None,
+            "subnet_reputation_score": None,
+            "subnet_density": {}
+        },
+        "asn_info": {
+            "asn": 35913,
+            "asn_allocation_age": None,
+            "asn_allocation_date": "",
+            "asn_rank": None,
+            "asn_rank_score": None,
+            "asn_reputation": None,
+            "asn_reputation_score": None,
+            "asn_takedown_reputation": None,
+            "asn_takedown_reputation_score": None,
+            "asname": "DEDIPATH-LLC",
+            "date": "",
+            "density": None,
+            "ips_in_asn": None,
+            "ips_num_active": None,
+            "ips_num_listed": None,
+            "asn_reputation_explanation": {}
+        },
+        "open_ports": [
+            {
+                "port": 8080,
+                "type": ""
+            }
+        ],
+        "host": {
+            "value": "45.86.74.243",
+            "type": "ipv4",
+            "category": "ip",
+            "port": None
+        },
+        "content_serving": {},
         "files_downloaded": [
             {
                 "object": {
@@ -273,13 +351,6 @@ print(sorted_colors)
                     "imp_hash": "",
                     "telfhash": "",
                     "md5": ""
-                }
-            }
-        ],
-        "child_urls": [
-            {
-                "url": {
-                    "value": "http://metamask.tokenim.ink"
                 }
             }
         ],
@@ -300,76 +371,56 @@ print(sorted_colors)
                 }
             }
         ],
-        "passive_dns": [],
-        "typosquat_info": {},
-        "idn_info": {
-            "is_idn": False,
-            "punycode": ""
-        },
-        "tld_info": {
-            "value": ".ink"
-        },
-        "open_ports": [
+        "associated_urls": [
             {
-                "port": 39901,
-                "type": ""
+                "url": {
+                    "value": "http://36.49.34.150:12225/.i"
+                }
             }
         ],
-        "host": {
-            "value": "metamask.tokenim.ink",
-            "type": "domain",
-            "category": "subdomain",
-            "port": None
-        },
-        "ssl_certificate": {},
-        "hierarchical_dns_analysis": {},
-        "passive_content_analysis": {},
-        "domain_whois": {
-            "address": "REDACTED FOR PRIVACY",
-            "city": "REDACTED FOR PRIVACY",
-            "country": "CN",
-            "state": "Guizhou",
-            "domain": "metamask.tokenim.ink",
-            "creation_date": "2023-09-26 17:23:00.100000",
-            "expiration_date": "2024-09-26 17:23:00.100000",
-            "name": "metamask.tokenim.ink",
-            "epp_status": [
-                "clientHold",
-                "clientTransferProhibited",
-                "clientTransferProhibited",
-                "clientHold"
-            ],
+        "ip_whois": {
+            "address": "",
+            "city": "",
+            "country": "",
+            "state": "",
+            "reverse_dns": [],
+            "creation_date": None,
+            "expiration_date": None,
+            "name": "45.86.74.243",
+            "epp_status": [],
             "emails": [
-                "kf@zzy.cn"
+                "hostmaster@ripe.net",
+                "abuse@ripe.net"
             ],
-            "whois_server": "whois.zzy.cn",
+            "whois_server": "",
             "zip_code": None,
-            "name_servers": [
-                "ns1.cnolnic.net",
-                "ns2.cnolnic.net"
-            ],
+            "name_servers": [],
             "organization": "",
             "registrar": {
-                "Registrar_WHOIS_Server": "whois.zzy.cn",
+                "Registrar_WHOIS_Server": "",
                 "Registrar_url": "",
-                "Registrar_name": "XIAMEN CHINASOURCE INTERNET SERVICE CO., LTD.",
+                "Registrar_name": "",
                 "Registrar_organization": "",
                 "Registrar_location": {},
                 "Registrar_status": "",
                 "Registrar_IANA_id": ""
             },
-            "dnssec": [
-                "unsigned"
-            ],
-            "updated_at": "2023-11-28 01:12:04.400000"
+            "referral_url": "",
+            "dnssec": [],
+            "registry_domain_url_id": "",
+            "updated_at": None
+        },
+        "isp": {
+            "isp_name": "Stark Industries Solutions LTD",
+            "country": "Philippines",
+            "date": "2023-12-13T00:03:36.804675"
         },
         "artifact_validation": [
             {
                 "benign": False,
                 "whitelisted": False,
                 "is_deployable": True,
-                "domain_rank": None,
-                "date": "2023-12-02T19:25:03.278894",
+                "date": "2023-12-13T00:03:37.288985",
                 "compromised": False,
                 "is_fp": False,
                 "forcefully_malicious": None,
@@ -377,6 +428,4 @@ print(sorted_colors)
             }
         ]
     }
-}
-
 

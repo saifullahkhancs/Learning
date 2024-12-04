@@ -1,184 +1,3 @@
-# from pydantic import BaseModel , Field
-# from typing import Optional
-# from bson import ObjectId
-# from datetime import datetime
-# from typing import Optional, List, Dict
-
-# class Source(BaseModel):
-#     id: int
-#     name: str
-#     display_name:	str
-#     url	: str
-#     confidence:str
-#     type: str
-#     time: datetime
-
-# class Reported_Source(BaseModel):
-#     name: str
-#     sr_reviewed: Optional[str]
-#     reported_time: datetime
-#     type: str
-#     confidence: str
-
-
-# class Malware(BaseModel):
-#     value: str
-   
-
-# class Vulnerability(BaseModel):
-#     value: str
-#     reported_cves : str
-#     reported_source : Optional[list[Reported_Source]]
-    
-# class Threat_Actors(BaseModel):
-#     value : str
-#     reported_source : Optional[list[Reported_Source]]
-    
-# class Threat(BaseModel):
-#     stage : str
-#     threat_type: str
-#     reported_source : Optional[list[Reported_Source]]
-
-# class Tool(BaseModel):
-#     value : str
-#     reported_source : Optional[list[Reported_Source]]
-
-# class Urlhaus(BaseModel):
-#     id	:	int
-#     urlhaus_reference: str  
-#     url: str
-#     url_status:str
-#     host:str
-#     date_added:	datetime
-#     threat	:	str
-#     blacklists: Optional[Dict[str, str]]
-#     reporter: str
-#     larted : bool
-#     tags: Optional[list[str]]
-
-# class Status(BaseModel):
-#     value : str
-#     reported_source : Optional[list[Reported_Source]]
-
-# class Verdict(BaseModel):
-#     value : str
-#     reported_source : Optional[list[Reported_Source]]
-
-# class Confidence(BaseModel):
-#     value : str
-#     reported_source : Optional[list[Reported_Source]]
-# class Score(BaseModel):
-#     value : str
-#     reported_source : Optional[list[Reported_Source]]
-
-# class Analysis(BaseModel):
-#     status:	Status	
-#     verdict: Verdict		
-#     confidence: Confidence
-#     score: Score
-
-# class Presence_Index(BaseModel):
-#     value: str
-
-# class Technique(BaseModel):
-#     tech_id : str
-#     tech_name : str
-
-# class Tactic(BaseModel):
-#     tac_id : str
-#     tac_name : str
-#     tech: Optional[list[Technique]]
-
-# class Associated_Threat_Campaigns(BaseModel):
-#     campaign_name: str
-#     target : str 
-#     attack_origin : Optional[List[str]]
-#     targeted_region : Optional[List[str]]
-#     targeted_country : Optional[List[str]]
-#     targeted_industry : Optional[List[str]]
-#     targeted_sector : Optional[List[str]]
-#     sources : Optional[list[Source]]
-
-# class Host(BaseModel):
-#     type: str
-#     category:str
-#     port: Optional[int]
-#     value:str
-
-# class Open_Port(BaseModel):
-#     port : int
-#     typr : Optional[str]
-
-# class Object_Info(BaseModel):
-#     value:str
-# class Object(BaseModel):
-#     sha1: Optional[str]	
-#     sha256:	Optional[str]	
-#     object_info: Optional[Object_Info]
-#     sha3_384: Optional[str]	
-#     ss_deep:Optional[str]		
-#     sha512:	Optional[str]	
-#     tlsh: Optional[str]		
-#     vhash: Optional[str]		
-#     imp_hash: Optional[str]		
-#     telfhash: Optional[str]		
-#     md5: Optional[str]	
-
-
-# class Http_Response(BaseModel):
-#     value : str
-# class Url(BaseModel):
-
-#     value: str
-#     type: str
-#     confidence: str
-#     source: Optional[list[Source]]
-#     score	: int
-#     verdict	: str
-#     approved: bool
-#     malwares: Optional[list[Vulnerability]]
-#     threat_actors : Optional[list[Threat_Actors]]
-#     threat : Optional[list[Threat]]
-#     tools : Optional[list[Tool]]
-#     strikes : Optional[list[str]]
-#     tags : Optional[list[str]]
-#     first_seen: datetime	
-#     last_seen: datetime
-#     raw : Urlhaus
-#     analysis : Optional[list[Analysis]]
-#     presence_index : Optional[Presence_Index]
-#     mitigation_rules : Optional[List[str]]
-#     first_crawled : datetime
-#     last_crawled  :datetime
-#     mitre_ttp : Optional[list[Tactic]]
-#     tlp	: str
-#     whitelisted_check: bool
-#     internal_raw_osint: bool
-#     internal_allow_sync	:	bool
-#     associated_threat_campaigns : Optional[List[Associated_Threat_Campaigns]] 
-#     status: str
-#     uri: str
-#     host : Optional[Host]
-#     larted : bool
-#     open_ports : Optional[list[Open_Port]]
-#     files_downloaded:Optional[list[Object]]
-#     http_response : Optional[Http_Response]
-#     shortened : Optional[shortened]
-
-
-
-# class LogResponce(BaseModel):
-
-#     id: Optional[str] = None  # ObjectId will be converted to string
-#     name: str
-#     phone_number : str | None
-
-#     class Config:
-#          json_encoders = {
-#             ObjectId: str  # Automatically converts ObjectId to string
-#         }
-    
-
 import json
 from typing import Optional, Union, List
 from typing_extensions import Literal
@@ -501,6 +320,7 @@ class Domain(Artifact):
     url: Optional[list]
     ipv4: Optional[list]
     email: Optional[list]
+    ip: Optional[list[str]]
 
 
 class Email(Artifact):
@@ -547,6 +367,9 @@ class Object(Artifact):
     node_type: Optional[str]
     size: Optional[float]
     file_type: Optional[list]
+    ip: Optional[List[str]]
+    url: Optional[List[str]]
+    domain: Optional[List[str]]
 
     @root_validator(skip_on_failure=True)
     def add_entity(cls, values):

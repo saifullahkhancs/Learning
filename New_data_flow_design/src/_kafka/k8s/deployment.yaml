@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: threat-landscape-subscription-worker
+  namespace: intelligence
+  labels:
+    name: threat-landscape-subscription-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: threat-landscape-subscription-worker
+  template:
+    metadata:
+      name: threat-landscape-subscription-worker
+      labels:
+        name: threat-landscape-subscription-worker
+    spec:
+      containers:
+        - name: threat-landscape-subscription-worker
+          image: gcr.io/us-staging-237601/threat-landscape-subscription-worker:1.0.0
+          imagePullPolicy: Always
+          env:
+             - name: WORKER_ENV
+               valueFrom:
+                configMapKeyRef:
+                  name: env-config
+                  key: CLUSTER_NAME
+             - name: CLOUD_PROVIDER
+               valueFrom:
+                configMapKeyRef:
+                  name: env-config
+                  key: CLOUD_PROVIDER
+             - name: DEBUG
+               value: "true"
+             - name: KAFKA_INTERNAL_BOOTSTRAP_SERVERS
+               value: kafka-internal-0.kafka-cluster:9094,kafka-internal-1.kafka-cluster:9094,kafka-internal-2.kafka-cluster:9094
+             - name: KAFKA_INTERNAL_USER
+               valueFrom:
+                 secretKeyRef:
+                   name: threat-landscape-subscription-worker
+                   key: KAFKA_INTERNAL_USER
+                   optional: true
+             - name: KAFKA_INTERNAL_PASSWORD
+               valueFrom:
+                 secretKeyRef:
+                   name: threat-landscape-subscription-worker
+                   key: KAFKA_INTERNAL_PASSWORD
+                   optional: true
+             - name: TOPIC
+               value: threat_advisories
+             - name: KAFKA_INTERNAL_GROUP
+               value: check_subscriptions_trunk
+             - name : JOB_SERVICE_URL
+               value : http://jobs-service-v2.workflows:37000/jobs/api/v4/plans/internal/threat-landscape
+          

@@ -1,7 +1,7 @@
 import asyncio
 
 from aiokafka import AIOKafkaConsumer
-import config
+import  config
 from utils import run_in_threadpool
 from .deserializers import json_deserializer
 from logger import get_logger

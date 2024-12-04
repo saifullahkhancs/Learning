@@ -25725,8 +25725,10 @@ kb_event = {
 data77 = {'meta': {'ver': 1.0}, 'data': {'name': 'cve-2023-3987', 'cve_title': None, 'cve_state': 'active', 'patch_information': None, 'displayName': 'CVE-2023-3987', 'description': 'A vulnerability was found in SourceCodester Simple Online Mens Salon Management System 1.0. It has been classified as critical. Affected is an unknown function of the file /admin/?page=user/manage_user&id=3. The manipulation of the argument id leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-235608.', 'publishedDate': '2023-07-28T06:15Z', 'cweNumber': 'CWE-89', 'cweName': '', 'otherName': '', 'tags': ['Permissions Required', 'Exploit', 'Third Party Advisory', 'VDB Entry'], 'refs': ['https://vuldb.com/?ctiid.235608', "https://github.com/draco1725/POC/blob/main/Exploit/Simple%20Online%20Men's%20Salon%20Management%20System/SQL%20Injection", 'https://vuldb.com/?id.235608'], 'vectorString': 'CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H', 'attackVector': 'NETWORK', 'attackComplexity': 'LOW', 'privilegesRequired': 'NONE', 'userInteraction': 'NONE', 'scope': 'UNCHANGED', 'confidentialityImpact': 'HIGH', 'integrityImpact': 'HIGH', 'availabilityImpact': 'HIGH', 'baseScore': '9.8', 'baseSeverity': 'CRITICAL', 'cpe': [{'cpe23uri': 'cpe:2.3:a:simple_online_mens_salon_management_system_project:simple_online_mens_salon_management_system:1.0:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '', 'operator': '', 'base_cpe': []}], 'recentArticles': '', 'vectorString2': '', 'accessVector2': '', 'accessComplexity2': '', 'authentication2': '', 'confidentialityImpact2': '', 'integrityImpact2': '', 'availabilityImpact2': '', 'baseScore2': '', 'Severity2': None, 'exploitabilityScore2': '', 'impactScore2': '', 'vendor': [], 'product': [], 'version': [], 'cwe': [], 'createdOn': [], 'exploitedInStrike': [], 'exploitedInTransaction': [], 'mentionedInNews': [], 'hasAlias': [], 'ips': [], 'domains': [], 'urls': [], 'authentiHash': [], 'md5': [], 'sha1': [], 'sha256': [], 'sha512': [], 'ssDeep': [], 'vHash': [], 'impHash': None, 'approved': True, 'approved_by': 'default', 'added_on': 1691110929.545181, 'submitted_by': 'nvd', 'type': 'vulnerability', 'source': {'name': 'NVD', 'timestamp': 0, 'month': '', 'year': '2023', 'type': 'nvd'}, 'exploitabilityScore': '', 'impactScore': '', 'patchable': False, 'exploitable': None, 'zero_day': False, 'exploit_maturity': '', 'check': 'cves', 'vulnerability_type': [], 'public_exposure': None, 'cve_patch': ''}}
 data77 = {'meta': {'ver': 1.0}, 'data': {'name': 'CVE-2023-3733', 'cve_title': 'Chromium: CVE-2023-3733 Inappropriate implementation in WebApp Installs', 'cve_state': '', 'patch_information': '\nProduct/s:\nMicrosoft Edge (Chromium-based)\nRemedy:\nUpgrade to Version 115.0.1901.183\n', 'displayName': '', 'description': 'This CVE was assigned by Chrome.  Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see Google Chrome Releases for more information.\n', 'publishedDate': '', 'cweNumber': '', 'cweName': '', 'otherName': '', 'tags': ['Patch Tuesday', 'Microsoft', 'Patch Available'], 'refs': ['https://msrc.microsoft.com/update-guide'], 'vectorString': '', 'attackVector': '', 'attackComplexity': '', 'privilegesRequired': '', 'userInteraction': '', 'scope': '', 'confidentialityImpact': '', 'integrityImpact': '', 'availabilityImpact': '', 'baseScore': '', 'baseSeverity': 'No_Severity', 'cpe': [{'cpe23uri': 'cpe:2.3:a:microsoft:edge:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '', 'operator': '', 'base_cpe': []}, {'cpe23uri': 'cpe:2.3:a:microsoft:edge:*:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': '115.0.1901.183', 'operator': '', 'base_cpe': []}], 'recentArticles': '', 'vectorString2': '', 'accessVector2': '', 'accessComplexity2': '', 'authentication2': '', 'confidentialityImpact2': '', 'integrityImpact2': '', 'availabilityImpact2': '', 'baseScore2': '', 'Severity2': None, 'exploitabilityScore2': '', 'impactScore2': '', 'vendor': [], 'product': [], 'version': [], 'cwe': [], 'createdOn': [], 'exploitedInStrike': [], 'exploitedInTransaction': [], 'mentionedInNews': [], 'hasAlias': [], 'ips': [], 'domains': [], 'urls': [], 'authentiHash': [], 'md5': [], 'sha1': [], 'sha256': [], 'sha512': [], 'ssDeep': [], 'vHash': [], 'impHash': None, 'approved': True, 'approved_by': 'default', 'added_on': 1689984336.100637, 'submitted_by': 'ms_patch_tuesday_crawler', 'type': 'vulnerability', 'source': {'name': 'microsoft', 'timestamp': 1689922800, 'month': 'Jul', 'year': '2023', 'type': 'patch_tuesday'}, 'exploitabilityScore': '', 'impactScore': '', 'patchable': True, 'exploitable': False, 'zero_day': False, 'exploit_maturity': 'No Information', 'check': 'cves', 'vulnerability_type': ['Elevation of Privilege', 'Spoofing'], 'public_exposure': False, 'cve_patch': ''}}
 data77 = {'meta': {'ver': 1.0}, 'data': {'name': 'cve-2023-29984', 'cve_title': None, 'cve_state': 'active', 'patch_information': None, 'displayName': 'CVE-2023-29984', 'description': 'Null pointer dereference vulnerability exists in multiple vendors MFPs and printers which implement Debut web server 1.2 or 1.3. Processing a specially crafted request may lead an affected product to a denial-of-service (DoS) condition. As for the affected products/models/versions, see the detailed information provided by each vendor.', 'publishedDate': '2023-07-11T20:15Z', 'cweNumber': 'CWE-476', 'cweName': '', 'otherName': '', 'tags': ['Third Party Advisory', 'Vendor Advisory', 'Product'], 'refs': ['http://brother.com', 'https://jvn.jp/en/vu/JVNVU93767756/index.html', 'https://www.fujifilm.com/fbglobal/eng/company/news/notice/2023/browser_announce.html'], 'vectorString': 'CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H', 'attackVector': 'NETWORK', 'attackComplexity': 'LOW', 'privilegesRequired': 'NONE', 'userInteraction': 'NONE', 'scope': 'UNCHANGED', 'confidentialityImpact': 'NONE', 'integrityImpact': 'NONE', 'availabilityImpact': 'HIGH', 'baseScore': '7.5', 'baseSeverity': 'HIGH', 'cpe': [{'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m265_z_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'n', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m265_z:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m268_z_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m268_z:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m225_z_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'n', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m225_z:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m225_dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'n', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m225_dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m268_dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m268_dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_p265_dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.21', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_p265_dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_p268_dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.21', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_p268_dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_p268_d_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.21', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_p268_d:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_p225_d_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.17', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_p225_d:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m118_z_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m118_z:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m118_w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m118_w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m115_z_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m115_z:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m115_fw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m115_fw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_m115_w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_m115_w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_p118_w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_p118_w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:fujifilm:docuprint_p115_w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.11', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:fujifilm:docuprint_p115_w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:toshibatec:e-studio_302dnf_firmware:-:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:toshibatec:e-studio_302dnf:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:toshibatec:e-studio_301dn_firmware:-:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:toshibatec:e-studio_301dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1610w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1610w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1610we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1610we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1610wr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1610wr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1610wvb_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1610wvb:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1612w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1612w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1612we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1612we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1612wr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1612wr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1612wvb_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1612wvb:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1615nw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'r', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1615nw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1616nw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'r', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1616nw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1617nw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'r', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1617nw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1618w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1618w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1622we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1622we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1623we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1623we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-1623wr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-1623wr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-7180dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-7180dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j4120dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j4120dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j4220n-b_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j4220n-b:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j4220n-w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j4220n-w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j4225n-b_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'h', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j4225n-b:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j4225n-w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'h', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j4225n-w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j562dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j562dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j562n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j562n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j567n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j567n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j572dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'n', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j572dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j572n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j572n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j577n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j577n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j582n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j582n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j587n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'e', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j587n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j762n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j762n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j767n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j767n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j772dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j772dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j774dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j774dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j785dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'g', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j785dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j962n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j962n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j963n-w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j963n-w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j963n-b_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j963n-b:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j968n-w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j968n-w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j968n-b_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j968n-b:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j972n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j972n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j973n-b_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j973n-b:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j973n-w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j973n-w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j978n-b_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j978n-b:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j978n-w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j978n-w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j981n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j981n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j982n-b_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j982n-b:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j982n-w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j982n-w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j983n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j983n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j987n-b_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'e', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j987n-b:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-j987n-w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'e', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-j987n-w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2520dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2520dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2520dwr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2520dwr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2540dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2540dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2540dnr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2540dnr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2540dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2540dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2540dw\\(japan\\)_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2540dw\\(japan\\):-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2541dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2541dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2560dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2560dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l2560dwr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l2560dwr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-l8410cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'g', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-l8410cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-t510w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-t510w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-t510w\\(china\\)_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-t510w\\(china\\):-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-t710w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-t710w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:dcp-t710w\\(china\\)_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:dcp-t710w\\(china\\):-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:fax-l2700dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'q', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:fax-l2700dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1210w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1210w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1210we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1210we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1210wr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1210wr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1210wvb_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1210wvb:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1211w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1211w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1212w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1212w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1212we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1212we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1212wr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1212wr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1212wvb_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1212wvb:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1218w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1218w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1222we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1222we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1223we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1223we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-1223wr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-1223wr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-2560dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.35', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-2560dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2305w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.24', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2305w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2315dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.24', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2315dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2340dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.26', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2340dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2340dwr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.26', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2340dwr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2360dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.35', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2360dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2360dnr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.35', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2360dnr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2360dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.35', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2360dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2361dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.35', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2361dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2365dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.35', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2365dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2365dwr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.35', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2365dwr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2366dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.35', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2366dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l2380dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l2380dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l8260cdn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.15', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l8260cdn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l8260cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.15', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l8260cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l8360cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l8360cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l8360cdwt_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l8360cdwt:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:hl-l9310cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': '1.20', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:hl-l9310cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-1910w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 't', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-1910w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-1910we_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 't', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-1910we:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-1911nw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 't', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-1911nw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-1911w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 't', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-1911w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-1912wr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 't', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-1912wr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-1915w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 't', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-1915w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-1916nw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 't', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-1916nw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-1919nw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-1919nw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-7880dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'q', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-7880dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j2320_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j2320:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j2330dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j2330dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j2720_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'q', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j2720:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j2730dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'y', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j2730dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j3530dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j3530dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j3930dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j3930dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j4320dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j4320dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j4420dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j4420dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j460dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j460dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j4620dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'u', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j4620dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j4625dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'u', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j4625dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j4720n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j4720n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j4725n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'h', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j4725n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j480dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j480dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j485dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j485dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j491dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j491dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j497dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j497dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5320dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5320dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5330dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5330dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5335dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5335dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5520dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'r', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5520dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5620cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'j', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5620cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5620dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'r', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5620dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5625dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'r', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5625dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5630cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5630cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5720cdw\\(japan\\)_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'j', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5720cdw\\(japan\\):-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5720dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'q', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5720dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5730dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'y', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5730dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5820dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5820dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5830dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'y', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5830dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5920dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'q', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5920dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j5930dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'y', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j5930dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6530dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6530dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6535dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6535dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6580cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'r', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6580cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6583cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6583cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6730dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6730dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j680dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j680dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j690dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j690dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6930dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6930dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6935dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'z', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6935dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6980cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6980cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6983cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6983cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j6995cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j6995cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j730d\\(w\\)n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j730d\\(w\\)n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j737d\\(w\\)n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j737d\\(w\\)n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j738dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j738dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j738dwn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j738dwn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j775dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j775dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j830d\\(w\\)n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j830d\\(w\\)n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j837d\\(w\\)n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j837d\\(w\\)n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j880dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j880dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j880n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j880n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j885dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j885dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j887n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j887n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j890dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j890dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j893n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j893n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j895dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j895dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j898n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j898n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j900d\\(w\\)n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j900d\\(w\\)n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j903n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j903n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j907d\\(w\\)n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'k', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j907d\\(w\\)n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j985dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j985dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j990d\\(w\\)n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j990d\\(w\\)n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j997d\\(w\\)n_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j997d\\(w\\)n:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j998dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j998dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-j998dwn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'l', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-j998dwn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2680w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2680w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2685dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2685dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2700dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2700dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2700dnr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2700dnr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2700dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2700dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2700dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2700dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2700dwr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'x', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2700dwr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2701dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2701dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2703dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2703dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2705dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2705dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2707dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2707dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2720dn_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 's', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2720dn:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2720dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2720dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2720dwr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'w', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2720dwr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2740dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2740dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2740dw\\(japan\\)_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 't', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2740dw\\(japan\\):-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l2740dwr_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'v', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l2740dwr:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l8610cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'g', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l8610cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l8610cdw\\(japan\\)_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'c', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l8610cdw\\(japan\\):-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l8690cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'g', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l8690cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l8900cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'g', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l8900cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l9570cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'g', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l9570cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l9570cdw\\(japan\\)_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'c', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l9570cdw\\(japan\\):-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-l9577cdw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'g', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-l9577cdw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-t810w_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-t810w:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-t810w\\(china\\)_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'm', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-t810w\\(china\\):-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}, {'cpe23uri': 'cpe:2.3:o:brother:mfc-t910dw_firmware:*:*:*:*:*:*:*:*', 'vulnerable': True, 'start_version': '', 'including': '', 'excluding': 'p', 'operator': 'AND', 'base_cpe': [{'cpe23uri': 'cpe:2.3:h:brother:mfc-t910dw:-:*:*:*:*:*:*:*', 'vulnerable': False, 'start_version': '', 'including': '', 'excluding': ''}]}], 'recentArticles': '', 'vectorString2': '', 'accessVector2': '', 'accessComplexity2': '', 'authentication2': '', 'confidentialityImpact2': '', 'integrityImpact2': '', 'availabilityImpact2': '', 'baseScore2': '', 'Severity2': None, 'exploitabilityScore2': '', 'impactScore2': '', 'vendor': [], 'product': [], 'version': [], 'cwe': [], 'createdOn': [], 'exploitedInStrike': [], 'exploitedInTransaction': [], 'mentionedInNews': [], 'hasAlias': [], 'ips': [], 'domains': [], 'urls': [], 'authentiHash': [], 'md5': [], 'sha1': [], 'sha256': [], 'sha512': [], 'ssDeep': [], 'vHash': [], 'impHash': None, 'approved': True, 'approved_by': 'default', 'added_on': 1691024972.255145, 'submitted_by': 'nvd', 'type': 'vulnerability', 'source': {'name': 'NVD', 'timestamp': 0, 'month': '', 'year': '2023', 'type': 'nvd'}, 'exploitabilityScore': '', 'impactScore': '', 'patchable': False, 'exploitable': None, 'zero_day': False, 'exploit_maturity': '', 'check': 'cves', 'vulnerability_type': [], 'public_exposure': None, 'cve_patch': ''}}
-data888 = {"meta":{"timestamp":1691383878727,"username":"neo4j","txId":128882652,"txEventId":2,"txEventsCount":3,"operation":"created","source":{"hostname":"neo4j-cluster-core-1"}},"payload":{"id":"121376494","start":{"id":"152912","labels":["SourceEvent","IP"],"ids":{"name":"85.96.49.152"}},"end":{"id":"5871159","labels":["Source"],"ids":{"hash":"612ea9fceb99c37cf85b236ab7aa436b5de2f90f11e1024a74b73c7a58bdf0bb"}},"before":None,"after":{"properties":{"createdAt":1.691383878295371E9,"reported_time":1.690769577836791E9,"updatedAt":1.691383878295371E9}},"label":"HAS_SOURCE","type":"relationship"},"schema":{"properties":{"createdAt":"Double","reported_time":"Double","updatedAt":"Double"},"constraints":[{"label":"IP","properties":["uid"],"type":"UNIQUE"},{"label":"IP","properties":["srid"],"type":"UNIQUE"},{"label":"IP","properties":["name"],"type":"UNIQUE"},{"label":"Source","properties":["srid"],"type":"UNIQUE"},{"label":"Source","properties":["hash"],"type":"UNIQUE"}]}}
+sour_rel_data = {"meta":{"timestamp":1691383878727,"username":"neo4j","txId":128882652,"txEventId":2,"txEventsCount":3,"operation":"created","source":{"hostname":"neo4j-cluster-core-1"}},"payload":{"id":"121376494","start":{"id":"152912","labels":["SourceEvent","IP"],"ids":{"name":"85.96.49.152"}},"end":{"id":"5871159","labels":["Source"],"ids":{"hash":"612ea9fceb99c37cf85b236ab7aa436b5de2f90f11e1024a74b73c7a58bdf0bb"}},"before":None,"after":{"properties":{"createdAt":1.691383878295371E9,"reported_time":1.690769577836791E9,"updatedAt":1.691383878295371E9}},"label":"HAS_SOURCE","type":"relationship"},"schema":{"properties":{"createdAt":"Double","reported_time":"Double","updatedAt":"Double"},"constraints":[{"label":"IP","properties":["uid"],"type":"UNIQUE"},{"label":"IP","properties":["srid"],"type":"UNIQUE"},{"label":"IP","properties":["name"],"type":"UNIQUE"},{"label":"Source","properties":["srid"],"type":"UNIQUE"},{"label":"Source","properties":["hash"],"type":"UNIQUE"}]}}
 data8877777 ={"meta":{"timestamp":1691420044507,"username":"neo4j","txId":129063713,"txEventId":1,"txEventsCount":3,"operation":"created","source":{"hostname":"neo4j-cluster-core-1"}},"payload":{"id":"121546504","start":{"id":"151839","labels":["SourceEvent","IP"],"ids":{"name":"192.81.213.192"}},"end":{"id":"7013137","labels":["Source"],"ids":{"hash":"b257ab9de304952b1e5bd1b414f94f62df4c826b69737f8997577602f75e5ef4"}},"before":None,"after":{"properties":{"createdAt":1.691420044037873E9,"reported_time":1.690791657638096E9,"updatedAt":1.691420044037873E9}},"label":"HAS_SOURCE","type":"relationship"},"schema":{"properties":{"createdAt":"Double","reported_time":"Double","updatedAt":"Double"},"constraints":[{"label":"IP","properties":["uid"],"type":"UNIQUE"},{"label":"IP","properties":["srid"],"type":"UNIQUE"},{"label":"IP","properties":["name"],"type":"UNIQUE"},{"label":"Source","properties":["srid"],"type":"UNIQUE"},{"label":"Source","properties":["hash"],"type":"UNIQUE"}]}}
+
+
 dataSHA = {
 	"meta": {
 		"timestamp": 1691495057613,
@@ -25740,14 +25742,14 @@ dataSHA = {
 		}
 	},
 	"payload": {
-		"id": "8322344",
+		"id": "17234396",
 		"before": None,
 		"after": {
 			"properties": {
 				"uid": "38869067-6ed7-4270-a47b-3db09a5e908c",
 				"createdAt": 1691495057.544408,
 				"name": "dc031230a2b001289e7848477bf3b2954422a637283a74c3810f3722b0560996",
-				"srid": "sha256-38869067-6ed7-4270-a47b-3db09a5e908c",
+				"srid": "sha256-5c5edeba-901f-41a4-842e-cf71d99beef1",
 				"updatedAt": 1691495057.544408
 			},
 			"labels": [
@@ -25882,6 +25884,252 @@ data88r = {
 		]
 	}
 }
+
+
+dataobjact = {
+    "meta": {
+        "timestamp": 1714388473058,
+        "username": "neo4j",
+        "txId": 299644581,
+        "txEventId": 0,
+        "txEventsCount": 1,
+        "operation": "created",
+        "source": {
+            "hostname": "neo4j-cluster-core-1"
+        }
+    },
+    "payload": {
+        "id": "17234391",
+        "before": {
+            "properties": {
+                "sha1": "38e4911d258ffe42ce58d4eab2fa85b7cb429c0c",
+                "createdAt": 1.714388470128292E9,
+                "uid": "249f6f01-4d38-4d56-aa46-5af2179456bc",
+                "sha256": "dc031230a2b001289e7848477bf3b2954422a637283a74c3810f3722b0560996",
+                "sha512": "2fdfef5d189420cf909a71b6390de1142dc1dc92e119afef413a023479a03b98518cb29e277dcbdd902cebd34e5f274d3dfa072cdb902f1322db31f24c7db0c6",
+                "updatedAt": 1.714388470128244E9,
+                "md5": "564da266f847dcd5c2ab003c4e36f0be",
+                "srid": "object-249f6f01-4d38-4d56-aa46-5af2179456bc"
+            },
+            "labels": [
+                "Object"
+            ]
+        },
+        "after": {
+            "properties": {
+                "sha1": "38e4911d258ffe42ce58d4eab2fa85b7cb429c0c",
+                "createdAt": 1.714388470128292E9,
+                "uid": "249f6f01-4d38-4d56-aa46-5af2179456bc",
+                "sha256": "dc031230a2b001289e7848477bf3b2954422a637283a74c3810f3722b0560996",
+                "name": "object-249f6f01-4d38-4d56-aa46-5af2179456bc",
+                "sha512": "2fdfef5d189420cf909a71b6390de1142dc1dc92e119afef413a023479a03b98518cb29e277dcbdd902cebd34e5f274d3dfa072cdb902f1322db31f24c7db0c6",
+                "updatedAt": 1.714388472911572E9,
+                "md5": "564da266f847dcd5c2ab003c4e36f0be",
+                "srid": "object-249f6f01-4d38-4d56-aa46-5af2179456bc"
+            },
+            "labels": [
+                "Object"
+            ]
+        },
+        "type": "node"
+    },
+    "schema": {
+        "properties": {
+            "sha1": "String",
+            "createdAt": "Double",
+            "uid": "String",
+            "sha256": "String",
+            "name": "String",
+            "sha512": "String",
+            "updatedAt": "Double",
+            "md5": "String",
+            "srid": "String"
+        },
+        "constraints": [
+            {
+                "label": "Object",
+                "properties": [
+                    "srid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "Object",
+                "properties": [
+                    "name"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "Object",
+                "properties": [
+                    "uid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "Object",
+                "properties": [
+                    "srid"
+                ],
+                "type": "NODE_PROPERTY_EXISTS"
+            }
+        ]
+    }
+}
+source = {
+	"meta": {
+		"timestamp": 1696923625413,
+		"username": "neo4j",
+		"txId": 129307276,
+		"txEventId": 1,
+		"txEventsCount": 1,
+		"operation": "created",
+		"source": {
+			"hostname": "neo4j-cluster-core-1"
+		}
+	},
+	"payload": {
+		"id": "10542350",
+		"before": None,
+		"after": {
+			"properties": {
+				"uid": "88bffe8f-1957-41ed-b3c9-997c6a9200e2",
+				"confidence": "high",
+				"createdAt": 1696923625.413119,
+				"displayName": "malwarebazaar",
+				"hash": "1398319fc1929377869d053942bf62accc0580c264db4f62dee92bf9b5e1f0c7",
+				"name": "malwarebazaar",
+				"srid": "source-88bffe8f-1957-41ed-b3c9-997c6a9200e2",
+				"type": "open_feed",
+				"updatedAt": 1718111193.46035
+			},
+			"labels": [
+				"Source"
+			]
+		},
+		"type": "node"
+	},
+	"schema": {
+		"properties": {
+			"uid": "String",
+			"confidence": "String",
+			"createdAt": "Double",
+			"displayName": "String",
+			"hash": "String",
+			"name": "String",
+			"srid": "String",
+			"type": "String",
+			"updatedAt": "Double"
+		},
+		"constraints": [
+			{
+				"label": "Source",
+				"properties": [
+					"uid"
+				],
+				"type": "UNIQUE"
+			},
+			{
+				"label": "Source",
+				"properties": [
+					"hash"
+				],
+				"type": "UNIQUE"
+			}
+		]
+	}
+}
+
+object_has_source = {
+    "meta": {
+        "timestamp": 1691383878727,
+        "username": "neo4j",
+        "txId": 128882652,
+        "txEventId": 2,
+        "txEventsCount": 3,
+        "operation": "created",
+        "source": {
+            "hostname": "neo4j-cluster-core-1"
+        }
+    },
+    "payload": {
+        "id": "	262032132",
+        "start": {
+            "id": "17234391",
+            "labels": [
+                "Object"
+            ],
+            "ids": {
+               "srid": "object-249f6f01-4d38-4d56-aa46-5af2179456bc"
+            }
+        },
+        "end": {
+            "id": "10542350",
+            "labels": [
+                "Source"
+            ],
+            "ids": {
+                "hash": "1398319fc1929377869d053942bf62accc0580c264db4f62dee92bf9b5e1f0c7"
+            }
+        },
+        "before":None,
+        "after": {
+            "properties": {
+                "createdAt": 1.691383878295371E9,
+                "reported_time": 1.690769577836791E9,
+                "updatedAt": 1.691383878295371E9
+            }
+        },
+        "label": "HAS_SOURCE",
+        "type": "relationship"
+    },
+    "schema": {
+        "properties": {
+            "createdAt": "Double",
+            "reported_time": "Double",
+            "updatedAt": "Double"
+        },
+        "constraints": [
+            {
+                "label": "IP",
+                "properties": [
+                    "uid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "IP",
+                "properties": [
+                    "srid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "IP",
+                "properties": [
+                    "name"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "Source",
+                "properties": [
+                    "srid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "Source",
+                "properties": [
+                    "hash"
+                ],
+                "type": "UNIQUE"
+            }
+        ]
+    }
+}
+
 data8899 = {
 	"meta": {
 		"timestamp": 1691495057788,
@@ -25975,8 +26223,7 @@ data8899 = {
 		]
 	}
 }
-
-data99p = {
+ipsourcerel = {
 	"meta": {
 		"timestamp": 1692366234998,
 		"username": "neo4j",
@@ -26223,7 +26470,7 @@ sigme______ = {"workspace_id": "9bc66a85-60a7-4fa2-bdf5-709a1aea217d", "company_
 node_event = {
 	"meta": {"timestamp": 1690206793348, "username": "neo4j", "txId":
 		122286186,
-			 "txEventId": 2, "txEventsCount": 51, "operation": "updated",
+			 "txEventId": 2, "txEventsCount": 51, "operation": "created",
 			 "source": {"hostname": "neo4j-cluster-core-1"}},
 	"payload": {"id": "2416675", "before": {
 		"properties": {"date": "September 26, 2022",
@@ -26400,1544 +26647,133 @@ relation_event = {
 }
 
 
-sha = {
-    "meta": {
-        "timestamp": 1730382302809,
-        "username": "neo4j",
-        "txId": 396892500,
-        "txEventId": 0,
-        "txEventsCount": 1,
-        "operation": "created",
-        "source": {
-            "hostname": "neo4j-cluster-core-0"
-        }
-    },
-    "payload": {
-        "id": "26095935",
-        "before":None,
-        "after": {
-            "properties": {
-                "uid": "74d568fd-c219-4ecd-9afb-75e917452279",
-                "createdAt": 1.730382302690152E9,
-                "name": "60e56713191a5ff83cc905debd5a76c80fcd77de",
-                "srid": "sha1-74d568fd-c219-4ecd-9afb-75e917452279",
-                "updatedAt": 1.730382302690152E9
-            },
-            "labels": [
-                "SHA1"
-            ]
-        },
-        "type": "node"
-    },
-    "schema": {
-        "properties": {
-            "uid": "String",
-            "createdAt": "Double",
-            "name": "String",
-            "srid": "String",
-            "updatedAt": "Double"
-        },
-        "constraints": [
-            {
-                "label": "SHA1",
-                "properties": [
-                    "uid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "srid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "name"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "srid"
-                ],
-                "type": "NODE_PROPERTY_EXISTS"
-            }
-        ]
-    }
-} 
-
-
-object = {"meta":{"timestamp":1730382302579,"username":"neo4j","txId":396892498,"txEventId":0,"txEventsCount":1,"operation":"created","source":{"hostname":"neo4j-cluster-core-0"}},"payload":{"id":"26095934","before":None,"after":{"properties":{"sha1":"60e56713191a5ff83cc905debd5a76c80fcd77de","uid":"fe1a7f66-5f06-44e9-89b4-86f7456976f2","createdAt":1.730382302459995E9,"srid":"object-fe1a7f66-5f06-44e9-89b4-86f7456976f2","updatedAt":1.730382302459929E9},"labels":["Object"]},"type":"node"},"schema":{"properties":{"sha1":"String","uid":"String","createdAt":"Double","srid":"String","updatedAt":"Double"},"constraints":[{"label":"Object","properties":["srid"],"type":"UNIQUE"},{"label":"Object","properties":["uid"],"type":"UNIQUE"},{"label":"Object","properties":["name"],"type":"UNIQUE"},{"label":"Object","properties":["srid"],"type":"NODE_PROPERTY_EXISTS"}]}}
-sha_and__object = {
-    "meta": {
-        "timestamp": 1730382303028,
-        "username": "neo4j",
-        "txId": 396892502,
-        "txEventId": 0,
-        "txEventsCount": 2,
-        "operation": "created",
-        "source": {
-            "hostname": "neo4j-cluster-core-0"
-        }
-    },
-    "payload": {
-        "id": "378093608",
-        "start": {
-            "id": "26095935",
-            "labels": [
-                "SHA1"
-            ],
-            "ids": {
-                "name": "60e56713191a5ff83cc905debd5a76c80fcd77de"
+sourcedata ={
+    "workspace_id": "c025052e-a160-440f-a88e-4e34b9c82716",
+    "company_id": "23ea8442-ae2a-4cca-a115-1220f6116eb6",
+    "user_id": "ace9c2c2-2ea6-4f78-9e76-0bee4716263a",
+    "label": "Add Artifacts",
+    "description": "Added artifacts from alert",
+    "success": True,
+    "timestamp": 1730881744.977802,
+    "type": "info",
+    "metadata": {
+        "plan_id": None,
+        "job_id": "e0b8f774-9d31-4b99-b791-b5bf14017cd2",
+        "task_id": "ee69389d-bb16-41f1-b130-3ee90b743f9c",
+        "action": {
+            "name": "add_artifacts",
+            "integration": None,
+            "source": {
+                "id": "SRA-90225",
+                "value": "SRA-90225",
+                "type": "alert"
             }
         },
-        "end": {
-            "id": "26095934",
-            "labels": [
-                "Object"
-            ],
-            "ids": {
-                "srid": "object-fe1a7f66-5f06-44e9-89b4-86f7456976f2"
-            }
-        },
-        "before": None,
-        "after": {
-            "properties": {
-                "createdAt": 1.730382302934838E9,
-                "updatedAt": 1.730382302934838E9
-            }
-        },
-        "label": "SHA1_OF_OBJECT",
-        "type": "relationship"
-    },
-    "schema": {
-        "properties": {
-            "createdAt": "Double",
-            "updatedAt": "Double"
-        },
-        "constraints": [
-            {
-                "label": "SHA1",
-                "properties": [
-                    "uid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "srid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "name"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "srid"
-                ],
-                "type": "NODE_PROPERTY_EXISTS"
-            },
-            {
-                "label": "Object",
-                "properties": [
-                    "srid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Object",
-                "properties": [
-                    "uid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Object",
-                "properties": [
-                    "name"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Object",
-                "properties": [
-                    "srid"
-                ],
-                "type": "NODE_PROPERTY_EXISTS"
-            }
-        ]
-    }
-}
-malware ={
-    "meta": {
-        "timestamp": 1691495057788,
-        "username": "neo4j",
-        "txId": 129307276,
-        "txEventId": 2,
-        "txEventsCount": 3,
-        "operation": "created",
-        "source": {
-            "hostname": "neo4j-cluster-core-1"
-        }
-    },
-    "payload": {
-        "id": "465895",
-        "before": None,
-        "after": {
-            "properties": {
-                "alias": ["XMRig", "XMRig Miner", "XMRigMiner"],
-                "description": "XMRig is an open-sourced Monero CPU Miner that was released in May 2017. Later, it was modified by threat actors to mine Monero cryptocurrency. This miner exploits vulnerable Windows, IIS, and Linux servers to mine Monero. This scheme affects end users' CPU/GPU processing power through compromised websites, devices and servers. This type of malware is wielded by operators aiming to make money on the backs of their victims.",
-                "name": "XMRigMiner",
-                "platform": ["windows", "linux"],
-                "refs": [
-                    "https://securityintelligence.com/xmrig-father-zeus-of-cryptocurrency-mining-malware/",
-                    "https://cyware.com/news/a-brief-understanding-of-the-xmrig-monero-miner-malware-d7c05714",
-                    "https://www.virustotal.com/gui/file/19f7bbdd8c543d8bc8e472f5fdb6aaab0401f1656f5ee313a45ddaeae212577a/details"
-                ],
-                "srid": "malware-xmrigminer-a77e55eb-b6cf-48c6-9c3e-4acd68574692",
-                "uid": "93ea7f5d-87b2-4b1e-bfa4-1c06973102cc"
-            },
-            "labels": ["Malware"]
-        },
-        "type": "node"
-    },
-    "schema": {
-        "properties": {
-            "alias": "List<String>",
-            "description": "String",
-            "name": "String",
-            "platform": "List<String>",
-            "refs": "List<String>",
-            "srid": "String",
-            "uid": "String"
-        },
-        "constraints": [
-            {
-                "label": "Malware",
-                "properties": ["srid"],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Malware",
-                "properties": ["uid"],
-                "type": "UNIQUE"
-            }
-        ]
-    }
-}
-obj_use_mal = {
-    "meta": {
-        "timestamp": 1691495061904,
-        "username": "neo4j",
-        "txId": 129307292,
-        "txEventId": 1,
-        "txEventsCount": 2,
-        "operation": "created",
-        "source": {
-            "hostname": "neo4j-cluster-core-1"
-        }
-    },
-    "payload": {
-        "id": "5890104",
-        "start": {
-            "id": "939667",
-            "labels": [
-                "Object"
-            ],
-            "ids": {
-                "name": "object-ced1af1f-00db-45d7-ac6a-a00d7c04508d"
-            }
-        },
-        "end": {
-            "id": "465895",
-            "labels": [
-                "Malware"
-            ],
-            "ids": {
-                "name": "XMRigMiner"
-            }
-        },
-        "before": None,
-        "after": {
-            "properties": {
-                "createdAt": 1657893346.960069,
-                "updatedAt": 1657893346.960069
-            }
-        },
-        "label": "OBJECT_USES_MAL",
-        "type": "relationship"
-    },
-    "schema": {
-        "properties": {
-            "createdAt": "Double",
-            "updatedAt": "Double"
-        },
-        "constraints": [
-            {
-                "label": "Object",
-                "properties": ["srid"],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Object",
-                "properties": ["name"],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Object",
-                "properties": ["uid"],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Malware",
-                "properties": ["srid"],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Malware",
-                "properties": ["name"],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Malware",
-                "properties": ["uid"],
-                "type": "UNIQUE"
-            }
-        ]
-    }
-}
-
-
-data ={
-	"meta": {
-		"timestamp": 1690206793348,
-		"username": "neo4j",
-		"txId": 122286187,
-		"txEventId": 3,
-		"txEventsCount": 52,
-		"operation": "created",
-		"source": {
-			"hostname": "neo4j-cluster-core-1"
-		}
-	},
-	"payload": {
-		"id": "2738929",
-		"before": {
-			"properties": {
-				"value": "https://vk.com/doc418490229_669356461?hash=QZ4Z4X5d1YyJIYsuybrCPLzO6Ls2spy0JgNSqnc72tL&dl=0LhPUEBSvCJyNIPscRw3GxYsokIzwdbZxqgmCthcoz8&api=1&no_preview=1#xin",
-				"type": "url",
-				"confidence": "high",
-				"score": 90,
-				"verdict": "malicious",
-				"tags": ["encrypted", "dropped-by-PrivateLoader"],
-				"strikes": ["STA4090"],
-				"first_seen": "2023-12-08T21:50:03.600000",
-				"last_seen": "2023-12-08T21:50:03.600000",
-				"approved": None
-			},
-			"labels": ["URL"]
-		},
-		"after": {
-			"properties": {
-				"value": "https://vk.com/doc418490229_669356461?hash=QZ4Z4X5d1YyJIYsuybrCPLzO6Ls2spy0JgNSqnc72tL&dl=0LhPUEBSvCJyNIPscRw3GxYsokIzwdbZxqgmCthcoz8&api=1&no_preview=1#xin",
-				"type": "url",
-				"confidence": "high",
-				"score": 90,
-				"verdict": "malicious",
-				"tags": ["encrypted", "dropped-by-PrivateLoader"],
-				"strikes": ["STA4090"],
-				"first_seen": "2023-12-08T21:50:03.600000",
-				"last_seen": "2023-12-08T21:50:03.600000",
-				"approved": None,
-				"malwares": [
-					{
-						"value": "Redline Stealer",
-						"reported_source": {
-							"name": "urlhaus",
-							"reported_time": "2024-01-07T11:31:21.220030",
-							"type": "open_feed",
-							"confidence": "high"
-						}
-					}
-				],
-				"vulnerability": [
-					{
-						"value": "Follina",
-						"reported_cves": "CVE-2022-0732",
-						"reported_source": {
-							"name": "urlhaus",
-							"reported_time": "2024-02-15T21:21:30.153664",
-							"type": "open_feed",
-							"confidence": "low"
-						}
-					}
-				],
-				"threat_actors": [
-					{
-						"value": "LV Ransomware Group",
-						"reported_source": {
-							"name": "urlhaus",
-							"reported_time": "2023-03-29T11:36:56.951523",
-							"type": "open_feed",
-							"confidence": "high"
-						}
-					}
-				],
-				"threat": [
-					{
-						"stage": "",
-						"threat_type": "malware_download",
-						"reported_source": {
-							"name": "urlhaus",
-							"reported_time": "2023-12-08T22:01:18.585985",
-							"type": "open_feed",
-							"confidence": "high"
-						}
-					}
-				],
-				"tools": [
-					{
-						"value": "Beacon",
-						"reported_source": {
-							"name": "urlhaus",
-							"reported_time": "2023-12-02T15:10:33.417572",
-							"type": "open_feed",
-							"confidence": "high"
-						}
-					}
-				],
-				"raw": [
-					{
-						"urlhaus": {
-							"id": 2738929,
-							"urlhaus_reference": "https://urlhaus.abuse.ch/url/2738929/",
-							"url": "https://vk.com/doc418490229_669356461?hash=QZ4Z4X5d1YyJIYsuybrCPLzO6Ls2spy0JgNSqnc72tL&dl=0LhPUEBSvCJyNIPscRw3GxYsokIzwdbZxqgmCthcoz8&api=1&no_preview=1#xin",
-							"host": "vk.com",
-							"tags": ["dropped-by-PrivateLoader", "encrypted"]
-						}
-					}
-				]
-			},
-			"labels": ["URL"]
-		},
-		"type": "node"
-	},
-	"schema": {
-		"properties": {
-			"value": "String",
-			"type": "String",
-			"confidence": "String",
-			"score": "Integer",
-			"verdict": "String",
-			"tags": "String[]",
-			"strikes": "String[]",
-			"first_seen": "DateTime",
-			"last_seen": "DateTime",
-			"approved": "Boolean",
-			"malwares": "String[]",
-			"vulnerability": "String[]",
-			"threat_actors": "String[]",
-			"threat": "String[]",
-			"tools": "String[]",
-			"raw": "String[]"
-		},
-		"constraints": [
-			{
-				"label": "URL",
-				"properties": ["value"],
-				"type": "UNIQUE"
-			}
-		]
-	}
-}
-
-
-topic  = "elastic"
-
-url_event =  {
-    "value": "https://vk.com/doc418490229_669356461?hash=QZ4Z4X5d1YyJIYsuybrCPLzO6Ls2spy0JgNSqnc72tL&dl=0LhPUEBSvCJyNIPscRw3GxYsokIzwdbZxqgmCthcoz8&api=1&no_preview=1#xin",
-    "type": "url",
-    "confidence": "high",
-    "sources": [
-      {
-        "id": "29",
-        "name": "urlhaus",
-        "display_name": "Urlhaus",
-        "url": "https://urlhaus-api.abuse.ch/v1/urls/recent/",
-        "confidence": "high",
-        "type": "open_feed",
-        "time": "2023-12-08T22:01:18.585919"
-      }
-    ],
-    "score": 90,
-    "verdict": "malicious",
-    "approved": False,
-    "malwares": [
-      {
-        "reported_source": {
-          "name": "urlhaus",
-          "sr_reviewed": None,
-          "reported_time": "2024-01-07T11:31:21.220030",
-          "type": "open_feed",
-          "confidence": "high"
-        },
-        "value": "Redline Stealer"
-      }
-    ],
-    "vulnerability": [
-      {
-        "value": "Follina",
-        "reported_cves": "CVE-2022-0732",
-        "reported_source": {
-          "name": "urlhaus",
-          "reported_time": "2024-02-15T21:21:30.153664",
-          "confidence": "low",
-          "type": "open_feed",
-          "sr_reviewed": None
-        }
-      }
-    ],
-    "threat_actors": [
-      {
-        "value": "LV Ransomware Group",
-        "reported_source": {
-          "name": "urlhaus",
-          "reported_time": "2023-03-29T11:36:56.951523",
-          "confidence": "high",
-          "type": "open_feed",
-          "sr_reviewed": None
-        }
-      }
-    ],
-    "threat": [
-      {
-        "stage": "",
-        "reported_source": {
-          "name": "urlhaus",
-          "reported_time": "2023-12-08T22:01:18.585985",
-          "confidence": "high",
-          "type": "open_feed",
-          "sr_reviewed": None
-        },
-        "threat_type": "malware_download"
-      }
-    ],
-    "tools": [
-      {
-        "reported_source": {
-          "sr_reviewed": None,
-          "confidence": "high",
-          "name": "urlhaus",
-          "reported_time": "2023-12-02T15:10:33.417572",
-          "type": "open_feed"
-        },
-        "value": "Beacon"
-      }
-    ],
-    "strikes": [
-      "STA4090"
-    ],
-    "tags": [
-      "encrypted",
-      "dropped-by-PrivateLoader"
-    ],
-    "first_seen": "2023-12-08T21:50:03.600000",
-    "last_seen": "2023-12-08T21:50:03.600000",
-    "update_at": "2023-12-08T22:01:18.586065",
-    "raw": [
-      {
-        "urlhaus": {
-          "id": 2738929,
-          "urlhaus_reference": "https://urlhaus.abuse.ch/url/2738929/",
-          "url": "https://vk.com/doc418490229_669356461?hash=QZ4Z4X5d1YyJIYsuybrCPLzO6Ls2spy0JgNSqnc72tL&dl=0LhPUEBSvCJyNIPscRw3GxYsokIzwdbZxqgmCthcoz8&api=1&no_preview=1#xin",
-          "url_status": "offline",
-          "host": "vk.com",
-          "date_added": "2023-12-08 21:50:36 UTC",
-          "threat": "malware_download",
-          "blacklists": {
-            "spamhaus_dbl": "not listed",
-            "surbl": "not listed"
-          },
-          "reporter": "andretavare5",
-          "larted": "False",
-          "tags": [
-            "dropped-by-PrivateLoader",
-            "encrypted"
-          ]
-        }
-      }
-    ],
-    "analysis": {
-      "status": [
-        {
-          "reported_source": {
-            "name": "urlhaus",
-            "sr_reviewed": False,
-            "reported_time": "2023-12-08T22:01:18.586065",
-            "type": "open_feed",
-            "confidence": "high"
-          },
-          "value": "offline"
-        }
-      ],
-      "verdict": [
-        {
-          "reported_source": {
-            "name": "urlhaus",
-            "sr_reviewed": True,
-            "reported_time": "2023-12-08T22:01:18.586092",
-            "type": "open_feed",
-            "confidence": "high"
-          },
-          "value": "malicious"
-        }
-      ],
-      "confidence": [
-        {
-          "reported_source": {
-            "name": "urlhaus",
-            "sr_reviewed": True,
-            "reported_time": "2023-12-08T22:01:18.586116",
-            "type": "open_feed",
-            "confidence": "high"
-          },
-          "value": "high"
-        }
-      ],
-      "score": [
-        {
-          "reported_source": {
-            "name": "urlhaus",
-            "sr_reviewed": True,
-            "reported_time": "2023-12-08T22:01:18.586142",
-            "type": "open_feed",
-            "confidence": "high"
-          },
-          "value": "90"
-        }
-      ]
-    },
-    "presence_index": {},
-    "mitigation_rules": [],
-    "first_crawled": "2023-12-08T22:01:18.586156",
-    "last_crawled": "2023-12-08T22:01:18.586157",
-    "mitre_ttp": [
-      {
-        "tac_id": "TA0008",
-        "tac_name": "Lateral Movement",
-        "tech": [
-          {
-            "tech_id": "T1550",
-            "tech_name": "Privilege Escalation",
-            "sub_tech": [
-              {
-                "sub_tech_id": ".002",
-                "sub_tech_name": "Powershell"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "tlp": "green",
-    "whitelisted_check": True,
-    "internal_raw_osint": False,
-    "internal_allow_sync": True,
-    "associated_threat_campaigns": [
-      {
-        "campaign_name": "Google Breach",
-        "attack_origin": [
-          "Russia"
-        ],
-        "targeted_region": [
-          "North America"
-        ],
-        "sources": [
-          {
-            "confidence": "medium",
-            "name": "open_phish",
-            "id": "10",
-            "time": "2023-12-25T08:50:27.882234",
-            "display_name": "OpenPhish",
-            "type": "open_feed",
-            "url": "https://www.openphish.com/"
-          }
-        ],
-        "targeted_country": [
-          "us"
-        ],
-        "targeted_industry": [
-          "Finance"
-        ],
-        "target": "AT&T Inc.",
-        "targeted_sector": [
-          "Finance"
-        ]
-      }
-    ],
-    "status": "offline",
-    "uri": "/doc418490229_669356461hash=QZ4Z4X5d1YyJIYsuybrCPLzO6Ls2spy0JgNSqnc72tL&dl=0LhPUEBSvCJyNIPscRw3GxYsokIzwdbZxqgmCthcoz8&api=1&no_preview=1xin",
-    "host": {
-      "type": "domain",
-      "category": "domain",
-      "port": None,
-      "value": "vk.com"
-    },
-    "larted": False,
-    "open_ports": [
-      {
-        "port": 39901,
-        "type": ""
-      }
-    ],
-    "files_downloaded": [
-      {
-        "object": {
-          "sha1": "",
-          "sha256": "283c4f9174d19944189f5d6961f3319420c752bfaa6f65c19dd85ad2ca1cd77f",
-          "object_info": {},
-          "sha3_384": "",
-          "ss_deep": "",
-          "sha512": "",
-          "tlsh": "",
-          "vhash": "",
-          "imp_hash": "",
-          "telfhash": "",
-          "md5": ""
-        }
-      }
-    ],
-    "http_response": {},
-    "shortened": {
-      "redirection_chain": [
-        {
-          "url": {
-            "value": "http://bafybeihvi5l7repjrrhs6y677rs2ocbbkohwumgtykbxn7let326dgurne.ipfs.dweb.link/"
-          }
-        }
-      ],
-      "is_shorten": False,
-      "final_location": {
-        "url": {
-          "value": "https://vk.com/doc418490229_669356461?hash=QZ4Z4X5d1YyJIYsuybrCPLzO6Ls2spy0JgNSqnc72tL&dl=0LhPUEBSvCJyNIPscRw3GxYsokIzwdbZxqgmCthcoz8&api=1&no_preview=1#xin"
-        }
-      }
-    },
-    "url_content_categorization": [],
-    "urls_part_of_body": [],
-    "phishing_info": {},
-    "artifact_validation": [
-      {
-        "benign": False,
-        "whitelisted": False,
-        "is_deployable": True,
-        "domain_rank": None,
-        "date": "2023-12-08T22:01:18.586266",
-        "compromised": False,
-        "is_fp": False,
-        "forcefully_malicious": None,
-        "source": "whitelisting_service"
-      }
-    ],
-    "is_fp": None
-  }
-
-
-domain_event = {
-        "value": "metamask.tokenim.ink",
-        "type": "domain",
-        "confidence": "high",
-        "sources": [
-            {
-                "id": "12",
-                "name": "phishtank",
-                "display_name": "PhishTank",
-                "url": "http://www.phishtank.com/phish_detail.php?phish_id=8376954",
-                "confidence": "high",
-                "type": "open_feed",
-                "time": "2023-12-02T19:25:03.278296"
-            }
-        ],
-        "score": 80,
-        "verdict": "malicious",
-        "approved": False,
-        "malwares": [
-            {
-                "reported_source": {
-                    "name": "phishtank",
-                    "sr_reviewed": None,
-                    "reported_time": "2024-01-07T11:31:21.220030",
-                    "type": "open_feed",
-                    "confidence": "high"
-                },
-                "value": "Redline Stealer"
-            }
-        ],
-        "vulnerability": [
-            {
-                "value": "Follina",
-                "reported_cves": "CVE-2022-0732",
-                "reported_source": {
-                    "name": "phishtank",
-                    "reported_time": "2024-02-15T21:21:30.153664",
-                    "confidence": "low",
-                    "type": "open_feed",
-                    "sr_reviewed": None
-                }
-            }
-        ],
-        "threat_actors": [
-            {
-                "value": "LV Ransomware Group",
-                "reported_source": {
-                    "name": "phishtank",
-                    "reported_time": "2023-03-29T11:36:56.951523",
-                    "confidence": "high",
-                    "type": "open_feed",
-                    "sr_reviewed": None
-                }
-            }
-        ],
-        "threat": [
-            {
-                "stage": "",
-                "reported_source": {
-                    "name": "phishtank",
-                    "reported_time": "2023-12-02T19:25:03.278393",
-                    "confidence": "high",
-                    "type": "open_feed",
-                    "sr_reviewed": None
-                },
-                "threat_type": "phishing"
-            }
-        ],
-        "tools": [
-            {
-                "reported_source": {
-                    "sr_reviewed": None,
-                    "confidence": "high",
-                    "name": "phishtank",
-                    "reported_time": "2023-12-02T15:10:33.417572",
-                    "type": "open_feed"
-                },
-                "value": "Beacon"
-            }
-        ],
-        "strikes": [
-            "STA4090"
-        ],
-        "tags": [
-            "cobalt_strike"
-        ],
-        "first_seen": "2023-11-27T21:58:03.600000",
-        "last_seen": "2023-11-27T22:23:04.700000",
-        "raw": [
-            {
-                "phishtank": {
-                    "phish_id": 8376954,
-                    "url": "http://metamask.tokenim.ink",
-                    "phish_detail_url": "http://www.phishtank.com/phish_detail.php?phish_id=8376954",
-                    "submission_time": "2023-11-27T21:58:36+00:00",
-                    "verified": "yes",
-                    "verification_time": "2023-11-27T22:23:47+00:00",
-                    "online": "yes",
-                    "details": [
-                        {
-                            "ip_address": "194.124.216.137",
-                            "cidr_block": "194.124.216.0/24",
-                            "announcing_network": "3214",
-                            "rir": "ripencc",
-                            "country": "DE",
-                            "detail_time": "2023-11-27T22:13:29+00:00"
-                        }
-                    ],
-                    "target": "Other"
-                }
-            }
-        ],
-        "analysis": {
-            "status": [
-                {
-                    "value": "online",
-                    "reported_source": {
-                        "name": "phishtank",
-                        "reported_time": "2023-12-02T19:25:03.278478",
-                        "confidence": "high",
-                        "type": "open_feed",
-                        "sr_reviewed": False
-                    }
-                }
-            ],
-            "verdict": [
-                {
-                    "value": "malicious",
-                    "reported_source": {
-                        "name": "phishtank",
-                        "reported_time": "2023-12-02T19:25:03.278517",
-                        "confidence": "high",
-                        "type": "open_feed",
-                        "sr_reviewed": True
-                    }
-                }
-            ],
-            "confidence": [
-                {
-                    "value": "high",
-                    "reported_source": {
-                        "name": "phishtank",
-                        "reported_time": "2023-12-02T19:25:03.278555",
-                        "confidence": "high",
-                        "type": "open_feed",
-                        "sr_reviewed": True
-                    }
-                }
-            ],
-            "score": [
-                {
-                    "value": "80",
-                    "reported_source": {
-                        "name": "phishtank",
-                        "reported_time": "2023-12-02T19:25:03.278603",
-                        "confidence": "high",
-                        "type": "open_feed",
-                        "sr_reviewed": True
-                    }
-                }
-            ]
-        },
-        "presence_index": {},
-        "mitigation_rules": [],
-        "first_crawled": "2023-12-02T19:25:03.806660",
-        "last_crawled": "2023-12-02T19:25:03.806663",
-        "mitre_ttp": [
-            {
-                "tac_id": "TA0008",
-                "tac_name": "Lateral Movement",
-                "tech": [
-                    {
-                        "tech_id": "T1550",
-                        "tech_name": "Privilege Escalation",
-                        "sub_tech": [
-                            {
-                                "sub_tech_id": ".002",
-                                "sub_tech_name": "Powershell"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "tlp": "green",
-        "whitelisted_check": True,
-        "internal_raw_osint": False,
-        "internal_allow_sync": True,
-        "associated_threat_campaigns": [
-            {
-                "campaign_name": "Google Breach",
-                "attack_origin": [
-                    "Russia"
-                ],
-                "targeted_region": [
-                    "North America"
-                ],
-                "sources": [
-                    {
-                        "confidence": "medium",
-                        "name": "open_phish",
-                        "id": "10",
-                        "time": "2023-12-25T08:50:27.882234",
-                        "display_name": "OpenPhish",
-                        "type": "open_feed",
-                        "url": "https://www.openphish.com/"
-                    }
-                ],
-                "targeted_country": [
-                    "us"
-                ],
-                "targeted_industry": [
-                    "Finance"
-                ],
-                "target": "AT&T Inc.",
-                "targeted_sector": [
-                    "Finance"
-                ]
-            }
-        ],
-        "dga_info": {},
-        "domain_reputation": [],
-        "infrastructure_info": {
-            "cousin_domains": None,
-            "resolving_ip": [
-                {
-                    "ip": {
-                        "value": "194.124.216.137",
-                        "time": "2023-12-02T19:25:03.278688"
-                    }
-                }
-            ],
-            "dnsbl_info": None,
-            "infra_tag": None,
-            "mx_info": None,
-            "ns_reputation": None,
-            "sibling_domains": None
-        },
-        "status": "online",
-        "files_downloaded": [
-            {
-                "object": {
-                    "sha1": "",
-                    "sha256": "283c4f9174d19944189f5d6961f3319420c752bfaa6f65c19dd85ad2ca1cd77f",
-                    "object_info": {},
-                    "sha3_384": "",
-                    "ss_deep": "",
-                    "sha512": "",
-                    "tlsh": "",
-                    "vhash": "",
-                    "imp_hash": "",
-                    "telfhash": "",
-                    "md5": ""
-                }
-            }
-        ],
-        "child_urls": [
-            {
-                "url": {
-                    "value": "http://metamask.tokenim.ink"
-                }
-            }
-        ],
-        "communicating_files": [
-            {
-                "object": {
-                    "sha1": "",
-                    "sha256": "283c4f9174d19944189f5d6961f3319420c752bfaa6f65c19dd85ad2ca1cd77f",
-                    "object_info": {},
-                    "sha3_384": "",
-                    "ss_deep": "",
-                    "sha512": "",
-                    "tlsh": "",
-                    "vhash": "",
-                    "imp_hash": "",
-                    "telfhash": "",
-                    "md5": ""
-                }
-            }
-        ],
-        "passive_dns": [],
-        "typosquat_info": {},
-        "idn_info": {
-            "is_idn": False,
-            "punycode": ""
-        },
-        "tld_info": {
-            "value": ".ink"
-        },
-        "open_ports": [
-            {
-                "port": 39901,
-                "type": ""
-            }
-        ],
-        "host": {
-            "value": "metamask.tokenim.ink",
-            "type": "domain",
-            "category": "subdomain",
-            "port": None
-        },
-        "ssl_certificate": {},
-        "hierarchical_dns_analysis": {},
-        "passive_content_analysis": {},
-        "domain_whois": {
-            "address": "REDACTED FOR PRIVACY",
-            "city": "REDACTED FOR PRIVACY",
-            "country": "CN",
-            "state": "Guizhou",
-            "domain": "metamask.tokenim.ink",
-            "creation_date": "2023-09-26 17:23:00.100000",
-            "expiration_date": "2024-09-26 17:23:00.100000",
-            "name": "metamask.tokenim.ink",
-            "epp_status": [
-                "clientHold",
-                "clientTransferProhibited",
-                "clientTransferProhibited",
-                "clientHold"
-            ],
-            "emails": [
-                "kf@zzy.cn"
-            ],
-            "whois_server": "whois.zzy.cn",
-            "zip_code": None,
-            "name_servers": [
-                "ns1.cnolnic.net",
-                "ns2.cnolnic.net"
-            ],
-            "organization": "",
-            "registrar": {
-                "Registrar_WHOIS_Server": "whois.zzy.cn",
-                "Registrar_url": "",
-                "Registrar_name": "XIAMEN CHINASOURCE INTERNET SERVICE CO., LTD.",
-                "Registrar_organization": "",
-                "Registrar_location": {},
-                "Registrar_status": "",
-                "Registrar_IANA_id": ""
-            },
-            "dnssec": [
-                "unsigned"
-            ],
-            "updated_at": "2023-11-28 01:12:04.400000"
-        },
-        "artifact_validation": [
-            {
-                "benign": False,
-                "whitelisted": False,
-                "is_deployable": True,
-                "domain_rank": None,
-                "date": "2023-12-02T19:25:03.278894",
-                "compromised": False,
-                "is_fp": False,
-                "forcefully_malicious": None,
-                "source": "whitelisting_service"
-            }
-        ]
-    }
-
-ip_event = {
-        "value": "45.86.74.243",
-        "type": "ipv4",
-        "confidence": "medium",
-        "sources": [
-            {
-                "id": "26",
-                "name": "rstcloud",
-                "display_name": "RST Cloud",
-                "url": "https://raw.githubusercontent.com/rstcloud/rstthreats/master/feeds/full/random100_ioc_ip_latest.json",
-                "confidence": "medium",
-                "type": "open_feed",
-                "time": "2023-12-13T00:03:37.288355"
-            }
-        ],
-        "score": 68,
-        "verdict": "suspicious",
-        "approved": False,
-        "malwares": [
-            {
-                "reported_source": {
-                    "name": "rstcloud",
-                    "sr_reviewed": None,
-                    "reported_time": "2024-01-07T11:31:21.220030",
-                    "type": "open_feed",
-                    "confidence": "high"
-                },
-                "value": "Redline Stealer"
-            }
-        ],
-        "vulnerability": [
-            {
-                "value": "Follina",
-                "reported_cves": "CVE-2022-0732",
-                "reported_source": {
-                    "name": "rstcloud",
-                    "reported_time": "2024-02-15T21:21:30.153664",
-                    "confidence": "low",
-                    "type": "open_feed",
-                    "sr_reviewed": None
-                }
-            }
-        ],
-        "threat_actors": [
-            {
-                "value": "LV Ransomware Group",
-                "reported_source": {
-                    "name": "rstcloud",
-                    "reported_time": "2023-03-29T11:36:56.951523",
-                    "confidence": "high",
-                    "type": "open_feed",
-                    "sr_reviewed": None
-                }
-            }
-        ],
-        "threat": [
-            {
-                "stage": "",
-                "reported_source": {
-                    "name": "rstcloud",
-                    "reported_time": "2023-12-02T19:25:03.278393",
-                    "confidence": "high",
-                    "type": "open_feed",
-                    "sr_reviewed": None
-                },
-                "threat_type": "phishing"
-            }
-        ],
-        "tools": [
-            {
-                "reported_source": {
-                    "sr_reviewed": None,
-                    "confidence": "high",
-                    "name": "rstcloud",
-                    "reported_time": "2023-12-02T15:10:33.417572",
-                    "type": "open_feed"
-                },
-                "value": "Beacon"
-            }
-        ],
-        "strikes": [
-            "STA4090"
-        ],
-        "tags": [
-            "cobalt_strike",
-            "malware"
-        ],
-        "first_seen": "2023-03-13T00:00:00.909823",
-        "last_seen": "2023-12-10T00:00:00.746659",
-        "raw": [
-            {
-                "RST_Cloud_IP": {
-                    "ip": {
-                        "v4": "45.86.74.243",
-                        "num": 760630003
-                    },
-                    "ports": [
-                        8080
-                    ],
-                    "fseen": 1678665600,
-                    "lseen": 1702166400,
-                    "collect": 1702252800,
-                    "src": {
-                        "name": [
-                            "github_repos"
-                        ],
-                        "report": "https://github.com/stamparm/maltrail"
-                    },
-                    "tags": {
-                        "str": [
-                            "malware"
-                        ],
-                        "codes": [
-                            10
-                        ]
-                    },
-                    "asn": {
-                        "num": 44477,
-                        "firstip": {
-                            "netv4": "45.86.74.0",
-                            "num": 760629760
-                        },
-                        "lastip": {
-                            "netv4": "45.86.79.255",
-                            "num": 760631295
-                        },
-                        "cloud": "",
-                        "domains": 55899,
-                        "org": "",
-                        "isp": "STARKINDUSTRIES"
-                    },
-                    "geo": {
-                        "city": "Manila",
-                        "country": "Philippines",
-                        "region": "Metro Manila"
-                    },
-                    "related": {
-                        "domains": []
-                    },
-                    "score": {
-                        "total": 6,
-                        "src": 68.04,
-                        "tags": 0.89,
-                        "frequency": 0.1
-                    },
-                    "fp": {
-                        "alarm": "False",
-                        "descr": ""
-                    },
-                    "threat": [
-                        "cobalt_strike"
-                    ],
-                    "cve": [],
-                    "industry": [],
-                    "ttp": [],
-                    "id": "90e8a60a-a026-30fc-9d4e-33f4f361ce5b",
-                    "title": "RST Threat feed. IOC: 45.86.74.243",
-                    "description": "IOC with tags: malware. Related threats: cobalt_strike"
-                }
-            }
-        ],
-        "analysis": {
-            "status": [],
-            "verdict": [
-                {
-                    "value": "suspicious",
-                    "reported_source": {
-                        "name": "rstcloud",
-                        "reported_time": "2023-12-13T00:03:37.288491",
-                        "confidence": "medium",
-                        "type": "open_feed",
-                        "sr_reviewed": False
-                    }
-                }
-            ],
-            "confidence": [
-                {
-                    "value": "medium",
-                    "reported_source": {
-                        "name": "rstcloud",
-                        "reported_time": "2023-12-13T00:03:37.288537",
-                        "confidence": "medium",
-                        "type": "open_feed",
-                        "sr_reviewed": False
-                    }
-                }
-            ],
-            "score": [
-                {
-                    "value": "68.04",
-                    "reported_source": {
-                        "name": "rstcloud",
-                        "reported_time": "2023-12-13T00:03:37.288567",
-                        "confidence": "medium",
-                        "type": "open_feed",
-                        "sr_reviewed": False
-                    }
-                }
-            ]
-        },
-        "presence_index": {},
-        "mitigation_rules": [],
-        "first_crawled": "2023-12-13T00:03:37.288582",
-        "last_crawled": "2023-12-13T00:03:37.288582",
-        "mitre_ttp": [
-            {
-                "tac_id": "TA0008",
-                "tac_name": "Lateral Movement",
-                "tech": [
-                    {
-                        "tech_id": "T1550",
-                        "tech_name": "Privilege Escalation",
-                        "sub_tech": [
-                            {
-                                "sub_tech_id": ".002",
-                                "sub_tech_name": "Powershell"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "tlp": "green",
-        "whitelisted_check": True,
-        "internal_raw_osint": False,
-        "internal_allow_sync": True,
-        "associated_threat_campaigns": [
-            {
-                "campaign_name": "Google Breach",
-                "attack_origin": [
-                    "Russia"
-                ],
-                "targeted_region": [
-                    "North America"
-                ],
-                "sources": [
-                    {
-                        "confidence": "medium",
-                        "name": "open_phish",
-                        "id": "10",
-                        "time": "2023-12-25T08:50:27.882234",
-                        "display_name": "OpenPhish",
-                        "type": "open_feed",
-                        "url": "https://www.openphish.com/"
-                    }
-                ],
-                "targeted_country": [
-                    "us"
-                ],
-                "targeted_industry": [
-                    "Finance"
-                ],
-                "target": "AT&T Inc.",
-                "targeted_sector": [
-                    "Finance"
-                ]
-            }
-        ],
-        "status": "offline",
-        "infra_info": {},
-        "location_info": {
-            "continent_code": "NA",
-            "continent_name": "North America",
-            "country_code": "US",
-            "country_name": "United States",
-            "country_is_in_european_union": None,
-            "city": "Los Angeles",
-            "region": "",
-            "region_code": "",
-            "country_code_iso3": "",
-            "country_capital": "",
-            "country_tld": "",
-            "postal": "90009",
-            "latitude": 34.0544,
-            "longitude": -118.244,
-            "timezone": "America/Los_Angeles",
-            "utc_offset": "",
-            "country_calling_code": "",
-            "currency": "",
-            "currency_name": "",
-            "languages": [],
-            "country_area": None,
-            "country_population": None
-        },
-        "ip_type": "public",
-        "ip_class": "A",
-        "ip_history": [],
-        "infra_security": {},
-        "os_fingerprinting": {},
-        "subnet_info": {
-            "subnet": "45.86.64.0/20",
-            "subnet_allocation_age": None,
-            "subnet_allocation_date": "",
-            "subnet_reputation": None,
-            "subnet_reputation_score": None,
-            "subnet_density": {}
-        },
-        "asn_info": {
-            "asn": 35913,
-            "asn_allocation_age": None,
-            "asn_allocation_date": "",
-            "asn_rank": None,
-            "asn_rank_score": None,
-            "asn_reputation": None,
-            "asn_reputation_score": None,
-            "asn_takedown_reputation": None,
-            "asn_takedown_reputation_score": None,
-            "asname": "DEDIPATH-LLC",
-            "date": "",
-            "density": None,
-            "ips_in_asn": None,
-            "ips_num_active": None,
-            "ips_num_listed": None,
-            "asn_reputation_explanation": {}
-        },
-        "open_ports": [
-            {
-                "port": 8080,
-                "type": ""
-            }
-        ],
-        "host": {
-            "value": "45.86.74.243",
+        "resource": {
+            "id": "66e152c8375775a70c2a63a1",
+            "entity": "Intel",
             "type": "ipv4",
-            "category": "ip",
-            "port": None
-        },
-        "content_serving": {},
-        "files_downloaded": [
-            {
-                "object": {
-                    "sha1": "",
-                    "sha256": "283c4f9174d19944189f5d6961f3319420c752bfaa6f65c19dd85ad2ca1cd77f",
-                    "object_info": {},
-                    "sha3_384": "",
-                    "ss_deep": "",
-                    "sha512": "",
-                    "tlsh": "",
-                    "vhash": "",
-                    "imp_hash": "",
-                    "telfhash": "",
-                    "md5": ""
-                }
-            }
-        ],
-        "communicating_files": [
-            {
-                "object": {
-                    "sha1": "",
-                    "sha256": "283c4f9174d19944189f5d6961f3319420c752bfaa6f65c19dd85ad2ca1cd77f",
-                    "object_info": {},
-                    "sha3_384": "",
-                    "ss_deep": "",
-                    "sha512": "",
-                    "tlsh": "",
-                    "vhash": "",
-                    "imp_hash": "",
-                    "telfhash": "",
-                    "md5": ""
-                }
-            }
-        ],
-        "associated_urls": [
-            {
-                "url": {
-                    "value": "http://36.49.34.150:12225/.i"
-                }
-            }
-        ],
-        "ip_whois": {
-            "address": "",
-            "city": "",
-            "country": "",
-            "state": "",
-            "reverse_dns": [],
-            "creation_date": None,
-            "expiration_date": None,
-            "name": "45.86.74.243",
-            "epp_status": [],
-            "emails": [
-                "hostmaster@ripe.net",
-                "abuse@ripe.net"
-            ],
-            "whois_server": "",
-            "zip_code": None,
-            "name_servers": [],
-            "organization": "",
-            "registrar": {
-                "Registrar_WHOIS_Server": "",
-                "Registrar_url": "",
-                "Registrar_name": "",
-                "Registrar_organization": "",
-                "Registrar_location": {},
-                "Registrar_status": "",
-                "Registrar_IANA_id": ""
-            },
-            "referral_url": "",
-            "dnssec": [],
-            "registry_domain_url_id": "",
-            "updated_at": None
-        },
-        "isp": {
-            "isp_name": "Stark Industries Solutions LTD",
-            "country": "Philippines",
-            "date": "2023-12-13T00:03:36.804675"
-        },
-        "artifact_validation": [
-            {
-                "benign": False,
-                "whitelisted": False,
-                "is_deployable": True,
-                "date": "2023-12-13T00:03:37.288985",
-                "compromised": False,
-                "is_fp": False,
-                "forcefully_malicious": None,
-                "source": "whitelisting_service"
-            }
-        ]
+            "value": "142.250.190.101",
+            "rule": None,
+            "tags": [],
+            "custom_score": None,
+            "analysis_state": None,
+            "analysis": {},
+            "object": None,
+            "hash": None
+        }
     }
+}
 
+kb_sync_data = {
+    "id": "domain-f84d824a-ac73-4a3b-a45d-b0270c7e4192",
+    "index": "intelligence_kb_artifact_domain",
+    "body": {
+        "script": {
+            "lang": "painless",
+            "source": """
+                Set prop = new HashSet(ctx._source.tlp != null ? ctx._source.tlp : []);
+                prop.add(params.name);
+                ctx._source.tlp = prop;
+            """,
+            "params": {
+                "name": "white",
+                "srid": "tlp-7fd5e65f-ac9d-4822-9e44-31e9be372119",
+                "uid": "7fd5e65f-ac9d-4822-9e44-31e9be372119",
+                "entity": ["tlp"],
+                "displayName": "white",
+                "label": "TLP",
+                "type": "tlp"
+            }
+        },
+        "upsert": {
+            "name": "3115c.me",
+            "srid": "domain-f84d824a-ac73-4a3b-a45d-b0270c7e4192",
+            "uid": "f84d824a-ac73-4a3b-a45d-b0270c7e4192",
+            "entity": ["domain"],
+            "displayName": "3115c.me",
+            "label": "Domain",
+            "type": "domain",
+            "tlp": ["white"]
+        }
+    },
+    "destination_id": None,
+    "event_type": "relationship"
+}
+
+enrich_event = {
+    "workspace_id": "d045390b-f028-4dd2-8a67-5786bd1ba792",
+    "company_id": "23ea8442-ae2a-4cca-a115-1220f6116eb6",
+    "user_id": "ace9c2c2-2ea6-4f78-9e76-0bee4716263a",
+    "label": "Enrich artifacts",
+    "description": "Enriched artifacts from AE",
+    "success": True,
+    "timestamp": 1731481869.185883,
+    "type": "info",
+    "metadata": {
+        "plan_id": None,
+        "job_id": None,
+        "task_id": None,
+        "action": {
+            "name": "enrichment",
+            "integration": None,
+            "source": None
+        },
+        "resource": {
+            "id": "6705154e375775a70ce7ff79",
+            "entity": "Intel",
+            "type": "sha256",
+            "value": "42efd4351f45ff1b2fb5848282c14e94657e8e9c26862d35a19dd6787377f1f7",
+            "rule": None,
+            "tags": [],
+            "custom_score": None,
+            "analysis_state": "completed",
+            "analysis": {
+                "community_verdict": "clean",
+                "community_score": 1,
+                "free_verdict": "no verdict",
+                "free_score": 0,
+                "premium_verdict": "no verdict",
+                "premium_score": 0,
+                "strike_ready_verdict": "clean",
+                "strike_ready_score": 1,
+                "strike_ready_tlp": "white"
+            },
+            "object": {
+                "md5": "72219ba421752aa1e96e0b01fb217f51",
+                "sha1": "550c893e54273f1303bf7ac6255c6727839622b5",
+                "sha256": "42efd4351f45ff1b2fb5848282c14e94657e8e9c26862d35a19dd6787377f1f7"
+            },
+            "hash": None
+        }
+    }
+}
 
 if __name__ == "__main__":
 
     # for k in range(150):
     #     for i in range(3):
-    registered_user = object
-    response = producer.send(topic, ip_event)
+    registered_user = enrich_event
+    response = producer.send('registered_user__intel_', registered_user)
     print(response.get())
     time.sleep(5)
