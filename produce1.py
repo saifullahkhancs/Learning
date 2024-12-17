@@ -1,7 +1,7 @@
 from kafka import KafkaProducer
 import time
 import json
-from src import config
+# from src import config
 # data3 = json.loads("""{
 #     "meta":{
 #         "ver":1.0
@@ -25369,7 +25369,7 @@ logger.addHandler(console_handler)
 #     security_protocol='SASL_PLAINTEXT')
 
 producer = KafkaProducer(
-    bootstrap_servers=config.KAFKA_BOOTSTRAP_SERVERS,
+    bootstrap_servers='localhost:29092',
     # api_version=(0, 11, 5),
     value_serializer=json_serializer,
     # sasl_plain_username='tg-user1',
@@ -26564,7 +26564,7 @@ node_event = {
 			{"label": "Ransom", "properties": ["srid"], "type": "UNIQUE"},
 			{"label": "Ransom", "properties": ["uid"], "type": "UNIQUE"}]}}
 
-relation_event = {
+relation_event = {           
 	"meta": {
 		"timestamp": 1689754983017,
 		"username": "neo4j",
@@ -26721,6 +26721,89 @@ kb_sync_data = {
     "event_type": "relationship"
 }
 
+
+# DATA FOT TEHE ENRICHEMENT 
+
+# POST /d045390b-f028-4dd2-8a67-5786bd1ba792_intelligence_artifact_object/_doc/<new_id>
+{
+  "alert": [
+    "SRA-2081",
+    "SRA-10909",
+    "SRA-13182",
+    "SRA-10901",
+    "SRA-9932",
+    "SRA-10907",
+    "SRA-9938",
+    "SRA-2077",
+    "SRA-2076"
+  ],
+  "alert_source": [
+    "Malwarebytes ThreatDown"
+  ],
+  "alerts_count": 2502,
+  "analysis_state": "completed",
+  "case": [],
+  "cases_count": 0,
+  "community_score": 1,
+  "community_verdict": "clean",
+  "completed_at": 1731481869.185883,
+  "created_at": 1731485357,
+  "deployment": [
+    "Microsoft Sentinel"
+  ],
+  "deployments_count": 1,
+  "displayName": "42efd4351f45ff1b2fb5848282c14e94657e8e9c26862d35a19dd6787377f1f7",
+  "enrichment_user": "ace9c2c2-2ea6-4f78-9e76-0bee4716263a",
+  "entity": [
+    "sha256",
+    "md5",
+    "object",
+    "artifact"
+  ],
+  "free_score": 0,
+  "free_verdict": "no verdict",
+  "id": "6705154e375775a70ce7ff79",
+  "job_id": [
+    "377568ef-9d15-4f53-9928-148d44c55aec",
+    "9057338d-3edb-4ee8-b810-01e0af71d6d6",
+    "69878989-a79f-4991-b901-60553a44abfe"
+  ],
+  "md5": "72219ba421752aa1e96e0b01fb217f51",
+  "name": [
+    "72219ba421752aa1e96e0b01fb217f51",
+    "550c893e54273f1303bf7ac6255c6727839622b5",
+    "42efd4351f45ff1b2fb5848282c14e94657e8e9c26862d35a19dd6787377f1f7"
+  ],
+  "plan_id": [
+    "67052d11e183a1d029bdd8c1",
+    "67053889c95aae8b070e89e1"
+  ],
+  "premium_score": 0,
+  "premium_verdict": "no verdict",
+  "sha1": "550c893e54273f1303bf7ac6255c6727839622b5",
+  "sha256": "42efd4351f45ff1b2fb5848282c14e94657e8e9c26862d35a19dd6787377f1f7",
+  "source": [
+    "Deploy and Retire"
+  ],
+  "source_id": [
+    "55d3338ad73f1eb42d24b2a3b732e8d004f3f10e"
+  ],
+  "source_type": [
+    "alert"
+  ],
+  "sources_count": 1,
+  "strike_ready_score": 1,
+  "strike_ready_verdict": "clean",
+  "tag": [],
+  "task_id": [],
+  "tlp": [
+    "white"
+  ],
+  "type": "artifact_object", 
+  "updated_at": 1731481869.185883
+}
+
+
 enrich_event = {
     "workspace_id": "d045390b-f028-4dd2-8a67-5786bd1ba792",
     "company_id": "23ea8442-ae2a-4cca-a115-1220f6116eb6",
@@ -26757,7 +26840,7 @@ enrich_event = {
                 "premium_score": 0,
                 "strike_ready_verdict": "clean",
                 "strike_ready_score": 1,
-                "strike_ready_tlp": "white"
+                "strike_ready_tlp": "WHITE"
             },
             "object": {
                 "md5": "72219ba421752aa1e96e0b01fb217f51",

@@ -1,7 +1,7 @@
 from kafka import KafkaProducer
 import time
 import json
-from src import config
+# from src import config
 # data3 = json.loads("""{
 #     "meta":{
 #         "ver":1.0
@@ -25369,7 +25369,7 @@ logger.addHandler(console_handler)
 #     security_protocol='SASL_PLAINTEXT')
 
 producer = KafkaProducer(
-    bootstrap_servers=config.KAFKA_BOOTSTRAP_SERVERS,
+    bootstrap_servers='localhost:29092',
     # api_version=(0, 11, 5),
     value_serializer=json_serializer,
     # sasl_plain_username='tg-user1',
@@ -26416,7 +26416,7 @@ object = {
     "before": None,
     "after": {
       "properties": {
-        "sha1": "60e56713191a5ff83cc905debd5a76c80fcd77de",
+        "sha1": "",
         "md5": "e56093a7cd414f5592cc76a41ddd4c25",
         "uid": "fe1a7f66-5f06-44e9-89b4-86f7456976f2",
         "createdAt": 1730382302.459995,
@@ -26460,6 +26460,7 @@ object = {
     ]
   }
 }
+
 
 
 sha = {
@@ -26534,6 +26535,279 @@ sha = {
     }
 } 
 
+
+sha_and__object = {
+    "meta": {
+        "timestamp": 1730382303028,
+        "username": "neo4j",
+        "txId": 396892502,
+        "txEventId": 0,
+        "txEventsCount": 2,
+        "operation": "created",
+        "source": {
+            "hostname": "neo4j-cluster-core-0"
+        }
+    },
+    "payload": {
+        "id": "378093608",
+        "start": {
+            "id": "26095934",
+            "labels": [
+                "Object"
+            ],
+            "ids": {
+                "srid": "object-fe1a7f66-5f06-44e9-89b4-86f7456976f2"
+            }
+        },
+        "end": {
+            "id": "26095937",
+            "labels": [
+                "SHA1"
+            ],
+            "ids": {
+                "name": "60e56713191a5ff83cc905debd5a76c80fcd77de"
+                
+            }
+        },
+        "before": None,
+        "after": {
+            "properties": {
+                "createdAt": 1.730382302934838E9,
+                "updatedAt": 1.730382302934838E9
+            }
+        },
+        "label": "HAS_SHA1",
+        "type": "relationship"
+    },
+    "schema": {
+        "properties": {
+            "createdAt": "Double",
+            "updatedAt": "Double"
+        },
+        "constraints": [
+            {
+                "label": "SHA1",
+                "properties": [
+                    "uid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "SHA1",
+                "properties": [
+                    "srid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "SHA1",
+                "properties": [
+                    "name"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "SHA1",
+                "properties": [
+                    "srid"
+                ],
+                "type": "NODE_PROPERTY_EXISTS"
+            },
+            {
+                "label": "Object",
+                "properties": [
+                    "srid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "Object",
+                "properties": [
+                    "uid"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "Object",
+                "properties": [
+                    "name"
+                ],
+                "type": "UNIQUE"
+            },
+            {
+                "label": "Object",
+                "properties": [
+                    "srid"
+                ],
+                "type": "NODE_PROPERTY_EXISTS"
+            }
+        ]
+    }
+}
+
+
+object2 = {"meta": {
+    "timestamp": 1676544118775,
+    "username": "neo4j",
+    "txId": 12345,
+    "txEventId": 0,
+    "txEventsCount": 1,
+    "operation": "created",
+    "source": {
+      "hostname": "neo4j-cluster-core-0"
+    }
+  },
+  "payload": {
+    "id": "240151",
+    "before": None,
+    "after": {
+      "properties": {
+        "confidence": "high",
+        "createdAt": 1676544118.77552,
+        "firstSeen": 1676543582.9,
+        "lastSeen": 1676543582.9,
+        "md5": "9730ee14db1d3088b284b3ad350fdb1b",
+        "name": "object-2017dec5-650c-4944-8322-81164f0bc3ec",
+        "score": 90,
+        "sha1": "",
+        "sha256": "107b4465806250a6fd7fda62b3ec399b4eaa97a7262bd4a9e13fbe96007ed99e",
+        "srid": "object-2017dec5-650c-4944-8322-81164f0bc3ec",
+        "uid": "2017dec5-650c-4944-8322-81164f0bc3ec",
+        "updatedAt": 1696633853.034841,
+        "verdict": "malicious"
+      },
+      "labels": ["Object"]
+    },
+    "type": "node"
+  },
+  "schema": {
+    "properties": {
+      "confidence": "String",
+      "createdAt": "Double",
+      "firstSeen": "Double",
+      "lastSeen": "Double",
+      "md5": "String",
+      "name": "String",
+      "score": "Integer",
+      "sha1": "String",
+      "sha256": "String",
+      "srid": "String",
+      "uid": "String",
+      "updatedAt": "Double",
+      "verdict": "String"
+    },
+  }
+}
+
+sha2 = {
+  "meta": {
+    "timestamp": 1676544119045,
+    "username": "neo4j",
+    "txId": 12346,
+    "txEventId": 0,
+    "txEventsCount": 1,
+    "operation": "created",
+    "source": {
+      "hostname": "neo4j-cluster-core-0"
+    }
+  },
+  "payload": {
+    "id": "468180",
+    "before": None,
+    "after": {
+      "properties": {
+        "createdAt": 1676544119.045492,
+        "firstSeen": 1676543582.9,
+        "lastSeen": 1676543582.9,
+        "name": "c1788dfd2f4faea8dc64652149b7190b714a9450",
+        "srid": "sha1-0bb6d767-80a2-4c63-bd22-cf195cb29f7e",
+        "uid": "0bb6d767-80a2-4c63-bd22-cf195cb29f7e",
+        "updatedAt": 1676544119.045492
+      },
+      "labels": ["SHA1"]
+    },
+    "type": "node"
+  },
+  "schema": {
+    "properties": {
+      "createdAt": "Double",
+      "firstSeen": "Double",
+      "lastSeen": "Double",
+      "name": "String",
+      "srid": "String",
+      "uid": "String",
+      "updatedAt": "Double"
+    },
+    "constraints": [
+      {
+        "label": "SHA1",
+        "properties": ["uid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "SHA1",
+        "properties": ["srid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "SHA1",
+        "properties": ["name"],
+        "type": "UNIQUE"
+      }
+    ]
+  }
+}
+
+
+
+object_has_sha = {
+  "meta": {
+    "timestamp": 1676544119083,
+    "username": "neo4j",
+    "txId": 12347,
+    "txEventId": 0,
+    "txEventsCount": 1,
+    "operation": "created",
+    "source": {
+      "hostname": "neo4j-cluster-core-0"
+    }
+  },
+  "payload": {
+    "id": "1293324",
+    "start": {
+      "id": "240151",
+      "labels": ["Object"],
+      "ids": {
+        "srid": "object-2017dec5-650c-4944-8322-81164f0bc3ec"
+      }
+    },
+    "end": {
+      "id": "468180",
+      "labels": ["SHA1"],
+      "ids": {
+        "name": "c1788dfd2f4faea8dc64652149b7190b714a9450"
+      }
+    },
+    "before": None,
+    "after": {
+      "properties": {
+        "createdAt": 1676544119.083627,
+        "updatedAt": 1676544119.083627
+      }
+    },
+    "label": "HAS_SHA1",
+    "type": "relationship"
+  },
+  "schema": {
+    "properties": {
+      "createdAt": "Double",
+      "updatedAt": "Double"
+    },
+    "constraints": []
+  }
+}
+
+
 md5 = {
     "meta": {
         "timestamp": 17303823028809,
@@ -26607,113 +26881,8 @@ md5 = {
 } 
 
 
-sha_and__object = {
-    "meta": {
-        "timestamp": 1730382303028,
-        "username": "neo4j",
-        "txId": 396892502,
-        "txEventId": 0,
-        "txEventsCount": 2,
-        "operation": "created",
-        "source": {
-            "hostname": "neo4j-cluster-core-0"
-        }
-    },
-    "payload": {
-        "id": "378093608",
-        "start": {
-            "id": "26095935",
-            "labels": [
-                "SHA1"
-            ],
-            "ids": {
-                "name": "60e56713191a5ff83cc905debd5a76c80fcd77de"
-            }
-        },
-        "end": {
-            "id": "26095934",
-            "labels": [
-                "Object"
-            ],
-            "ids": {
-                "srid": "object-fe1a7f66-5f06-44e9-89b4-86f7456976f2"
-            }
-        },
-        "before": None,
-        "after": {
-            "properties": {
-                "createdAt": 1.730382302934838E9,
-                "updatedAt": 1.730382302934838E9
-            }
-        },
-        "label": "SHA1_OF_OBJECT",
-        "type": "relationship"
-    },
-    "schema": {
-        "properties": {
-            "createdAt": "Double",
-            "updatedAt": "Double"
-        },
-        "constraints": [
-            {
-                "label": "SHA1",
-                "properties": [
-                    "uid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "srid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "name"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "SHA1",
-                "properties": [
-                    "srid"
-                ],
-                "type": "NODE_PROPERTY_EXISTS"
-            },
-            {
-                "label": "Object",
-                "properties": [
-                    "srid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Object",
-                "properties": [
-                    "uid"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Object",
-                "properties": [
-                    "name"
-                ],
-                "type": "UNIQUE"
-            },
-            {
-                "label": "Object",
-                "properties": [
-                    "srid"
-                ],
-                "type": "NODE_PROPERTY_EXISTS"
-            }
-        ]
-    }
-}
+
+
 malware ={
     "meta": {
         "timestamp": 1691495057788,
@@ -28988,7 +29157,7 @@ object_event22  = {
     "tools": [],
     "ransoms": [],
     "strikes": [],
-    "tags": [],
+    "tags": ["i am in the new one"],
     "internal_tags": [
       "ua-wget",
       "malware_download",
@@ -29549,8 +29718,8 @@ domain_event2 = {
             'botnet_cc',
             "i"
         ],
-        'first_seen': 1733317501.7,
-        'last_seen': 1733464800.4,
+        'first_seen':1734164925.335116,
+        'last_seen': 1734078525.335116,
         'raw': [
             {
                 'threat_fox': {
@@ -29681,13 +29850,13 @@ domain_event2 = {
     }
 }
 
-# topic  = "elastic"
-topic= "registered_user_thre"
+topic  = "elastic"
+# topic= "registered_user_thre"
 if __name__ == "__main__":
 
     # for k in range(150):
     #     for i in range(3):
     registered_user = object
-    response = producer.send(topic,sha )
+    response = producer.send(topic,domain_event2 )
     print(response.get())
     time.sleep(5)
