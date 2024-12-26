@@ -1,0 +1,3 @@
+12/20/2022
+
+Bug : - After adding ransom and hash and adding the sha ->ransom relation  new object is created and hash remain there

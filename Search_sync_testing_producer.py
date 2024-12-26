@@ -42,7 +42,7 @@ object = {"meta": {
     "txId": 12345,
     "txEventId": 0,
     "txEventsCount": 1,
-    "operation": "created",
+    "operation": "create",
     "source": {
       "hostname": "neo4j-cluster-core-0"
     }
@@ -58,8 +58,8 @@ object = {"meta": {
         "lastSeen": 1676543582.9,
         "md5": "e56093a7cd414f5592cc76a41ddd4c25",
         "name": "object-2017dec5-650c-4944-8322-81164f0bc3ec",
-        "score": 90,
-        "sha1": "c1788dfd2f4faea8dc64652149b7190b714a9450",
+        "score": 10,
+        "sha1": "",
         "sha256": "107b4465806250a6fd7fda62b3ec399b4eaa97a7262bd4a9e13fbe96007ed99e",
         "srid": "object-2017dec5-650c-4944-8322-81164f0bc3ec",
         "uid": "2017dec5-650c-4944-8322-81164f0bc3ec",
@@ -272,8 +272,270 @@ object_has_sha = {
 }
 
 
+sha_ransom = {
+  "meta": {
+    "timestamp": 1704646392548,
+    "username": "neo4j",
+    "txId": 12347,
+    "txEventId": 0,
+    "txEventsCount": 1,
+    "operation": "created",
+    "source": {
+      "hostname": "neo4j-cluster-core-0"
+    }
+  },
+  "payload": {
+    "id": "6313",
+    "before": None,
+    "after": {
+      "properties": {
+        "firstSeen": 1704646392.448,
+        "lastSeen": 1704646392.548,
+        "name": "c2cc9ad6549d7e81f9052ba45680219bab75960a",
+        "sourceId": 6313,
+        "srid": "sha1-00fd6e30-e09d-43b0-817c-589633522546",
+        "uid": "f0ed9f49-2f39-4088-b3e0-a94be91e73e6"
+      },
+      "labels": ["SHA1"]
+    },
+    "type": "node"
+  },
+  "schema": {
+    "properties": {
+      "firstSeen": "Double",
+      "lastSeen": "Double",
+      "name": "String",
+      "sourceId": "Long",
+      "srid": "String",
+      "uid": "String"
+    },
+    "constraints": [
+      {
+        "label": "SHA1",
+        "properties": ["uid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "SHA1",
+        "properties": ["srid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "SHA1",
+        "properties": ["name"],
+        "type": "UNIQUE"
+      }
+    ]
+  }
+}
 
 
+raansom = {
+  "meta": {
+    "timestamp": 1704646393000,
+    "username": "neo4j",
+    "txId": 12348,
+    "txEventId": 0,
+    "txEventsCount": 1,
+    "operation": "created",
+    "source": {
+      "hostname": "neo4j-cluster-core-0"
+    }
+  },
+  "payload": {
+    "id": "721",
+    "before": None,
+    "after": {
+      "properties": {
+        "alias": ["malware-gen", "armageddon"],
+        "authentiHash": "0a73616ec491081fdc9c2b6fd696ca8cee7101c715636f99a91ec27ce578de32",
+        "creator": "darkday",
+        "date": "June 13th, 2019",
+        "description": "Armageddon is a ransomware infection, that does not add an extension or rename files in any other way. Armageddon is distributed using third-party software download sources, spam email campaigns, trojans, fake software updaters, and cracks. Once infiltrated, Armageddon encrypts most of the stored files using the RSA-2048 encryption algorithm. Once data is encrypted, Armageddon opens a pop-up window that contains a ransom-demand message.",
+        "encryption": "No Information",
+        "extensions": [],
+        "family": "HiddenTear",
+        "fileSize": "322 KB (329,728 Bytes)",
+        "fileType": "Win32 PE executable (.EXE)",
+        "impHash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+        "md5": "50c6225ff8e1e741238fc0bbdf7d8172",
+        "name": "Armageddon",
+        "origin": "No Information",
+        "paymentMethod": "No Information",
+        "platform": ["windows"],
+        "price": "No Information",
+        "ransomNote": [],
+        "ransomwareExtension": "",
+        "refs": ["https://malware.wikia.org/wiki/Armageddon"],
+        "sha1": "c2cc9ad6549d7e81f9052ba45680219bab75960a",
+        "sha256": "1ebdbfea6ab13f258a7d00dea47de48261cfb84d52ebbb6f282498c3ab1b1b39",
+        "sourceId": 721,
+        "sourceLanguage": "Assembly",
+        "srid": "ransom-armageddon-e5d1ce62-82e9-4724-a75c-8e0802ba9f2f",
+        "ssDeep": "3072:F66/pFINPVP06dvuqrWrb60Db+7uQxQrq61gFsRd8cQUewkoLeC8BS0HVKT+8X2C:Gbxu6Q31gFsR0FoTY8T+8Gx",
+        "uid": "bca91af5-687e-47fc-9917-86357e96e07c",
+        "vHash": "235036751512b099322b6043"
+      },
+      "labels": ["Ransom"]
+    },
+    "type": "node"
+  },
+  "schema": {
+    "properties": {
+      "alias": "List<String>",
+      "authentiHash": "String",
+      "creator": "String",
+      "date": "String",
+      "description": "String",
+      "encryption": "String",
+      "extensions": "List<String>",
+      "family": "String",
+      "fileSize": "String",
+      "fileType": "String",
+      "impHash": "String",
+      "md5": "String",
+      "name": "String",
+      "origin": "String",
+      "paymentMethod": "String",
+      "platform": "List<String>",
+      "price": "String",
+      "ransomNote": "List<String>",
+      "ransomwareExtension": "String",
+      "refs": "List<String>",
+      "sha1": "String",
+      "sha256": "String",
+      "sourceId": "Long",
+      "sourceLanguage": "String",
+      "srid": "String",
+      "ssDeep": "String",
+      "uid": "String",
+      "vHash": "String"
+    },
+    "constraints": [
+      {
+        "label": "Ransom",
+        "properties": ["uid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "Ransom",
+        "properties": ["srid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "Ransom",
+        "properties": ["sha1"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "Ransom",
+        "properties": ["name"],
+        "type": "UNIQUE"
+      }
+    ]
+  }
+}
+
+
+
+rasnsom_sha_rel = {
+  "meta": {
+    "timestamp": 1704646393000,
+    "username": "neo4j",
+    "txId": 12349,
+    "txEventId": 0,
+    "txEventsCount": 1,
+    "operation": "created",
+    "source": {
+      "hostname": "neo4j-cluster-core-0"
+    }
+  },
+  "payload": {
+    "id": "44148",
+    "end": {
+      "id": "6313",
+      "labels": ["SHA1"],
+      "ids": {
+        "name": "c2cc9ad6549d7e81f9052ba45680219bab75960a"
+      }
+    },
+    "start": {
+      "id": "721",
+      "labels": ["Ransom"],
+      "ids": {
+        "name": "Armageddon"
+      }
+    },
+    "before": None,
+    "after": {
+      "properties": {
+        "sourceId": 44148,
+        "createdAt": 1704646393.000,
+        "updatedAt": 1704646393.000
+      }
+    },
+    "label": "RANSOM_SHA1",
+    "type": "relationship"
+  },
+  "schema": {
+    "properties": {
+      "sourceId": "Long",
+      "createdAt": "Double",
+      "updatedAt": "Double"
+    },
+    "constraints": []
+  }
+}
+
+
+sha_ransom_rel  = {
+  "meta": {
+    "timestamp": 1704646394000,
+    "username": "neo4j",
+    "txId": 12350,
+    "txEventId": 0,
+    "txEventsCount": 1,
+    "operation": "created",
+    "source": {
+      "hostname": "neo4j-cluster-core-0"
+    }
+  },
+  "payload": {
+    "id": "44149",
+    "start": {
+      "id": "6313",
+      "labels": ["SHA1"],
+      "ids": {
+        "name": "c2cc9ad6549d7e81f9052ba45680219bab75960a"
+      }
+    },
+    "end": {
+      "id": "721",
+      "labels": ["Ransom"],
+      "ids": {
+        "name": "Armageddon"
+      }
+    },
+    "before": None,
+    "after": {
+      "properties": {
+        "sourceId": 44149,
+        "createdAt": 1704646394.000,
+        "updatedAt": 1704646394.000
+      }
+    },
+    "label": "SHA1_OF_RANSOM",
+    "type": "relationship"
+  },
+  "schema": {
+    "properties": {
+      "sourceId": "Long",
+      "createdAt": "Double",
+      "updatedAt": "Double"
+    },
+    "constraints": []
+  }
+}
 
 
 # topic  = "elastic"
@@ -283,6 +545,6 @@ if __name__ == "__main__":
     # for k in range(150):
     #     for i in range(3):
     registered_user = object
-    response = producer.send(topic,sha1 )
+    response = producer.send(topic, object )
     print(response.get())
     time.sleep(5)

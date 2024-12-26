@@ -1,5 +1,5 @@
-Too add the document for the enrichment
-POST /d045390b-f028-4dd2-8a67-5786bd1ba792_intelligence_artifact_object/_doc/<new_id>
+####   Too add the document for the enrichment
+POST /d045390b-f028-4dd2-8a67-5786bd1ba792_intelligence_artifact_object/_doc/6705154e375775a70ce7ff79
 {
   "alert": [
     "SRA-2081",
@@ -80,11 +80,100 @@ POST /d045390b-f028-4dd2-8a67-5786bd1ba792_intelligence_artifact_object/_doc/<ne
 
 
 
-too update the field 
+####  Too update the field 
 
 POST /d045390b-f028-4dd2-8a67-5786bd1ba792_intelligence_artifact_object/_update/6705154e375775a70ce7ff79
 {
   "doc": {
     "tlp": ["red","White","blue","GREEN"]
+  }
+}
+
+
+####### Get the data of the intel indexs
+
+GET *_intelligence_artifact_url/_search
+GET *_intelligence_artifact_domain/_search
+GET *_intelligence_artifact_ipv4/_search
+GET *_intelligence_artifact_object/_search
+
+
+
+#####     Get the testing Kb  indexes data
+
+
+get temp_v1_intelligence_kb_artifact_url/_search
+get temp_v1_intelligence_kb_artifact_object/_search
+get temp_v1_intelligence_kb_artifact_domain/_search
+get temp_v1_intelligence_kb_artifact_ipv4/_search
+
+
+
+
+######   Scripit to update the field 
+
+
+POST /intelligence_kb_artifact_object/_update_by_query
+{
+  "script": {
+    "source": """
+      if (ctx._source.tlp.contains('WHITE')) {
+        ctx._source.tlp.remove(ctx._source.tlp.indexOf('WHITE'));
+        ctx._source.tlp.add('white');
+      }
+     """
+  },
+  "query": {
+    "terms": {
+      "tlp.keyword": ["WHITE"]
+    }
+  }
+}
+
+
+
+2:- to update the tl pwhere exist more than one tlp 
+@Mehlab Faryad  We can use this scripit and also scripit is updated when the tlp is adding.
+POST /{index_name}/_update_by_query
+{
+  "script": {
+    "source": """
+      Set tlp = new HashSet();
+            if (ctx._source.tlp != null) {
+                for (t in ctx._source.tlp) {
+                    tlp.add(t.toLowerCase());
+                }
+            }
+            Map sorted_dict = ["white": 1, "green": 2, "amber": 3, "red": 4];
+            Set valid_tlp = new HashSet();
+            for (t in tlp) {
+                if (sorted_dict.containsKey(t)) {
+                    valid_tlp.add(t);
+                }
+            }
+            if (!valid_tlp.isEmpty()) {
+                List tlpList = new ArrayList(valid_tlp);
+                tlpList.sort((a, b) -> sorted_dict.get(a) - sorted_dict.get(b));
+                ctx._source.tlp = tlpList.subList(0, 1);
+            } 
+     """
+  },
+   "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": { "field": "tlp" }
+        }
+      ],
+      "filter": [
+        {
+          "range": {
+            "tlp": {
+              "gt": 1
+            }
+          }
+        }
+      ]
+    }
   }
 }

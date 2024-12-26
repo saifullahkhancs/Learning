@@ -242,7 +242,7 @@ enrich_event = {
                 "premium_score": 0,
                 "strike_ready_verdict": "clean",
                 "strike_ready_score": 1,
-                "strike_ready_tlp": "WHITE"
+                "strike_ready_tlp": "white",
             },
             "object": {
                 "md5": "72219ba421752aa1e96e0b01fb217f51",
@@ -257,12 +257,13 @@ enrich_event = {
 
 
 # topic  = "elastic"
-topic= "registered_user_thre"
+topic= "registered_user_thre"      # for adding relation
+# topic = "registered_user__intel_"    #   for enrichment
 if __name__ == "__main__":
 
     # for k in range(150):
     #     for i in range(3):
     registered_user = object
-    response = producer.send(topic,tlp_object_testing_object_with_tlp )
+    response = producer.send(topic,tlp_object_testing_object_with_tlp)
     print(response.get())
     time.sleep(5)
