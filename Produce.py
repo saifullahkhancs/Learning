@@ -1030,15 +1030,19 @@ domain_event2 = {
 }
 
 
-
-
-topic  = "elastic"
+sr_event = {"domain_name": "metamask.tokenim.ink", "date": "2024-12-27 07:12:45.142181", "sr_rank": 1146975}
+sr_event1 = {"domain_name": "metamask.tokenim.ink", "date": "2024-12-21 07:12:45.142181", "sr_rank": 1146978}
+sr_event5 = {"domain_name": "metamask.tokenim.ink", "date": "2024-12-22 07:12:45.142181", "sr_rank": 1146979}
+sr_event2 = {"domain_name": "metamask.tokenim.ink", "date": "2024-12-23 07:12:45.142181", "sr_rank": 1146971}
+sr_event3 = {"domain_name": "metamask.tokenim.ink", "date": "2024-12-24 07:12:45.142181", "sr_rank": 1146973}
+# topic  = "elastic"
+topic = "internal_domain_rank_events"
 # topic= "registered_user_thre"
 if __name__ == "__main__":
 
     # for k in range(150):
     #     for i in range(3):
     registered_user = object
-    response = producer.send(topic,object_event21 )
+    response = producer.send(topic,sr_event5 )
     print(response.get())
     time.sleep(5)

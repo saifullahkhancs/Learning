@@ -2,6 +2,8 @@ import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { Neo4jGraphQL } from "@neo4j/graphql";
 import neo4j from "neo4j-driver";
+import fs from 'fs';
+const typeDefs = fs.readFileSync('schema/schema.graphql', 'utf8');
 
 // Initialize Neo4j Driver
 const driver = neo4j.driver(
@@ -24,105 +26,7 @@ const driver = neo4j.driver(
 
 
 
-  const typeDefs = `
-  type Strike {
-  uid: String
-  srid: String
-  name: String
-  verified: Boolean
-  hasTransaction: [Transaction!]! @relationship(type: "HAS_TRANSACTION", direction: OUT)
-}
-   type Tactic {
-  uid: String
-  srid: String
-  name: String
-  displayName: String
-  description: String
-  mitreId: String
-   has(sourceSRID: String!): [Technique!]! 
-          @cypher(
-            statement: """
-            MATCH (this)-[rel:HAS]->(tech:Technique)
-            WHERE rel.sourceSRID = $sourceSRID
-            RETURN tech
-            LIMIT 5
-            """
-          )
-  }
-interface TacticHasTechniques @relationshipProperties {
-  sourceSRID: String
-  label: String
-  uid: String
-}
-
-type Technique {
-    detection: String
-    refs: String
-    name: String
-    displayName: String
-    defenseBypassed: String
-    description: String
-    permission: String
-    mitreId: String
-    dataSources: String
-    version: String
-    platform: String
-    tactic: String
-    uid: String
-    srid: String
-    partOf: [Tactic!]! @relationship(type: "PART_OF", direction: OUT, properties: "TacticHasTechniques")
-    
-  }
-
-  type Transaction {
-  uid: String
-  srid: String
-  domain: String
-  url: String
-  urlType: String
-  stage: String
-  description: String
-  configuration: String
-  family: String
-  objType: String
-  date: String
-  vtScore: String
-  protocol: String
-  replayMode: String
-  impact: String
-  flow: String
-  ettr: Float
-  timeout: Float
-  category: String
-  actor: String
-  request: String
-  response: String
-  fileSize: String
-  fileName: [String]
-  filePath: String
-  advisory: [String]
-  cve: [String]
-  processInfo: [String]
-  createdAt: Float
-  stageOrder: Int
-  tactic_and_tech(sourceSRID: String!):  [TacticWithTechniques!]
-          @cypher(
-            statement: """
-             MATCH (n:Transaction {srid:$sourceSRID})
-              WITH n
-              MATCH (tact:Tactic)-[rel2:HAS]->(tech:Technique)
-              WHERE rel2.sourceSRID = n.srid
-              WITH tact , COLLECT(DISTINCT tech) AS techniques
-              RETURN { tactic: tact, techniques: techniques }
-            """
-          ) 
-  hasTactic: [Tactic!]! @relationship(type: "HAS_TACTIC", direction: OUT)
-}
-  type TacticWithTechniques {
-  tactic: Tactic
-  techniques: [Technique!]!
-}
-`
+// const typeDefs =  from schema.graphql
 const resolvers = {
   Tactic: {
     has: async (tactic, { limit = 10 }, { driver }) => {

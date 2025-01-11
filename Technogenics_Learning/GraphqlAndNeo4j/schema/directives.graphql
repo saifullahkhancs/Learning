@@ -1,0 +1,17 @@
+enum Direction {
+  IN
+  OUT
+}
+enum ExcludeOperation {
+  CREATE
+  READ
+  UPDATE
+  DELETE
+}
+directive @relationship(type: String!, direction: Direction, properties: String) on FIELD_DEFINITION | OBJECT
+directive @cypher(statement: String!) on FIELD_DEFINITION | OBJECT
+directive @relationshipProperties on INTERFACE
+directive @computed(from: [String!]!) on FIELD_DEFINITION
+directive @alias(property: String!) on FIELD_DEFINITION
+directive @exclude(operations: [ExcludeOperation!]! = [CREATE, READ, UPDATE, DELETE]) on OBJECT
+directive @node(label: String, additionalLabels: [String], plural: String) on OBJECT

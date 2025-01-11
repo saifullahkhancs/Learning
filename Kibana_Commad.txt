@@ -102,10 +102,10 @@ GET *_intelligence_artifact_object/_search
 #####     Get the testing Kb  indexes data
 
 
-get temp_v1_intelligence_kb_artifact_url/_search
-get temp_v1_intelligence_kb_artifact_object/_search
-get temp_v1_intelligence_kb_artifact_domain/_search
-get temp_v1_intelligence_kb_artifact_ipv4/_search
+get intelligence_kb_artifact_url/_search
+get intelligence_kb_artifact_object/_search
+get intelligence_kb_artifact_domain/_search
+get intelligence_kb_artifact_ipv4/_search
 
 
 
@@ -177,3 +177,17 @@ POST /{index_name}/_update_by_query
     }
   }
 }
+
+
+
+
+3:- To find the specific artifact with the given name
+
+GET _search
+{
+  "query": {
+    "match": {
+      "name": "oppo.com"
+    }
+    }
+  }

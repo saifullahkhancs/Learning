@@ -56,7 +56,7 @@ object = {"meta": {
         "createdAt": 1676544118.77552,
         "firstSeen": 1676543582.9,
         "lastSeen": 1676543582.9,
-        "md5": "e56093a7cd414f5592cc76a41ddd4c25",
+        "md5": "",
         "name": "object-2017dec5-650c-4944-8322-81164f0bc3ec",
         "score": 10,
         "sha1": "",
@@ -262,14 +262,56 @@ object_has_sha = {
     "label": "HAS_SHA1",
     "type": "relationship"
   },
-  "schema": {
+   "schema": {
     "properties": {
       "createdAt": "Double",
       "updatedAt": "Double"
     },
-    "constraints": []
+    "constraints": [
+      {
+        "label": "Object",
+        "properties": ["uid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "Object",
+        "properties": ["srid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "Object",
+        "properties": ["name"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "Object",
+        "properties": ["srid"],
+        "type": "NODE_PROPERTY_EXISTS"
+      },
+      {
+        "label": "SHA1",
+        "properties": ["name"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "SHA1",
+        "properties": ["uid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "SHA1",
+        "properties": ["srid"],
+        "type": "UNIQUE"
+      },
+      {
+        "label": "SHA1",
+        "properties": ["srid"],
+        "type": "NODE_PROPERTY_EXISTS"
+      }
+    ]
   }
 }
+
 
 
 sha_ransom = {
@@ -538,6 +580,9 @@ sha_ransom_rel  = {
 }
 
 
+
+
+
 # topic  = "elastic"
 topic= "registered_user_thre"
 if __name__ == "__main__":
@@ -545,6 +590,6 @@ if __name__ == "__main__":
     # for k in range(150):
     #     for i in range(3):
     registered_user = object
-    response = producer.send(topic, object )
+    response = producer.send(topic, object_has_sha) 
     print(response.get())
     time.sleep(5)

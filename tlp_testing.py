@@ -254,16 +254,54 @@ enrich_event = {
     }
 }
 
-
+new_enrich = {
+  "workspace_id": "8c477159-8e8a-467d-83ac-8ac31f2218b2",
+  "company_id": "23ea8442-ae2a-4cca-a115-1220f6116eb6",
+  "user_id": "ace9c2c2-2ea6-4f78-9e76-0bee4716263a",
+  "label": "Add Artifacts",
+  "description": "Added artifacts from case",
+  "success": True,
+  "timestamp": 1735555669.172204,
+  "type": "info",
+  "metadata": {
+    "plan_id": None,
+    "job_id": None,
+    "task_id": None,
+    "action": {
+      "name": "add_artifacts",
+      "integration": None,
+      "source": {
+        "id": "SRC-14143",
+        "value": "SRC-14143",
+        "type": "case"
+      }
+    },
+    "resource": {
+      "id": "67727a54fc62837dd1f907df",
+      "entity": "Intel",
+      "type": "url",
+      "value": "www.orden-justice.su/WinDiver.exe",
+      "rule": None,
+      "tags": [
+        "Not Prevented"
+      ],
+      "custom_score": None,
+      "analysis_state": None,
+      "analysis": {},
+      "object": None,
+      "hash": None
+    }
+  }
+}
 
 # topic  = "elastic"
-topic= "registered_user_thre"      # for adding relation
-# topic = "registered_user__intel_"    #   for enrichment
+# topic= "registered_user_thre"      # for adding relation
+topic = "registered_user__intel_"    #   for enrichment
 if __name__ == "__main__":
 
     # for k in range(150):
     #     for i in range(3):
     registered_user = object
-    response = producer.send(topic,tlp_object_testing_object_with_tlp)
+    response = producer.send(topic,new_enrich)
     print(response.get())
     time.sleep(5)
