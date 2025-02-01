@@ -191,3 +191,15 @@ GET _search
     }
     }
   }
+
+
+
+  to find the data in the internal  just search the string
+  GET /_search 
+  {
+    "query": {
+      "query_string": {
+        "query": "actcorp.in"
+      }
+    }
+  }
