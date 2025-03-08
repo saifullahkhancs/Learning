@@ -203,3 +203,63 @@ GET _search
       }
     }
   }
+
+
+Strike info in strike index
+  
+  
+  GET strikes_cb6846a5-5d77-4100-a649-58bbce04c3f0*/_search
+  {
+    "size": 300,
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "exists": {
+              "field": "artifacts"
+            }
+          },
+          {
+            "term": {
+              "artifacts.keyword": "cyberhavenext.pro"
+            }
+          }
+        ]
+      }
+    }
+  }
+
+
+ To check one field exists and one not exists 
+
+  GET cb6846a5-5d77-4100-a649-58bbce04c3f0*/_search
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "strikes_count"
+          }
+        }
+      ],
+      "must_not": {
+        "exists": {
+          "field": "strike_id"
+        }
+      }
+    }
+  }
+}
+
+
+To get specific field data
+GET countries_info_v1/_search
+{
+  "size": 241,
+  "_source": ["data.country" , "data.hasRegion"], 
+  "query": {
+    "match_all": {}
+  }
+}
