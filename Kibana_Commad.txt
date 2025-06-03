@@ -1,116 +1,732 @@
-####   Too add the document for the enrichment
-POST /d045390b-f028-4dd2-8a67-5786bd1ba792_intelligence_artifact_object/_doc/6705154e375775a70ce7ff79
+# imp note 
+# intelligence_kb_artifact_email
+
+# workspace_ids 
+  # default test-alpha 
+  // de38ad9d-638b-4621-96de-7c0f77e9edf1
+
+  #  qa test-alpha 
+  // cb6846a5-5d77-4100-a649-58bbce04c3f0
+
+
+
+  #   default trunk 
+  //  8c477159-8e8a-467d-83ac-8ac31f2218b2
+
+  #   qa trunk 
+  // c025052e-a160-440f-a88e-4e34b9c82716
+
+  # asss trunk 
+  // 897d1eae-4ca0-448a-8d94-b61186280807
+
+# name ka opar keyword nhy laga ga q ka as ki type pahala sa hi keyword ha
+
+GET intelligence_kb_artifact_email/_search
 {
-  "alert": [
-    "SRA-2081",
-    "SRA-10909",
-    "SRA-13182",
-    "SRA-10901",
-    "SRA-9932",
-    "SRA-10907",
-    "SRA-9938",
-    "SRA-2077",
-    "SRA-2076"
-  ],
-  "alert_source": [
-    "Malwarebytes ThreatDown"
-  ],
-  "alerts_count": 2502,
-  "analysis_state": "completed",
-  "case": [],
-  "cases_count": 0,
-  "community_score": 1,
-  "community_verdict": "clean",
-  "completed_at": 1731481869.185883,
-  "created_at": 1731485357,
-  "deployment": [
-    "Microsoft Sentinel"
-  ],
-  "deployments_count": 1,
-  "displayName": "42efd4351f45ff1b2fb5848282c14e94657e8e9c26862d35a19dd6787377f1f7",
-  "enrichment_user": "ace9c2c2-2ea6-4f78-9e76-0bee4716263a",
-  "entity": [
-    "sha256",
-    "md5",
-    "object",
-    "artifact"
-  ],
-  "free_score": 0,
-  "free_verdict": "no verdict",
-  "id": "6705154e375775a70ce7ff79",
-  "job_id": [
-    "377568ef-9d15-4f53-9928-148d44c55aec",
-    "9057338d-3edb-4ee8-b810-01e0af71d6d6",
-    "69878989-a79f-4991-b901-60553a44abfe"
-  ],
-  "md5": "72219ba421752aa1e96e0b01fb217f51",
-  "name": [
-    "72219ba421752aa1e96e0b01fb217f51",
-    "550c893e54273f1303bf7ac6255c6727839622b5",
-    "42efd4351f45ff1b2fb5848282c14e94657e8e9c26862d35a19dd6787377f1f7"
-  ],
-  "plan_id": [
-    "67052d11e183a1d029bdd8c1",
-    "67053889c95aae8b070e89e1"
-  ],
-  "premium_score": 0,
-  "premium_verdict": "no verdict",
-  "sha1": "550c893e54273f1303bf7ac6255c6727839622b5",
-  "sha256": "42efd4351f45ff1b2fb5848282c14e94657e8e9c26862d35a19dd6787377f1f7",
-  "source": [
-    "Deploy and Retire"
-  ],
-  "source_id": [
-    "55d3338ad73f1eb42d24b2a3b732e8d004f3f10e"
-  ],
-  "source_type": [
-    "alert"
-  ],
-  "sources_count": 1,
-  "strike_ready_score": 1,
-  "strike_ready_verdict": "clean",
-  "tag": [],
-  "task_id": [],
-  "tlp": [
-    "white"
-  ],
-  "type": "artifact_object", 
-  "updated_at": 1731481869.185883
+  "query": {
+    "match": {
+      "name": "support@crystalintbd.com"
+}}}
+# term list ka lya use hota ha 
+GET /_search
+{
+  "query": {
+    "term": {
+      "simulation_resul.keyword": {
+        "value": "github.com"
+      }
+    }
+  }
 }
 
-
-
-####  Too update the field 
-
-POST /d045390b-f028-4dd2-8a67-5786bd1ba792_intelligence_artifact_object/_update/6705154e375775a70ce7ff79
+//reg_21670793@whoisprotection.cc
+# cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve/_search
 {
-  "doc": {
-    "tlp": ["red","White","blue","GREEN"]
+  "_source": ["data.hasRegion", "data.hasSubRegion"],       
+  "query": {
+    "match": {
+      "name": "CVE-2021-44228"
+}}}
+
+index_user:- {workspace_id}_intelligence_artifact*
+for example 897d1eae-4ca0-448a-8d94-b61186280807_intelligence_artifact_ipv4
+kb_index:- intelligence_kb_artifact_ipv4
+
+GET {index}/_search
+{
+  "_source": ["data.hasRegion", "data.hasSubRegion"],       // add the fields according to you 
+    "match": {
+      "name": "CVE-2021-44228"
+}}
+
+# DELETE 
+#/cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve
+# 
+# /_doc/6254dc332644b00acecc0b5e850672f136444e06d1b70730dffff5484420383d
+
+
+
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve/_search
+{
+  "size": 0,
+  "aggs": {
+    "duplicate_names": {
+      "terms": {
+        "field": "name.keyword",
+        "min_doc_count": 2,
+        "size": 10000
+      }
+    }
+  }
+}
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve/_search
+{
+  "size": 0,
+  "aggs": {
+    "duplicate_names": {
+      "terms": {
+        "script": {
+          "source": "doc['name'].value"
+        },
+        "min_doc_count": 2,
+        "size": 10000
+      }
+    }
+  }
+}
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve/_search
+{
+  "size": 0,
+  "aggs": {
+    "duplicate_names": {
+      "terms": {
+        "field": "name.keyword",
+        "min_doc_count": 2,
+        "size": 4
+      }
+    }
+  }
+}
+
+post 897d1eae-4ca0-448a-8d94-b61186280807_intelligence_artifact_ipv4/_doc/2d43e10f9407758423decea01a58619c0cb6092bac88e06b09dfaa10246ecf51
+{
+  "doc":{
+    "simulation_result": [
+
+            {
+
+              "state": "Prevented",
+
+              "zone": "zain_int_trunk",
+
+              "job_id": "67d919e86ca6329233714855"
+
+            },
+
+            {
+
+              "state": "Not prevented",
+
+              "zone": "zain_sim_win",
+
+              "job_id": "67d917cc6ca6329233714836"
+
+            }
+
+          ]
+  }
+  
+  
+}
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve/_search
+{
+  "size": 6,
+  "_source": ["name"]
+}
+
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve/_mapping
+
+GET _cat/indices?v
+
+GET _cat/in?v&pretty
+GET _cat/indices?h=index
+
+
+GET _cat/indices/intelligence*artifact_url?v
+
+
+GET intelligence_kb_artifact_url/_search
+{
+  "query": {
+    "match": {
+       "": "url-87b30df4-1645-4660-8124-c9f38dc26bec"
+    }
+  }
+}
+
+//the data of the neo4j
+GET intelligence_kb_artifact_url/_search
+{
+  "query": {
+    "match_all": {}
+    }
   }
 }
 
 
-####### Get the data of the intel indexs
+GET 897d1eae-4ca0-448a-8d94-b61186280807_intelligence_artifact*/_search
+{
+  "size" : 100,
+  "query": {
+    "exists": {
+      "field": "simulation_result"
+    }
+  }
+}
 
-GET *_intelligence_artifact_url/_search
-GET *_intelligence_artifact_domain/_search
-GET *_intelligence_artifact_ipv4/_search
-GET *_intelligence_artifact_object/_search
+// fc7426b3-47cd-4bca-965a-aa6332430831
+
+GET 897d1eae-4ca0-448a-8d94-b61186280807_intelligence*/_search
+{
+  "size" : 100,
+  "query": {
+    "match": {
+      "simulation_result.state.keyword": "Prevented"
+    }
+  }
+  }
+
+GET 897d1eae-4ca0-448a-8d94-b61186280807_intelligence_artifact*/_search
+{
+  "query": {
+    "script": {
+      "script": {
+        "source": "if (doc.containsKey('simulation_result') && !doc['simulation_result'].empty) { def states = new HashSet(); for (def result : doc['simulation_result']) { states.add(result.state); } return states.size() == 1 && states.contains(params.state); } return false;",
+        "params": {
+          "state": "Not prevented"
+        },
+        "lang": "painless"
+      }
+    }
+  }
+}
+
+GET 897d1eae-4ca0-448a-8d94-b61186280807_intelligence_artifact_ipv4/_search
+{
+  "size": 100,
+  "query": {
+    "script": {
+      "script": {
+        "source": """
+          if (ctx._source.simulation_result == null) {
+            return false;
+          }
+          for (def result : ctx._source.simulation_result) {
+            if (result.state.keyword == 'Prevented') {
+              return true;
+            }
+          }
+          return false;
+        """,
+        "lang": "painless"
+      }
+    }
+  }
+}
+
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_artifact*/_search
+{
+  "query": {
+    "exists": {
+      "field": "deployment"
+    }
+  }
+}
+
+// ransom :- name + aliases
+// ransoms :- name only
+GET intelligence_kb_artifact*/_search
+{
+  "size": 100, 
+  "query": {
+    "bool": { 
+      "must": [
+        {
+          "exists": {
+            "field": "ransom"
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "exists": {
+            "field": "ransoms"
+          }
+        }
+      ]
+    }
+  }
+}
+GET /897d1eae-4ca0-448a-8d94-b61186280807_intelligence_artifact_ipv4/_mapping?pretty
+
+GET  56b92388-92ce-452e-8b2d-79ab4e29f9f2_intelligence_artifact_url/_search
+{
+  "size": 10000, 
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+GET *intelligence_artifact_object/_search
+{
+  "size": 10000,
+  "query": {
+    "range": {
+      "strikes_count": {  // Replace 'your_field_name' with the actual field name
+        "gt": 0,         // Replace with the desired value for greater than
+        "lt": 500          // Replace with the desired value for less than
+      }
+    }
+  }
+}
+GET *intelligence_artifact_object/_search
+{
+  "size": 100, 
+  "query": {
+    "match_all": {}
+  }
+}
 
 
 
-#####     Get the testing Kb  indexes data
+GET *intelligence_artifact_object/_search
+{
+  "size": 100, 
+  "query": {
+    "match": {
+      "name": "4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7"
+    }
+  }
+}
+
+GET *intelligence_artifact_ipv4/_search
+{
+  "size": 10000, 
+  "query": {
+    "match_all": {}
+  }
+}
 
 
-get intelligence_kb_artifact_url/_search
-get intelligence_kb_artifact_object/_search
-get intelligence_kb_artifact_domain/_search
-get intelligence_kb_artifact_ipv4/_search
+
+GET **/_search
+{
+  "size": 10000, 
+  "query": {
+    "match": {
+      "name": "islamachour.no-ip.org"
+    }
+  }
+}
+
+
+GET *tool*/_search
+{
+  "size": 10000, 
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+GET strikes_cb6846a5-5d77-4100-a649-58bbce04c3f0*/_search
+{
+  "size": 100, 
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET strike*/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+
+GET /_search
+{
+  "size": 20, 
+  "query": {
+    "term": {
+      "name": {
+        "value": "junk-bros.com"
+      }
+    }
+  }
+}
+
+
+GET intelligence_kb_artifact_object/_search
+{
+ "query": {
+    "terms": {
+      "tlp.keyword": ["WHITE"]
+    }
+  }
+}
+
+GET  /*intelligence_kb_artifact*/_search
+{
+  "size": 100, 
+  "query": {
+    "exists": {
+      "field": "source"
+    }
+  }
+}
+
+GET  /*intelligence_kb_artifact*/_search
+{
+  "size": 1000, 
+  "query": {
+    "exists": {
+      "field": "domain"
+    }
+  }
+}
+
+
+
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0*/_search
+{
+  "size": 100, 
+  "query": {
+    "bool": { 
+      "must": [
+        {
+          "exists": {
+          "field": "deployments_count"
+          }
+        },
+        {
+          "range": {
+          "deployments_count": {
+            "gte": 1
+          }
+        }
+        }
+      ]
+    }
+  }
+}
 
 
 
 
-######   Scripit to update the field 
+GET _search
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "entity"
+          }
+        },
+        {
+          "term": {
+            "strike_id.keyword": "SMW1047"
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET _search
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "entity"
+          }
+        },
+        {
+          "term": {
+            "strike_id.keyword": "SMW1047"
+          }
+        }
+      ]
+    }
+  }
+}
+
+
+GET c025052e-a160-440f-a88e-4e34b9c82716_intelligence*/_search
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "source"
+          }
+          },
+        {
+          "match": {
+            "source": "ThreatConnect" 
+        }
+        }
+      ]
+    }
+  }
+}
+
+
+
+GET /_search
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "entity"
+          }
+          },
+        {
+          "match": {
+            "entity.keyword": "domain" 
+          }
+        },
+        {
+          "match" :{
+            "entity.srid" : "domain-f3abc448-21ac-43a4-9b9b-1e9b66f5b05f"
+          }
+        }
+      ]
+    }
+  }
+}
+
+
+GET _search
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "source"
+          }
+        },
+        {
+          "term": {
+            "entity": "tool"
+          }
+        }
+      ]
+    }
+  }
+}
+
+
+# Trunk default namesapce
+ 
+8c477159-8e8a-467d-83ac-8ac31f2218b2
+#TRUNK qa namespace 
+c025052e-a160-440f-a88e-4e34b9c82716
+
+GET 8c477159-8e8a-467d-83ac-8ac31f2218b2_intelligence*/_search
+{
+  "query": {
+    "query_string": {
+      "fields": ["source"],
+      "query": "*Threa*",
+      "default_operator": "AND"
+    }
+  },
+  "aggs": {
+    "unique_values": {
+      "terms": {
+        "field": "source.keyword",
+        "size": 130
+      }
+    }
+  },
+  "size": 0,
+  "sort": [
+    {
+      "_score": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+
+
+# qa namespace trunk 
+
+GET c025052e-a160-440f-a88e-4e34b9c82716_intelligence*/_search
+{
+  "query": {
+    "query_string": {
+      "fields": ["source"],
+      "query": "*Threatc*",
+      "default_operator": "AND"
+    }
+  },
+  "aggs": {
+    "unique_values": {
+      "terms": {
+        "field": "source.keyword",
+        "size": 100
+      }
+    }
+  },
+  "size": 0,
+  "sort": [
+    {
+      "_score": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+
+# default  namespace trunk 
+GET 8c477159-8e8a-467d-83ac-8ac31f2218b2_intelligence*/_search
+{
+  "query": {
+    "query_string": {
+      "fields": ["source"],
+      "query": "*Threatc*",
+      "default_operator": "AND"
+    }
+  },
+  "aggs": {
+    "unique_values": {
+      "terms": {
+        "field": "source.keyword",
+        "size": 100
+      }
+    }
+  },
+  "size": 0,
+  "sort": [
+    {
+      "_score": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+
+GET cc025052e-a160-440f-a88e-4e34b9c82716_intelligence*/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "query_string": {
+            "fields": ["source"],
+            "query": "**", 
+            "default_operator": "AND"
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "unique_values": {
+      "terms": {
+        "field": "source.keyword",
+        "size": 100
+      }
+    }
+  },
+  "size": 0
+}
+
+GET c025052e-a160-440f-a88e-4e34b9c82716_intelligence*/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "query_string": {
+            "fields": ["source"],
+            "query": "*",
+            "default_operator": "AND"
+          }
+        },
+        {
+          "match": {
+            "source.keyword": "ThreatConnect"
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "unique_values": {
+      "terms": {
+        "field": "source.keyword",
+        "size": 100
+      }
+    }
+  },
+  "size": 0
+}
+
+GET c025052e-a160-440f-a88e-4e34b9c82716_intelligence*/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "source.keyword"
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "unique_values": {
+      "terms": {
+        "field": "source.keyword",
+        "size": 100
+      }
+    }
+  },
+  "size": 0
+}
+
+
+GET /intelligence_kb_artifact_object/_doc/object-4cacd309-13c2-4d25-a7cc-3586afbf8ac3
+
+
+
+POST /intelligence_kb_artifact_object/_update/object-479024b6-8f53-41ad-8731-1dccc99f2bf3
+{
+  "doc": {
+    "tlp": ["WHITE"]
+  }
+}
+
 
 
 POST /intelligence_kb_artifact_object/_update_by_query
@@ -122,55 +738,102 @@ POST /intelligence_kb_artifact_object/_update_by_query
         ctx._source.tlp.add('white');
       }
      """
-  },
+    
+  }
+  , 
   "query": {
     "terms": {
       "tlp.keyword": ["WHITE"]
     }
   }
+  
 }
 
 
-
-2:- to update the tl pwhere exist more than one tlp 
-@Mehlab Faryad  We can use this scripit and also scripit is updated when the tlp is adding.
-POST /{index_name}/_update_by_query
+GET /intelligence_kb_artifact_object/_search
 {
-  "script": {
-    "source": """
-      Set tlp = new HashSet();
-            if (ctx._source.tlp != null) {
-                for (t in ctx._source.tlp) {
-                    tlp.add(t.toLowerCase());
-                }
-            }
-            Map sorted_dict = ["white": 1, "green": 2, "amber": 3, "red": 4];
-            Set valid_tlp = new HashSet();
-            for (t in tlp) {
-                if (sorted_dict.containsKey(t)) {
-                    valid_tlp.add(t);
-                }
-            }
-            if (!valid_tlp.isEmpty()) {
-                List tlpList = new ArrayList(valid_tlp);
-                tlpList.sort((a, b) -> sorted_dict.get(a) - sorted_dict.get(b));
-                ctx._source.tlp = tlpList.subList(0, 1);
-            } 
-     """
+  "query": {
+    "match": {
+      "name": "60e56713191a5ff83cc905debd5a76c80fcd77de"
+    }
   },
-   "query": {
+  "sort": [
+    {
+      "created_at": {
+        "order": "desc"
+      }
+    }
+  ]
+}
+
+
+GET /_search
+{
+  "query": {
+    "match": {
+      "name": "testing-domain-01-02-2025.com"
+    }
+    }
+  }
+  
+  GET /_search
+{
+  "query": {
+    "match": {
+      "name": "home-101331.weeblysite.com"
+    }
+    }
+  }
+
+# http://59.182.85.229:36018/bin.sh
+GET /_search
+{
+  "query": {
+    "match": {
+      "name": "vk.com"
+    }
+    }
+  }
+ 
+ 
+#  englishdialoge.xyz/ 
+#  cb6846a5-5d77-4100-a649-58bbce04c3f0*
+GET intelligence_kb_artifact*/_search
+{
+  "query": {
+    "match": {
+      "name": "github.com"
+    }
+    }
+  }
+    
+
+GET intelligence_kb_artifact*/_search
+
+{
+  "size": 100,
+  "query": {
+    "exists": {
+      "field": "malware"
+    }
+  }
+} 
+
+
+GET /_search
+{
+  "size": 100,
+  "query": {
     "bool": {
       "must": [
         {
-          "exists": { "field": "tlp" }
-        }
-      ],
-      "filter": [
+          "exists": {
+            "field": "strike"
+          }
+        },
         {
-          "range": {
-            "tlp": {
-              "gt": 1
-            }
+          "term": {
+            "strike": "None"
           }
         }
       ]
@@ -180,59 +843,29 @@ POST /{index_name}/_update_by_query
 
 
 
-
-3:- To find the specific artifact with the given name
-
-GET _search
+GET strikes_cb6846a5-5d77-4100-a649-58bbce04c3f0*/_search
 {
+  "size": 300,
   "query": {
-    "match": {
-      "name": "oppo.com"
-    }
-    }
-  }
-
-
-
-  to find the data in the internal  just search the string
-  GET /_search 
-  {
-    "query": {
-      "query_string": {
-        "query": "actcorp.in"
-      }
-    }
-  }
-
-
-Strike info in strike index
-  
-  
-  GET strikes_cb6846a5-5d77-4100-a649-58bbce04c3f0*/_search
-  {
-    "size": 300,
-    "query": {
-      "bool": {
-        "must": [
-          {
-            "exists": {
-              "field": "artifacts"
-            }
-          },
-          {
-            "term": {
-              "artifacts.keyword": "cyberhavenext.pro"
-            }
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "artifacts"
           }
-        ]
-      }
+        },
+        {
+          "term": {
+            "artifacts.keyword": "github.com"
+          }
+        }
+      ]
     }
   }
+}
 
 
- To check one field exists and one not exists 
-
-  GET cb6846a5-5d77-4100-a649-58bbce04c3f0*/_search
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0*/_search
 {
   "size": 100,
   "query": {
@@ -242,6 +875,13 @@ Strike info in strike index
           "exists": {
             "field": "strikes_count"
           }
+        },
+        {
+          "range": {
+          "strikes_count": {
+            "gte": 1
+          }
+        }
         }
       ],
       "must_not": {
@@ -254,12 +894,773 @@ Strike info in strike index
 }
 
 
-To get specific field data
-GET countries_info_v1/_search
+
+
+
+GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_artifact*/_search
+    {
+        "query": {
+            "bool": {
+                "should": [
+                    {
+                        "multi_match": {
+                            "fields": [
+                                "threat_actor.keyword"
+                            ],
+                            "query": ""
+                        }
+                    }
+                ]
+            }
+        }
+        
+    }
+  
+  GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_artifact_i/_search
+    {
+      "track_total_hits": true, 
+    "size": 122,
+    "query": {
+            "bool": {
+                "should": [
+                    {
+                        "multi_match": {
+                            "fields": [
+                                "threat_actor.keyword"
+                            ],
+                            "query": "black basta"
+                        }
+                    },
+                    {
+                        "bool": {
+                            "should": [
+                                {
+                                    "bool": {
+                                        "must_not": [
+                                            {
+                                                "exists": {
+                                                    "field": "threat_actor"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "term": {
+                                        "threat_actor.keyword": ""
+                                    }
+                                }
+                            ],
+                            "minimum_should_match": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    
+  GET cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_artifact*/_search
+    {
+    "size": 122,
+     "query": {
+            "bool": {
+                "must_not": {
+                    "bool": {
+                        "should": [
+                            {
+                                "bool": {
+                                    "should": [
+                                        {
+                                            "bool": {
+                                                "must": [
+                                                    {
+                                                        "exists": {
+                                                            "field": "ransom"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "term": {
+                                                "ransom.keyword": ""
+                                            }
+                                        }
+                                    ],
+                                    "minimum_should_match": 1
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+    
+    
+GET intelligence_kb_artifact*/_search
 {
-  "size": 241,
-  "_source": ["data.country" , "data.hasRegion"], 
+  "size": 100,
   "query": {
-    "match_all": {}
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "targets_sector"
+          }
+        },
+        {
+          "term": {
+            "targets_sector": "health"
+          }
+        }
+      ]
+    }
   }
 }
+
+
+GET intelligence_kb_artifact*/_search
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "targets_sector"
+          }
+        },
+        {
+          "wildcard": {
+            "targets_sector": "*gea*"
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET industries_info_v1/_search
+{
+  
+  "query": {
+    "match_all": { }
+  }
+}
+
+GET countries_info_v1/_search
+{
+  "_source": ["data.hasRegion", "data.hasSubRegion"],
+  "size": 10, 
+  "query": {
+    "wildcard": {
+      "data.hasSubRegion":{
+        "value": "*no*", 
+        "case_insensitive" : true
+      }
+    }
+  }
+}
+
+GET countries_info_v1/_search
+{
+  "_source": ["data.hasRegion", "data.country"],
+  "size": 10, 
+  "query": {
+    "bool": {
+    "should": [
+      {
+      "wildcard": {
+        "data.country":{
+          "value": "*united s*", 
+          "case_insensitive" : true
+        }
+      }
+    },
+      { 
+     "match_phrase":{
+        "data.country":{
+        "query": "United S"
+        }
+     }
+    }
+    ] ,
+    "minimum_should_match": 1
+  }
+  }
+}
+
+GET countries_info_v1/_search
+{
+  "size": 300, 
+  "query": {
+    "wildcard": {
+      "data.country":{
+        "value": "united*sta*",
+        "case_insensitive" : true
+        
+      }
+    }
+  }
+}
+GET countries_info_v1/_search
+{
+  "size": 300, 
+  "query": {
+    "match_phrase_prefix": {
+      "data.country":{
+        "query": "united sta"
+      }
+    }
+  }
+}
+
+GET countries_info_v1/_search
+{
+  "_source": ["data.hasRegion", "data.hasSubRegion","data.country"],
+  "size": 200, 
+  "query": {
+    "bool":
+    {
+      "should": 
+    [
+      {"wildcard": {
+
+        "data.hasRegion": {
+          "value": "*North am*",
+          "case_insensitive" : true
+        }
+      }},
+      {"wildcard": {
+
+        "data.hasSubRegion": {
+          "value": "*North am*",
+          "case_insensitive" : true
+          
+        }
+      }
+        
+      },
+      { "match_phrase_prefix": {
+      "data.hasSubRegion":{
+        "query": "North am"
+      }
+    }}
+    ],
+    "minimum_should_match": 1
+    }
+  }
+  
+}
+GET industries_info_v1/_search
+{
+  "_source": ["data.industry","data.hasIndustryAlias.name"],
+  "size": 100, 
+  "query": {
+    "wildcard": {
+      "data.hasIndustryAlias.name":{
+        "value":  "**",
+        "case_insensitive" : true
+      }
+    }
+  }
+}
+
+GET industries_info_v1/_search
+{
+  "size": 0,
+  "aggs": {
+    "data": {
+      "terms": {
+        "field": "data.sector.keyword",
+        "size": 10000
+      }
+    }
+  },
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "wildcard": {
+           "data.sector":{
+              "value":  "**",
+              "case_insensitive" : true
+            }
+          }
+        },
+        { 
+          "match_phrase_prefix":{
+              "data.sector":{
+              "query": ""
+              }
+          }
+        }
+      ],
+     "minimum_should_match": 1 
+    }
+  }
+}
+
+
+
+GET countries_info_v1/_search
+{
+  "size": 0,
+  "aggs": {
+    "regions": {
+      "terms": {
+        "field": "data.hasRegion.keyword",
+        "size": 10000
+      }
+    },
+    "subregions": {
+      "terms": {
+        "field": "data.hasSubRegion.keyword",
+        "size": 10000
+      }
+    }
+  },
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "wildcard": {
+           "data.hasRegion":{
+              "value":  "*North a*",
+              "case_insensitive" : true
+            }
+          }
+        },
+        { 
+          "match_phrase_prefix":{
+              "data.hasRegion":{
+              "query": "North a"
+              }
+          }
+        },
+         {
+          "wildcard": {
+           "data.hasSubRegion":{
+              "value":  "*North as*",
+              "case_insensitive" : true
+            }
+          }
+        },
+        { 
+          "match_phrase_prefix":{
+              "data.hasSubRegion":{
+              "query": "North as"
+              }
+          }
+        }
+      ],
+     "minimum_should_match": 1 
+    }
+  }
+}
+
+GET countries_info_v1/_search
+{
+                            "size": 20,
+                            "_source": ["data.hasRegion", "data.hasSubRegion"],
+                                "query": {
+                                    "bool": {
+                                    "should": [
+                                        {
+                                        "wildcard": {
+                                            "data.hasRegion":{
+                                             "value":"*A*",
+                                             "case_insensitive" : true
+                                            }
+                                        }
+                                        },
+                                        {
+                                        "wildcard": {
+                                            "data.hasSubRegion": { 
+                                              "value": "*A*",
+                                             "case_insensitive" : true
+                                            }
+                                            
+                                        }
+                                        }
+                                    ]
+                                    }
+                                }
+                                }
+
+
+
+GET intelligence_kb_artifact*/_search
+{
+  "size": 100,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "targets_sector"
+          }
+        },
+        {
+          "wildcard": {
+            "targets_sector.keyword": "*[a-z]*"
+          }
+        }
+      ]
+    }
+  }
+}
+
+
+
+POST intelligence_kb_artifact*/_update_by_query
+{
+ "script": {
+    "source": """
+      def ids_to_remove = new ['STA1447','STA1473','STA1473'];
+      if (ctx._source.containsKey('strike_id')) {
+        def strike_ids = ctx._source.strike_id;
+        def new_strike_ids = [];
+        
+        for (int i = 0; i < strike_ids.length; i++) {
+          String id = strike_ids[i];
+          // Keep only if not in the removal list
+          if (!ids_to_remove.contains(id)) {
+            new_strike_ids.add(id);
+          }
+        }
+        
+        ctx._source.strike_id = new_strike_ids;
+      }
+      
+      // Update the count
+      if (ctx._source.containsKey('strike_id')) {
+        ctx._source.strikes_count = ctx._source.strike_id.length;
+      } else {
+        ctx._source.strikes_count = 0;
+      }
+    """
+  },
+ "query": {
+   "bool": {
+     "should": [
+      {
+        "terms": {
+          "strike.keyword" :[
+              "STA1447 - Sofacy Delivers Zebrocy Downloader", "STA1473 - TESTING APT Attack In the Middle East: The Big Bang", "STA1473 - (Test1) APT Attack In the Middle East: The Big Bang", "STA1398 - APT Nazar Delivers Nazar Trojan", "SMW1496 - Evilnum Malware Attack", "STA1517 - AgentTesla Targets Spain", "SRW1530 - HYDRA Ransomware Targets US", "SMW1531 - SWEED Delivers AgentTesla In Turkey", "SMW1082 - Mirai Active DDoS malware", "STA1377 - DoNot Team Delivers Trojan Via MalDoc", "SMW1496: A deep look at Evilnum and its toolset (Copy-1)", "SMW1496: A deep look at Evilnum and its toolset (Copy-2)", "SMW1571 - Unknown Threat Actor Targets UAE Firms By Exploiting Microsoft Exchange Server", "SRW1580 - Statically Compiled Variants of Linux Based Malware Rekoobe", "SRE1708 (HTTPS) - Attackers are exploiting zero day RCE flaw to target Windows users", "SRW1692(HTTPS) - LockBit Ransomware Targets Accenture", "SRW1675(HTTPS) - AvosLocker enters the ransomware scene asks for partners", "SRW1707 (HTTPS) - REvil Ransomware Latest Variant ITW", "SRW1697(HTTPS) - Chaos Ransomware Builder v4 rebranding it as Astra Ransomware", "SMW1732 - Pakistani Financial Institute Targeted by Unknown Threat Actor old", "STA1231 - APT34 Delivers TONEDEAF 2.0 To US Companies", "SMW1232 - CrowdStrike Report 2019 Marked as Malicious", "SMW1445 - RCtrl Backdoor Delivered By APT30", "SRV1874 - Unknown Threat Actor Targets Australia With AsyncRAT Followed By Follina Exploitation Testing", "STA3087 - Unveiling Sea Turtle: Sophisticated Cyber Threats and DNS Hijacking", "SMW4137 - BlankGrabber Malware Stealing Login Credentials And Sensitive Data", "STA4139 - Water Curupira Distributing PikaBot Malware Via Phishing", "SMW4149 - NoaBot Botnet Targeting SSH Servers For Crypto Mining", "SMW4189 - AceCryptor Packed Rescoms Malware Targets Europe", "SMW4249 - Fickle Stealer Distributed Via Multiple Attack Chain", "STA4250 - Naikon Targets Telecoms Operators With Rainyday Malware", "SMW4270 - Connecio Stealer Delivered Through Fake Falcon Sensor Update Lure", "STA4272 - MuddyWater Target Middle East With BugSleep", "STA4278 - APT41 Targets Taiwanese Government Research Institute with ShadowPad", "SRTS - Benign Strike 01", "SRTS - Benign Strike 02"]
+      }
+      },
+      {
+        
+        "terms": {
+          "strike_id.keyword": [
+  "STA1447",
+  "STA1473",
+  "STA1473",
+  "STA1398",
+  "SMW1496",
+  "STA1517",
+  "SRW1530",
+  "SMW1531",
+  "SMW1082",
+  "STA1377",
+  "SMW1496: A deep look at Evilnum and its toolset (Copy-1)",
+  "SMW1496: A deep look at Evilnum and its toolset (Copy-2)",
+  "SMW1571",
+  "SRW1580",
+  "SRE1708 (HTTPS)",
+  "SRW1692(HTTPS)",
+  "SRW1675(HTTPS)",
+  "SRW1707 (HTTPS)",
+  "SRW1697(HTTPS)",
+  "SMW1732",
+  "STA1231",
+  "SMW1232",
+  "SMW1445",
+  "SRV1874",
+  "STA3087",
+  "SMW4137",
+  "STA4139",
+  "SMW4149",
+  "SMW4189",
+  "SMW4249",
+  "STA4250",
+  "SMW4270",
+  "STA4272",
+  "STA4278",
+  "SRTS",
+  "SRTS"
+]
+        }
+      },
+      {
+        "match": {
+          "name": "github.com"
+        }
+      }
+      ]
+    }
+  }
+}
+
+
+
+// correct one 
+
+POST **/_update_by_query
+{
+ "script": {
+    "source": """
+      def ids_to_remove =['STA1447', 'STA1473', 'STA1473', 'STA1398', 'SMW1496', 'STA1517', 'SRW1530', 'SMW1531', 'SMW1082', 'STA1377', 'SMW1496: A deep look at Evilnum and its toolset (Copy-1)', 'SMW1496: A deep look at Evilnum and its toolset (Copy-2)', 'SMW1571', 'SRW1580', 'SRE1708 (HTTPS)', 'SRW1692(HTTPS)', 'SRW1675(HTTPS)', 'SRW1707 (HTTPS)', 'SRW1697(HTTPS)', 'SMW1732', 'STA1231', 'SMW1232', 'SMW1445', 'SRV1874', 'STA3087', 'SMW4137', 'STA4139', 'SMW4149', 'SMW4189', 'SMW4249', 'STA4250', 'SMW4270', 'STA4272', 'STA4278', 'SRTS', 'SRTS'];
+      
+      def strikes_to_remove = 
+      ['STA1447 - Sofacy Delivers Zebrocy Downloader', 'STA1473 - TESTING APT Attack In the Middle East: The Big Bang', 'STA1473 - (Test1) APT Attack In the Middle East: The Big Bang', 'STA1398 - APT Nazar Delivers Nazar Trojan', 'SMW1496 - Evilnum Malware Attack', 'STA1517 - AgentTesla Targets Spain', 'SRW1530 - HYDRA Ransomware Targets US', 'SMW1531 - SWEED Delivers AgentTesla In Turkey', 'SMW1082 - Mirai Active DDoS malware', 'STA1377 - DoNot Team Delivers Trojan Via MalDoc', 'SMW1496: A deep look at Evilnum and its toolset (Copy-1)', 'SMW1496: A deep look at Evilnum and its toolset (Copy-2)', 'SMW1571 - Unknown Threat Actor Targets UAE Firms By Exploiting Microsoft Exchange Server', 'SRW1580 - Statically Compiled Variants of Linux Based Malware Rekoobe', 'SRE1708 (HTTPS) - Attackers are exploiting zero day RCE flaw to target Windows users', 'SRW1692(HTTPS) - LockBit Ransomware Targets Accenture', 'SRW1675(HTTPS) - AvosLocker enters the ransomware scene asks for partners', 'SRW1707 (HTTPS) - REvil Ransomware Latest Variant ITW', 'SRW1697(HTTPS) - Chaos Ransomware Builder v4 rebranding it as Astra Ransomware', 'SMW1732 - Pakistani Financial Institute Targeted by Unknown Threat Actor old', 'STA1231 - APT34 Delivers TONEDEAF 2.0 To US Companies', 'SMW1232 - CrowdStrike Report 2019 Marked as Malicious', 'SMW1445 - RCtrl Backdoor Delivered By APT30', 'SRV1874 - Unknown Threat Actor Targets Australia With AsyncRAT Followed By Follina Exploitation Testing', 'STA3087 - Unveiling Sea Turtle: Sophisticated Cyber Threats and DNS Hijacking', 'SMW4137 - BlankGrabber Malware Stealing Login Credentials And Sensitive Data', 'STA4139 - Water Curupira Distributing PikaBot Malware Via Phishing', 'SMW4149 - NoaBot Botnet Targeting SSH Servers For Crypto Mining', 'SMW4189 - AceCryptor Packed Rescoms Malware Targets Europe', 'SMW4249 - Fickle Stealer Distributed Via Multiple Attack Chain', 'STA4250 - Naikon Targets Telecoms Operators With Rainyday Malware', 'SMW4270 - Connecio Stealer Delivered Through Fake Falcon Sensor Update Lure', 'STA4272 - MuddyWater Target Middle East With BugSleep', 'STA4278 - APT41 Targets Taiwanese Government Research Institute with ShadowPad', 'SRTS - Benign Strike 01', 'SRTS - Benign Strike 02'];
+      
+      if (ctx._source.containsKey('strike_id')) {
+        def strike_ids = ctx._source.strike_id;
+        def updated_strike_ids = [];
+        
+        for (int i = 0; i < strike_ids.length; i++) {
+          String id = strike_ids[i];
+          if (!ids_to_remove.contains(id)) {
+            updated_strike_ids.add(id);
+          }
+        }
+        
+        ctx._source.strike_id = updated_strike_ids;
+      }
+      
+      if (ctx._source.containsKey('strike')) {
+        def strikes = ctx._source.strike;
+        def updated_strikes = [];
+        
+        for (int i = 0; i < strikes.length; i++) {
+          String strike = strikes[i];
+          if (!strikes_to_remove.contains(strike)) {
+            updated_strikes.add(strike);
+          }
+        }
+        
+        ctx._source.strike = updated_strikes;
+      }
+      
+      // Update the count
+      if (ctx._source.containsKey('strike_id')) {
+        ctx._source.strikes_count = ctx._source.strike_id.length;
+      } else {
+        ctx._source.strikes_count = 0;
+      }
+    """
+  },
+ "query": {
+   "bool": {
+     "should": [
+      {
+        "terms": {
+          "strike.keyword" :[
+              "STA1447 - Sofacy Delivers Zebrocy Downloader", "STA1473 - TESTING APT Attack In the Middle East: The Big Bang", "STA1473 - (Test1) APT Attack In the Middle East: The Big Bang", "STA1398 - APT Nazar Delivers Nazar Trojan", "SMW1496 - Evilnum Malware Attack", "STA1517 - AgentTesla Targets Spain", "SRW1530 - HYDRA Ransomware Targets US", "SMW1531 - SWEED Delivers AgentTesla In Turkey", "SMW1082 - Mirai Active DDoS malware", "STA1377 - DoNot Team Delivers Trojan Via MalDoc", "SMW1496: A deep look at Evilnum and its toolset (Copy-1)", "SMW1496: A deep look at Evilnum and its toolset (Copy-2)", "SMW1571 - Unknown Threat Actor Targets UAE Firms By Exploiting Microsoft Exchange Server", "SRW1580 - Statically Compiled Variants of Linux Based Malware Rekoobe", "SRE1708 (HTTPS) - Attackers are exploiting zero day RCE flaw to target Windows users", "SRW1692(HTTPS) - LockBit Ransomware Targets Accenture", "SRW1675(HTTPS) - AvosLocker enters the ransomware scene asks for partners", "SRW1707 (HTTPS) - REvil Ransomware Latest Variant ITW", "SRW1697(HTTPS) - Chaos Ransomware Builder v4 rebranding it as Astra Ransomware", "SMW1732 - Pakistani Financial Institute Targeted by Unknown Threat Actor old", "STA1231 - APT34 Delivers TONEDEAF 2.0 To US Companies", "SMW1232 - CrowdStrike Report 2019 Marked as Malicious", "SMW1445 - RCtrl Backdoor Delivered By APT30", "SRV1874 - Unknown Threat Actor Targets Australia With AsyncRAT Followed By Follina Exploitation Testing", "STA3087 - Unveiling Sea Turtle: Sophisticated Cyber Threats and DNS Hijacking", "SMW4137 - BlankGrabber Malware Stealing Login Credentials And Sensitive Data", "STA4139 - Water Curupira Distributing PikaBot Malware Via Phishing", "SMW4149 - NoaBot Botnet Targeting SSH Servers For Crypto Mining", "SMW4189 - AceCryptor Packed Rescoms Malware Targets Europe", "SMW4249 - Fickle Stealer Distributed Via Multiple Attack Chain", "STA4250 - Naikon Targets Telecoms Operators With Rainyday Malware", "SMW4270 - Connecio Stealer Delivered Through Fake Falcon Sensor Update Lure", "STA4272 - MuddyWater Target Middle East With BugSleep", "STA4278 - APT41 Targets Taiwanese Government Research Institute with ShadowPad", "SRTS - Benign Strike 01", "SRTS - Benign Strike 02"]
+      }
+      },
+      {
+        "terms": {
+          "strike_id.keyword": [
+  "STA1447",
+  "STA1473",
+  "STA1473",
+  "STA1398",
+  "SMW1496",
+  "STA1517",
+  "SRW1530",
+  "SMW1531",
+  "SMW1082",
+  "STA1377",
+  "SMW1496: A deep look at Evilnum and its toolset (Copy-1)",
+  "SMW1496: A deep look at Evilnum and its toolset (Copy-2)",
+  "SMW1571",
+  "SRW1580",
+  "SRE1708 (HTTPS)",
+  "SRW1692(HTTPS)",
+  "SRW1675(HTTPS)",
+  "SRW1707 (HTTPS)",
+  "SRW1697(HTTPS)",
+  "SMW1732",
+  "STA1231",
+  "SMW1232",
+  "SMW1445",
+  "SRV1874",
+  "STA3087",
+  "SMW4137",
+  "STA4139",
+  "SMW4149",
+  "SMW4189",
+  "SMW4249",
+  "STA4250",
+  "SMW4270",
+  "STA4272",
+  "STA4278",
+  "SRTS",
+  "SRTS"
+]
+        }
+      }
+    ]
+   }
+ }
+}
+   
+  
+
+
+
+
+
+
+
+
+
+  
+GET /_search
+{
+  "_source": ["","strike","strikes_count"], 
+  "query": {
+    "match": {
+      "name": "github.com"
+}}}
+
+
+
+POST /intelligence_kb_artifact_domain/_update/domain-ef42a2a1-0ab4-4c7a-8474-e4ade059d7f4
+{
+  "doc": {
+    "strike": ["STA4084 - Agrius Targets Israeli Higher Education And Tech Sectors",
+                "SMW4047 - Graphic Designers Are Being Targeted With LolMiner For Cryptocurrency Mining",
+                "SMW4037 - A New Realst Stealer Delivers Via Fake Games",
+                "STA4185 - Earth Krahang Delivers XDealer Through A Phishing Campaign",
+                "SRV4079 - Apache ActiveMQ Vulnerability Exploited To Deliver HelloKitty Ransomware",
+                "SMW4184 - A Simple And Functional Weapon STRRAT Delivered Via Phishing",
+                "SMW4261 - Kematian Stealer Delivers Via Phishing",
+                "SMW4130 - New Version Of Meduza Stealer Released In Dark Web",
+                 "STA1447 - Sofacy Delivers Zebrocy Downloader", "STA1473 - TESTING APT Attack In the Middle East: The Big Bang"
+                
+               ]
+  }
+}
+
+POST /intelligence_kb_artifact_domain/_update_by_query
+{
+  "script": {
+    "source": """
+        ctx._source.strike_id.add('STA1447');
+        ctx._source.strikes_count = 10
+     """
+  }
+  , 
+   "query": {
+    "match": {
+      "name": "github.com"
+}}
+  
+}
+
+POST intelligence_kb_artifact*/_update_by_query
+{
+"script": {
+    "source": """
+      def ids_to_remove =['STA1447', 'STA1473', 'STA1473', 'STA1398', 'SMW1496', 'STA1517', 'SRW1530', 'SMW1531', 'SMW1082', 'STA1377', 'SMW1496: A deep look at Evilnum and its toolset (Copy-1)', 'SMW1496: A deep look at Evilnum and its toolset (Copy-2)', 'SMW1571', 'SRW1580', 'SRE1708 (HTTPS)', 'SRW1692(HTTPS)', 'SRW1675(HTTPS)', 'SRW1707 (HTTPS)', 'SRW1697(HTTPS)', 'SMW1732', 'STA1231', 'SMW1232', 'SMW1445', 'SRV1874', 'STA3087', 'SMW4137', 'STA4139', 'SMW4149', 'SMW4189', 'SMW4249', 'STA4250', 'SMW4270', 'STA4272', 'STA4278', 'SRTS', 'SRTS'];
+
+      def strikes_to_remove = 
+      ['STA1447 - Sofacy Delivers Zebrocy Downloader', 'STA1473 - TESTING APT Attack In the Middle East: The Big Bang', 'STA1473 - (Test1) APT Attack In the Middle East: The Big Bang', 'STA1398 - APT Nazar Delivers Nazar Trojan', 'SMW1496 - Evilnum Malware Attack', 'STA1517 - AgentTesla Targets Spain', 'SRW1530 - HYDRA Ransomware Targets US', 'SMW1531 - SWEED Delivers AgentTesla In Turkey', 'SMW1082 - Mirai Active DDoS malware', 'STA1377 - DoNot Team Delivers Trojan Via MalDoc', 'SMW1496: A deep look at Evilnum and its toolset (Copy-1)', 'SMW1496: A deep look at Evilnum and its toolset (Copy-2)', 'SMW1571 - Unknown Threat Actor Targets UAE Firms By Exploiting Microsoft Exchange Server', 'SRW1580 - Statically Compiled Variants of Linux Based Malware Rekoobe', 'SRE1708 (HTTPS) - Attackers are exploiting zero day RCE flaw to target Windows users', 'SRW1692(HTTPS) - LockBit Ransomware Targets Accenture', 'SRW1675(HTTPS) - AvosLocker enters the ransomware scene asks for partners', 'SRW1707 (HTTPS) - REvil Ransomware Latest Variant ITW', 'SRW1697(HTTPS) - Chaos Ransomware Builder v4 rebranding it as Astra Ransomware', 'SMW1732 - Pakistani Financial Institute Targeted by Unknown Threat Actor old', 'STA1231 - APT34 Delivers TONEDEAF 2.0 To US Companies', 'SMW1232 - CrowdStrike Report 2019 Marked as Malicious', 'SMW1445 - RCtrl Backdoor Delivered By APT30', 'SRV1874 - Unknown Threat Actor Targets Australia With AsyncRAT Followed By Follina Exploitation Testing', 'STA3087 - Unveiling Sea Turtle: Sophisticated Cyber Threats and DNS Hijacking', 'SMW4137 - BlankGrabber Malware Stealing Login Credentials And Sensitive Data', 'STA4139 - Water Curupira Distributing PikaBot Malware Via Phishing', 'SMW4149 - NoaBot Botnet Targeting SSH Servers For Crypto Mining', 'SMW4189 - AceCryptor Packed Rescoms Malware Targets Europe', 'SMW4249 - Fickle Stealer Distributed Via Multiple Attack Chain', 'STA4250 - Naikon Targets Telecoms Operators With Rainyday Malware', 'SMW4270 - Connecio Stealer Delivered Through Fake Falcon Sensor Update Lure', 'STA4272 - MuddyWater Target Middle East With BugSleep', 'STA4278 - APT41 Targets Taiwanese Government Research Institute with ShadowPad', 'SRTS - Benign Strike 01', 'SRTS - Benign Strike 02'];
+
+      if (ctx._source.containsKey('strike_id')) {
+        def strike_ids = ctx._source.strike_id;
+        def updated_strike_ids = [];
+
+        for (int i = 0; i < strike_ids.length; i++) {
+          String id = strike_ids[i];
+          if (!ids_to_remove.contains(id)) {
+            updated_strike_ids.add(id);
+          }
+        }
+
+        ctx._source.strike_id = updated_strike_ids;
+      }
+
+      if (ctx._source.containsKey('strike')) {
+        def strikes = ctx._source.strike;
+        def updated_strikes = [];
+
+        for (int i = 0; i < strikes.length; i++) {
+          String strike = strikes[i];
+          if (!strikes_to_remove.contains(strike)) {
+            updated_strikes.add(strike);
+          }
+        }
+
+        ctx._source.strike = updated_strikes;
+      }
+
+      // Update the count
+      if (ctx._source.containsKey('strike_id')) {
+        ctx._source.strikes_count = ctx._source.strike_id.length;
+      } else {
+        ctx._source.strikes_count = 0;
+      }
+    """
+  },
+"query": {
+   "bool": {
+     "should": [
+      {
+        "terms": {
+          "strike.keyword" :[
+              "STA1447 - Sofacy Delivers Zebrocy Downloader", "STA1473 - TESTING APT Attack In the Middle East: The Big Bang", "STA1473 - (Test1) APT Attack In the Middle East: The Big Bang", "STA1398 - APT Nazar Delivers Nazar Trojan", "SMW1496 - Evilnum Malware Attack", "STA1517 - AgentTesla Targets Spain", "SRW1530 - HYDRA Ransomware Targets US", "SMW1531 - SWEED Delivers AgentTesla In Turkey", "SMW1082 - Mirai Active DDoS malware", "STA1377 - DoNot Team Delivers Trojan Via MalDoc", "SMW1496: A deep look at Evilnum and its toolset (Copy-1)", "SMW1496: A deep look at Evilnum and its toolset (Copy-2)", "SMW1571 - Unknown Threat Actor Targets UAE Firms By Exploiting Microsoft Exchange Server", "SRW1580 - Statically Compiled Variants of Linux Based Malware Rekoobe", "SRE1708 (HTTPS) - Attackers are exploiting zero day RCE flaw to target Windows users", "SRW1692(HTTPS) - LockBit Ransomware Targets Accenture", "SRW1675(HTTPS) - AvosLocker enters the ransomware scene asks for partners", "SRW1707 (HTTPS) - REvil Ransomware Latest Variant ITW", "SRW1697(HTTPS) - Chaos Ransomware Builder v4 rebranding it as Astra Ransomware", "SMW1732 - Pakistani Financial Institute Targeted by Unknown Threat Actor old", "STA1231 - APT34 Delivers TONEDEAF 2.0 To US Companies", "SMW1232 - CrowdStrike Report 2019 Marked as Malicious", "SMW1445 - RCtrl Backdoor Delivered By APT30", "SRV1874 - Unknown Threat Actor Targets Australia With AsyncRAT Followed By Follina Exploitation Testing", "STA3087 - Unveiling Sea Turtle: Sophisticated Cyber Threats and DNS Hijacking", "SMW4137 - BlankGrabber Malware Stealing Login Credentials And Sensitive Data", "STA4139 - Water Curupira Distributing PikaBot Malware Via Phishing", "SMW4149 - NoaBot Botnet Targeting SSH Servers For Crypto Mining", "SMW4189 - AceCryptor Packed Rescoms Malware Targets Europe", "SMW4249 - Fickle Stealer Distributed Via Multiple Attack Chain", "STA4250 - Naikon Targets Telecoms Operators With Rainyday Malware", "SMW4270 - Connecio Stealer Delivered Through Fake Falcon Sensor Update Lure", "STA4272 - MuddyWater Target Middle East With BugSleep", "STA4278 - APT41 Targets Taiwanese Government Research Institute with ShadowPad", "SRTS - Benign Strike 01", "SRTS - Benign Strike 02"]
+      }
+      },
+      {
+        "terms": {
+          "strike_id.keyword": [
+  "STA1447",
+  "STA1473",
+  "STA1473",
+  "STA1398",
+  "SMW1496",
+  "STA1517",
+  "SRW1530",
+  "SMW1531",
+  "SMW1082",
+  "STA1377",
+  "SMW1496: A deep look at Evilnum and its toolset (Copy-1)",
+  "SMW1496: A deep look at Evilnum and its toolset (Copy-2)",
+  "SMW1571",
+  "SRW1580",
+  "SRE1708 (HTTPS)",
+  "SRW1692(HTTPS)",
+  "SRW1675(HTTPS)",
+  "SRW1707 (HTTPS)",
+  "SRW1697(HTTPS)",
+  "SMW1732",
+  "STA1231",
+  "SMW1232",
+  "SMW1445",
+  "SRV1874",
+  "STA3087",
+  "SMW4137",
+  "STA4139",
+  "SMW4149",
+  "SMW4189",
+  "SMW4249",
+  "STA4250",
+  "SMW4270",
+  "STA4272",
+  "STA4278",
+  "SRTS",
+  "SRTS"
+]
+        }
+      }
+    ]
+   }
+}
+}
+

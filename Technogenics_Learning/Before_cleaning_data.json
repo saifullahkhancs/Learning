@@ -1,0 +1,1207 @@
+{
+  "took": 12,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 85,
+      "relation": "eq"
+    },
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "domain-1f376a01-bee9-480d-9f2a-ac0822abf597",
+        "_score": 1,
+        "_source": {
+          "name": "palau.voipstelecom.com.au",
+          "strike_id": [
+            "SRV1874"
+          ],
+          "strikes_count": 1
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "domain-20c5f4a4-483a-4ab8-9ac1-98476bdd2e16",
+        "_score": 1,
+        "_source": {
+          "name": "lo0.systemctl.network",
+          "strike_id": [
+            "STA3087",
+            "STA3088"
+          ],
+          "strikes_count": 2
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "ef7e3a11e9330ee9befc2937c9616c4cee4f72a33b3df9db80947befdc0507f6",
+        "_score": 1,
+        "_source": {
+          "name": "kreedcssg3.temp.swtest.ru",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW4137"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "cffacada99fc014586db2ab4a694cb4ae690f05c548771d956d498f40b132ae0",
+        "_score": 1,
+        "_source": {
+          "name": "mimicer.online",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW4149"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "16aeca754a7291ae6cdcbc3ba4f4fe883a2514c803aacbeea2581d74cde9703c",
+        "_score": 1,
+        "_source": {
+          "name": "mimicmaster.online",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW4149"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "domain-2778699d-2b11-451e-b69f-a0ad4448062a",
+        "_score": 1,
+        "_source": {
+          "name": "w2.chatgptsfit.com",
+          "strike_id": [
+            "STA4278"
+          ],
+          "strikes_count": 1
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "559958c194236770c3853d25e1bf7a5a872d0e7ecfb23ace4514689d33cee094",
+        "_score": 1,
+        "_source": {
+          "name": "webmail.srthreatintel.com",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1571"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "domain-b6c31db0-9557-4026-991d-17a4c73e55d8",
+        "_score": 1,
+        "_source": {
+          "name": "spgbotup.club",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1473"
+          ],
+          "strike": [
+            "STA1473 - The Desert Falcons Targets the Middle East With Micropsia"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "061d7d9c5b82b3f5be910c16bae544c670199ea22393ac50545fcd873a962250",
+        "_score": 1,
+        "_source": {
+          "name": "supportsession.live",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1377"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "4ca0ab69cf4d12d718714f8a6986a9e5dba8d6a4022087e24cb36d0b28be206c",
+        "_score": 1,
+        "_source": {
+          "name": "namybotter.info",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1473"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "f9e301ff5948fce77e5b030f49203838f8c993e6bc5ad3a2bb7b1ed78ffbc078",
+        "_score": 1,
+        "_source": {
+          "name": "ftp.behnazgroup.ir",
+          "strikes_count": 3,
+          "strike_id": [
+            "STA1517",
+            "SMW1529",
+            "SMW1531"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "590971600e52d62ad2e44a06ae656b4419078694416dfbd505992a216d5831c0",
+        "_score": 1,
+        "_source": {
+          "name": "manygoodnews.com",
+          "strikes_count": 2,
+          "strike_id": [
+            "STA1235",
+            "STA1231"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "aacc0c612e548ced7f7c36ee9436d3d57466b1cd5c5aae13d78b5c9373e245c7",
+        "_score": 1,
+        "_source": {
+          "name": "hitmesanjjoy.pro",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1473"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "5135d69ba5921f3c91818d2428c1ef6440cebbfba24c3b028f12c4b8092c3b88",
+        "_score": 1,
+        "_source": {
+          "name": "sfml-dev.org",
+          "strikes_count": 1,
+          "strike_id": [
+            "SRW1530"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_domain",
+        "_id": "domain-ef42a2a1-0ab4-4c7a-8474-e4ade059d7f4",
+        "_score": 1,
+        "_source": {
+          "strike_id": [
+            "SRV4079",
+            "SMW4130",
+            "STA5049",
+            "SMW4261",
+            "SMW4249",
+            "SMW4047",
+            "STA4084",
+            "STA4185",
+            "SMW4037",
+            "SMW4184"
+          ],
+          "strikes_count": 10,
+          "strike": [
+            "STA4084 - Agrius Targets Israeli Higher Education And Tech Sectors",
+            "SMW4184 - A Simple And Functional Weapon STRRAT Delivered Via Phishing",
+            "STA4185 - Earth Krahang Delivers XDealer Through A Phishing Campaign",
+            "SMW4261 - Kematian Stealer Delivers Via Phishing"
+          ],
+          "name": "github.com"
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-ae3d42a7-d99c-4b57-94d1-b37eb69eee7d",
+        "_score": 1,
+        "_source": {
+          "name": "94.130.46.251",
+          "strikes_count": 1,
+          "strike_id": [
+            "SRW1530"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-759d2ea3-d531-4d81-b37c-448300ea9db6",
+        "_score": 1,
+        "_source": {
+          "name": "185.234.52.168",
+          "strike": [
+            "STA1447 - Sofacy Group Delivers Zebrocy Downloader"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1447"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "5d08a0553318f9642bf9f7094527af2b6879705a7f946b7a2a4d37f7b8120924",
+        "_score": 1,
+        "_source": {
+          "name": "185.213.208.245",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW4249"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "ip-51f3a779-d8fd-478f-a442-2c11374e3476",
+        "_score": 1,
+        "_source": {
+          "name": "91.235.234.202",
+          "strike_id": [
+            "STA5044",
+            "STA4272"
+          ],
+          "strikes_count": 2
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "ip-eec8096d-06fd-40cd-b728-81122067210d",
+        "_score": 1,
+        "_source": {
+          "name": "146.19.143.14",
+          "strike_id": [
+            "STA4272"
+          ],
+          "strikes_count": 1
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "ip-a7e97b9a-f41b-407a-a890-a25498128040",
+        "_score": 1,
+        "_source": {
+          "name": "15.235.202.109",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA4139"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "ip-505db98b-fc96-4e15-a715-ee4189ce0817",
+        "_score": 1,
+        "_source": {
+          "name": "194.32.78.245",
+          "strike": [
+            "STA1447 - Sofacy Group Delivers Zebrocy Downloader"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1447"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-1797ed58-b639-498c-843b-30135a65bd21",
+        "_score": 1,
+        "_source": {
+          "name": "139.28.37.63",
+          "strikes_count": 2,
+          "strike_id": [
+            "SMW1496: A deep look at Evilnum and its toolset (Copy",
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-dfdbe2ab-9bf4-4b2b-81b7-8de30ccbb636",
+        "_score": 1,
+        "_source": {
+          "name": "185.62.190.218",
+          "strikes_count": 2,
+          "strike_id": [
+            "SMW1496: A deep look at Evilnum and its toolset (Copy",
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-4be20a45-e07b-4f55-9a94-5c3f473e6979",
+        "_score": 1,
+        "_source": {
+          "name": "172.104.142.206",
+          "strike": [
+            "SRW1692 - LockBit 2.0 Ransomware Targets Consultation Company For $50 Million Ransom",
+            "SRW1698 - LockBit 2.0 Ransomware Detections in Chile, Italy, Taiwan And UK"
+          ],
+          "strikes_count": 3,
+          "strike_id": [
+            "SRW1692(HTTPS)",
+            "SRW1698",
+            "SRW1692"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "98e5e3e2980ca5cec949e297d9620fb49583b90a789b026674ce4481865b75e7",
+        "_score": 1,
+        "_source": {
+          "name": "51.195.232.97",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA4139"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-8b82c345-75cd-45bb-b91c-bb0279fff266",
+        "_score": 1,
+        "_source": {
+          "name": "192.236.163.208",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1082"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-570d57b6-f971-4373-84b3-d7e1c6f572cf",
+        "_score": 1,
+        "_source": {
+          "name": "185.62.190.89",
+          "strikes_count": 2,
+          "strike_id": [
+            "SMW1496: A deep look at Evilnum and its toolset (Copy",
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "ip-8cc92280-bdc8-4e88-93a7-ea96d3c57096",
+        "_score": 1,
+        "_source": {
+          "name": "194.76.225.46",
+          "strike": [
+            "STA3087 - The Sea Turtle Threat Actor Tends To Swim Under The Radar",
+            "SMW1729 - Malicious NPM Package Delivers DanaBot And XMRigMiner"
+          ],
+          "strikes_count": 2,
+          "strike_id": [
+            "SMW1729",
+            "STA3087"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "6ef481c995b7369e66cc37bb9bdefea6d0be36f60257a17cca15f2b67c011273",
+        "_score": 1,
+        "_source": {
+          "name": "45.85.76.18",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA4278"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "7045850e9fc04cd45778d2678b24838978ed218370190c7a7742c7318b768566",
+        "_score": 1,
+        "_source": {
+          "name": "185.255.114.110",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW4270"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "a789396443993ef748743f46c96b4e1d1f61976e92af277c3e8dc1a7598ecb06",
+        "_score": 1,
+        "_source": {
+          "name": "185.255.114.63",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW4270"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "f44f6bd9988e2532c1695d6d017c6c46f4f742ede7e13b82bd19c079ba2a3d48",
+        "_score": 1,
+        "_source": {
+          "name": "134.209.147.60",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA4250"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "cdda43d940d8aeb2053e894a006835f8b07f9bcc2bfabe05d49fdf94eabb6ed4",
+        "_score": 1,
+        "_source": {
+          "name": "65.20.76.211",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA4250"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-03a02ad1-1ab8-4c73-8c7a-01f960ae17f0",
+        "_score": 1,
+        "_source": {
+          "name": "82.165.103.120",
+          "strikes_count": 1,
+          "strike_id": [
+            "SRW1580"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "domain-d5b664c8-0403-4445-a51e-e258a1b6a666",
+        "_score": 1,
+        "_source": {
+          "name": "108.62.12.5",
+          "strike": [
+            "SRW1698 - LockBit 2.0 Ransomware Detections in Chile, Italy, Taiwan And UK"
+          ],
+          "strikes_count": 2,
+          "strike_id": [
+            "SRW1698",
+            "SRW1692(HTTPS)"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_ipv4",
+        "_id": "ip-b478f64b-ef42-4951-bb47-e9f3a79ad626",
+        "_score": 1,
+        "_source": {
+          "name": "45.15.16.60",
+          "strike": [
+            "SRW1698 - LockBit 2.0 Ransomware Detections in Chile, Italy, Taiwan And UK"
+          ],
+          "strikes_count": 2,
+          "strike_id": [
+            "SRW1698",
+            "SRW1692(HTTPS)"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "403181259d0d42b0993f9e606edd9aa78220d877b698c0349030745c5e7cdc26",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "d140f63ff050c572398da196f587775c",
+            "497dcb807d3127aa6d9947b735977e50ec21c25d40c66e5ef3babd76bff07bf5",
+            "62ee2c6c1e80817d31f4c27446036c81f1320bba"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1377"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "f6e77784311f506e7bd8a7bc48207f9f1399a2092645bf0daa473faa2ecb351b",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "6284cb8151b7a7c10ff4532ac09f25d185c4f5f3",
+            "18365dd10d00967e4383dae891df5f41",
+            "33dc1c3f3a292a5a5b3f8b2806a6373144a07c7ec1e44320f02fbd9b500cfac0"
+          ],
+          "strikes_count": 2,
+          "strike_id": [
+            "SMW1571",
+            "SMW1457"
+          ],
+          "strike": [
+            "SMW1457 - Trojan Delivered to Victims In UAE"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "27a490830644bd6fd7d02d21ccf1353e02ecde35931ed61a99bd19f13f21f890",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "a8b069ef9d76cd42e873c6e8ded9db8c17d9d0ce234b5e7c9a126b4d514c6f72",
+            "a2aa5324d0368704736361c4f5df7bed",
+            "85958ff8ae13126f3312e2845f1b523e5fdc3487"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "SRW1580"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "b336faa0d93a68795d7892964d3dbe9806567882b12aa9bd6a691e6b37f5eb97",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "6c282039a9eb798c00a01261ca18851f350df3e5",
+            "1422636dd3e4abdb0a9f89b9c14069e4ab4cdbfdc543cd65e1712c4f384b0181",
+            "a31e3b8d2f5e0369be8f3dbb7e23120b"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1447"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "5f8fd8995768b5f847d442e6f0b07dbb95ade35e582b786a120e60253b1ef691",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "51e362e8dc8d5ed7228af47ed913242a",
+            "6174ee3b9d01b93ae97b1163cec7dc454de0192e",
+            "d61eecd7492dfa461344076a93fc2668dc28943724190faf3d9390f8403b6411"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "12e370dafba212a262acdaf6e7395a83f4c779c84176df5c8d3a1d1fbee96a60",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "b190104e81d2e88c714c8b5c933dd98023eb8e1e",
+            "4c323bc11982b95266732c01645c39618550e68f25c34f6d3d79288eae7d4378",
+            "e2fc67d5572f66f92c21a9d95a4df2d0"
+          ],
+          "strikes_count": 2,
+          "strike_id": [
+            "STA1231",
+            "STA1235"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "0fceb014f3ab6e38f8df3db881547aff52f2d321e88b5ed78f097084b40f6d40",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "b15552213169ad3b8efb14470987a335",
+            "d573af5b9b8897bbd137f867b470a4118e5ab580",
+            "a897164e3547f0ce3aaa476b0364a200769e8c07ce825bcfdc43939dd1314bb1"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "617bbe4d25ba36e7822828448a5f817940387ddcceb23dbe4a0b9180acb49260",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "17150a137c43235ad07011b552f9ff27",
+            "c10cd1c78c180ba657e3921ee9421b9abd5b965c4cdfaa94a58e383b45bb72ca",
+            "d9beeb207d6dfe62e8f30bca6a39b68137c85554"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "2c9e8fb5c0f29f46373adf7200ad0ef685d888537313a084f7a123f514495abc",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "97c97ad2baef37eea023549131c192f441aa7976747166cd31095e7dad17948c",
+            "b4a63bd81c5388390dbda8b92770da88581610d1",
+            "f226dbe5dc77fe071ffc8c5d3c82e424"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "8eced825a181fa7e58c68b435d02af5366251d0e9d5803fc90a0eb4d1e75341b",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "8b640d71f6eda4bdddeab75b7a1d2e12",
+            "21c93e6133b395888426863602ae8dd5da23a38b",
+            "bbe17e6776f26d399515c0ed6cbebd3b7e3999c03186d32b33cfc0a5595a55dc"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1377"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "f114a613e9bb62ef58e3cae2a437ad1c63ee4f4500d40739bcd3834e0eb55021",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "0637d58ca498a16773f423556259b945c2facfc5",
+            "857f974c37bbb297b9dda101e586f2aa",
+            "61cb46754dc7e05002aa0ecce53f8bcd3c00845a4846bbb13b2654102be963c1"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1082"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "3c609e78dda05a3af4a2e5b971df8bc4cc11cd2a366bea3a17e0a39207ceb96d",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "def0dd0b4c6dbd9e44fe2da8d241224b818780180d626f5ba106ecc81237480b",
+            "107d25c7399b17ad6b7c05993b65c18e",
+            "33e4bca943301101c69f5658f737ece50c3a39e4"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1377"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "b3c18f81f8cfaf6015188d3c3aa6e4e95aa03d78ca4c4a846e568c97deaa1898",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "a3dc31c456508df7dfac8349eb0d2b65",
+            "63a73cf005eb328f3c7e99f0d28da65980d9620b66d8c41939f6db023418c864",
+            "74ea60b4e269817168e107bdccc42b3a1193c1e6"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1473"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "be387116ec0b0686fd85a6600bfddc5a1d90184a3e3812b2b14aedf4db72c63b",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "4db68522600f2d8aabd255e2da999a9d9c9f1f18491cfce9dadf2296269a172b",
+            "81881a0841deaa0ef1ea92c51d8c8845",
+            "9e093a5b34c4e5dea59e374b409173565dc3b05b"
+          ],
+          "strike_id": [
+            "STA1473"
+          ],
+          "strikes_count": 1
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "64531e340ed3077204ddf4cc0ee2cf35f9a8685036e8fd0114b0a6299069e168",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "4d0ab3951df93589a874192569cac88f7107f595600e274f52e2b75f68593bca",
+            "6b3116580d29020b9c259877ac18a7fd",
+            "48f99144bb9fdf379926e85fbe3caa462089f397"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1398"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "bece66af84f902c028b409a325ff61aac70ecd10b9177470c415b71fd6fd6468",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "c1ab32afb0e2d7b7b1cad3fb831e9373",
+            "839c3e6ba65e5d07a2e0c4dd4a2c0d7ae95a266431dd3f8971b8a37d17b1ddf6",
+            "05122010cde4dcd1b4cd55de7b7d442efda19976"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1398"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "9eefe16195e82f8b1343b2c58622b66237d1ca54955cf09921b252229ef26abe",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "2ef0f776a9547528e710c2d2bac234474b057f73",
+            "d9801b4da1dbc5264e83029abb93e800d3c9971c650ecc2df5f85bcc10c7bd61",
+            "61dfd8e9d0df201d9e74adbfcd35516f"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1398"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "6ef29172704201c931df9dbaab60f12210d2bda6909e06d7de13202e9ad4a1be",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "04147dc4f5fe55e54465c49d067bcb68",
+            "f317843c047e64474a2c0a9207f70f67a4cc9298065a3611d947f186d6733fb7",
+            "94425023a2d78b0d06ec8759756fd85257cbf5b3"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1531"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "5673431b883e3719af06a29ef6101c31114d9f79eccf712632b53493cb38f239",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "53c8f2fda54eba508c533283a8c2896f",
+            "d8b5c1ee5c251d0c6734c0824f4cd5c32572aceb",
+            "052e5b2b806fb084632ef52b18f9fa296dcbff8e0751a095f1aaeb84b24e0c90"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "SRW1530"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "90b1669e0f6fbf445d10ec2924ce71b143e6bbc7267cc588cd6c1e45af64a828",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "d5b0aaebc115e944f085190f1d3018b6a56f973d",
+            "58d009b25a761727f04a42f13121a79d75ff286cd1f63852afdb781be5ae9bc8",
+            "e7a47e0349b92d39ae4cae706da73db3"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1531"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "c21678c3c14ab6dea528403d9116f3406b177c30e0894519482602460ba3b961",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "152a49901a610e66a9fb3e3da2d2b4d17e5a8353",
+            "b80377b27fe0a1b9c4d8d8ea54f82379",
+            "106a6ff8bcf8e25871fa46ce8fff6c3b5153ff30c3b0c2ed5e98a9afafe29479"
+          ],
+          "strike_id": [
+            "SMW1732"
+          ],
+          "strikes_count": 1
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "7b977e60f485872e578e7832ce07d83f51ea10e9eb09ae46354b6882ad5ed937",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "c345d328802db528c08b9989d446c6046a81961f669837c093efd7786744a92b",
+            "e317209f724b96bbca01be103c80828b",
+            "94d7f2928c318c588d8143e1c81e48227ce735d3"
+          ],
+          "strike_id": [
+            "SMW1732"
+          ],
+          "strikes_count": 1
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "f1b15fc8f4d27b30a827a0a8caa3dfcc74d63d23619a97c37e2a74f05fb161af",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "de61e8d7147a0ea28dc9baf43c0d0a9f",
+            "9f1961d2d52c52fad6d027e4ee2e1e8c75de5d2d89a62f83b66aa6efb35599ed",
+            "c2c5a2be3abfa266f7586c12ca5ead8e201c5d43"
+          ],
+          "strike_id": [
+            "SMW1732"
+          ],
+          "strikes_count": 1
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_object",
+        "_id": "13e350d020aab0c8f67d1367344a0ab6d2034b8bfce1e2d5ddc9a5312d3b7223",
+        "_score": 1,
+        "_source": {
+          "name": [
+            "ed79d765c002e767ba5ed6cf8b878671a0ff25c3",
+            "9cb8a0cb778906c046734fbe67778c61",
+            "21477cb4ea18c8657cbcf076701808f02fca27f391a5a1ac9ebb61d83033cf71"
+          ],
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1445"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "53e79cdbab5f6e6342b134ddc267aef9c868d05188e7195006f095934f5acc10",
+        "_score": 1,
+        "_source": {
+          "name": "manygoodnews.com/file/c10cd1c78c180ba657e3921ee9421b9abd5b965c4cdfaa94a58e383b45bb72ca",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ],
+          "strike": [
+            "STA1231 - OilRig Delivers TONEDEAF 2.0 To US Companies"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "90436c2d26c457b17ed4bc9772a1f8b6fdc3aea576667c8567a2aed39f879e0d",
+        "_score": 1,
+        "_source": {
+          "name": "manygoodnews.com/upl?ser=000fjx",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ],
+          "strike": [
+            "STA1231 - OilRig Delivers TONEDEAF 2.0 To US Companies"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "52dfad1a330f321a644485013cc37285fec8db7c257651b35727a3095fa446f2",
+        "_score": 1,
+        "_source": {
+          "name": "192.236.163.208/mips",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1082"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "357919129d33e987faa31d368c04bdc9acf0c3f88cf079285346967631b2142a",
+        "_score": 1,
+        "_source": {
+          "name": "185.62.190.89/tran/register.php",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "1b904c1af47b9870d25cb70e3f10791f79a23475bd95ae3089fcaea701cd7ee2",
+        "_score": 1,
+        "_source": {
+          "name": "manygoodnews.com/testfile.zip-d61eecd7492dfa461344076a93fc2668dc28943724190faf3d9390f",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ],
+          "strike": [
+            "STA1231 - OilRig Delivers TONEDEAF 2.0 To US Companies"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "3a0b20c8e29a2c3ac7bcf59b5c57850c921ed97c1518c92036606db84bdc7140",
+        "_score": 1,
+        "_source": {
+          "name": "manygoodnews.com/dow?ser=000fjx",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ],
+          "strike": [
+            "STA1231 - OilRig Delivers TONEDEAF 2.0 To US Companies"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "c397f1d884dcc0be8810c4b2f8393705bb482e6d99af1423427ecfaa956d2398",
+        "_score": 1,
+        "_source": {
+          "name": "hitmesanjjoy.pro/file/path/TheBigBangAPT.doc",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1473"
+          ],
+          "strike": [
+            "STA1473 - The Desert Falcons Targets the Middle East With Micropsia"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "7a9328c89fef8d931efab32da30b4b4fb628f9c6171a11d5c9b9d993ef853ae1",
+        "_score": 1,
+        "_source": {
+          "name": "194.32.78.245/protect/get-upd-id.php",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1447"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "71b7d298fab08c615fc1ca9d6c0a37204a43678eb37a4d578622fa7f66a59a41",
+        "_score": 1,
+        "_source": {
+          "name": "manygoodnews.com/file/path/ch",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "8957f69c53014be5435079a60e1bc5fe402477bfd99415f9ef6b874d18ef33af",
+        "_score": 1,
+        "_source": {
+          "name": "manygoodnews.com/survey.xls",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1231"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "ada6ca58bacc37b8060787e85eac6f10d988cb6a7f2d6bf08c87fb471fcbdf11",
+        "_score": 1,
+        "_source": {
+          "name": "namybotter.info/file/path/4db68522600f2d8aabd255e2da999a9d9c9f1f18491cfce9dadf2296269a172b.bin",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1473"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "422ee9147db2dd610a7483be1b566a5a3cc22d548fcfde1ddd007f9e2dae415a",
+        "_score": 1,
+        "_source": {
+          "name": "185.62.190.218/tran/check.php%3Fid%3D%26ver%3D4.0",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "08224dd10ce1d7c88ff2d5bdcd27576ab599d7a1bf73c4218bd2169c2e3fdf45",
+        "_score": 1,
+        "_source": {
+          "name": "185.62.190.218/tran/view.php",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "584649a6b174bc8980a66046b60be9f006f256dbf8c4d32aeaa0ef1970d6f293",
+        "_score": 1,
+        "_source": {
+          "name": "139.28.37.63/tran/register.php",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "30407369acb955c35ab84b1db31bcf0f0ed7fbb127a5163028a9bb3e7329b9f6",
+        "_score": 1,
+        "_source": {
+          "name": "139.28.37.63/tran/check.php%3Fid%3D%26ver%3D4.0",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "871dbf3fc3455193dc5727cc3b45d361e56d3129b09bfe35786559af2ba55fbb",
+        "_score": 1,
+        "_source": {
+          "name": "185.62.190.89/tran/check.php%3Fid%3D%26ver%3D4.0",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "882e92bfbf17da05fa45290a97d81ec8b5e9aa4b9b4212294f843a881c0f7ad1",
+        "_score": 1,
+        "_source": {
+          "name": "185.62.190.218/tran/register.php",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "330bdc49362a5b9cda8315a448a9d95a3d404fd321734e2c87c35da4aa9cf314",
+        "_score": 1,
+        "_source": {
+          "name": "185.62.190.89/tran/view.php",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1496"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "f0322181697d76b4f2b7c956af017eaff154fedbe3613894ee076d20192288bb",
+        "_score": 1,
+        "_source": {
+          "name": "ftp.behnazgroup.ir/cache/DOC/q8500830201644836105lviwhgwg34m/f317843c047e64474a2c0a9207f70f67a4cc9298065a3611d947f186d6733fb7.bin",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1531"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "9636c212a11fe054c970c5c6fbd7736291b081c7f55f0001165d12c2abe949cb",
+        "_score": 1,
+        "_source": {
+          "name": "ftp.behnazgroup.ir/wp/Document/5r65712504026116389jmyzp09zw2b3sfn63/58d009b25a761727f04a42f13121a79d75ff286cd1f63852afdb781be5ae9bc8.img",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1531"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "447ac00d9f27c30768c2dee51f8b50bc870acac0a365eb6ac095f608f53d4ae9",
+        "_score": 1,
+        "_source": {
+          "name": "sfml-dev.org/wp-includes/Reporting/1g89974878316032719mibv1xp63/052e5b2b806fb084632ef52b18f9fa296dcbff8e0751a095f1aaeb84b24e0c90.bin",
+          "strikes_count": 1,
+          "strike_id": [
+            "SRW1530"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "e766987b7375654359e6d158393bd0f5c40904db3b67b1291530d00045c1f72a",
+        "_score": 1,
+        "_source": {
+          "name": "supportsession.live/192362/x2d34x3",
+          "strikes_count": 1,
+          "strike_id": [
+            "STA1377"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "6db701bea345bc62c4bd67901ac8633a8b8d5c6a8f2b16915f33a35c76023ba9",
+        "_score": 1,
+        "_source": {
+          "name": "192.236.163.208/bins/",
+          "strikes_count": 1,
+          "strike_id": [
+            "SMW1082"
+          ]
+        }
+      },
+      {
+        "_index": "intelligence_kb_artifact_url",
+        "_id": "57372b6199ad298d9bc7ea48d1745ec100ae94e485113c3e8508ee578918a626",
+        "_score": 1,
+        "_source": {
+          "name": "manygoodnews.com/",
+          "strikes_count": 2,
+          "strike_id": [
+            "STA1235",
+            "STA1231"
+          ]
+        }
+      }
+    ]
+  }
+}

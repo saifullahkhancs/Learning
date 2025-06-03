@@ -294,14 +294,229 @@ new_enrich = {
   }
 }
 
+
+new_sync_pipeline_data ={
+    "meta": {
+        "ver": 1.0,
+        "_id": "381df1c8de9d97928c7d369525143f56161c68e6",
+        "index": "ver_1.0.1_strikeready_intel_14_url"
+    },
+    "data": {
+        "value": "https://47.90.171.145/",
+        "type": "url",
+        "confidence": "high",
+        "sources": [
+            {
+                "id": "12",
+                "name": "phishtank",
+                "display_name": "PhishTank",
+                "url": "http://www.phishtank.com/phish_detail.php?phish_id=8997660",
+                "confidence": "high",
+                "type": "ThreatFeed",
+                "time": 1742871812.119023
+            },
+            {
+                "id": "41",
+                "name": "phishstats",
+                "display_name": "PhishStats",
+                "url": "https://phishstats.info:2096/api/phishing/?_p=11&_size=50&_sort=-date&_where=(date,gt,2025-03-03T00:07:29)~and(date,lt,2025-03-03T12:07:29)",
+                "confidence": "medium",
+                "type": "ThreatFeed",
+                "time": 1741004066.367672
+            },
+            {
+                "id": "12",
+                "name": "phishtank",
+                "display_name": "PhishTank",
+                "url": "http://www.phishtank.com/phish_detail.php?phish_id=8997660",
+                "confidence": "high",
+                "type": "ThreatFeed",
+                "time": 1740971020.63628
+            }
+        ],
+        "score": 80,
+        "verdict": "malicious",
+        "approved": False,
+        "malwares": [],
+        "vulnerability": [],
+        "threat_actors": [],
+        "threat": [],
+        "tools": [],
+        "ransoms": [],
+        "strikes": [],
+        "tags": [],
+        "internal_tags": [
+            "phishing"
+        ],
+        "first_seen": 1740967260.2,
+        "last_seen": 1741003253.431954,
+        "raw": [],
+        "analysis": {
+            "status": [
+                {
+                    "value": "online",
+                    "reported_source": {
+                        "name": "phishtank",
+                        "reported_time": 1742871812.119722,
+                        "confidence": "high",
+                        "type": "ThreatFeed",
+                        "sr_reviewed": False
+                    }
+                }
+            ],
+            "verdict": [
+                {
+                    "value": "suspicious",
+                    "reported_source": {
+                        "name": "phishstats",
+                        "reported_time": 1741004066.368228,
+                        "confidence": "medium",
+                        "type": "ThreatFeed",
+                        "sr_reviewed": False
+                    }
+                },
+                {
+                    "value": "malicious",
+                    "reported_source": {
+                        "name": "phishtank",
+                        "reported_time": 1742871812.119782,
+                        "confidence": "high",
+                        "type": "ThreatFeed",
+                        "sr_reviewed": True
+                    }
+                }
+            ],
+            "confidence": [
+                {
+                    "value": "medium",
+                    "reported_source": {
+                        "name": "phishstats",
+                        "reported_time": 1741004066.368252,
+                        "confidence": "medium",
+                        "type": "ThreatFeed",
+                        "sr_reviewed": True
+                    }
+                },
+                {
+                    "value": "high",
+                    "reported_source": {
+                        "name": "phishtank",
+                        "reported_time": 1742871812.119822,
+                        "confidence": "high",
+                        "type": "ThreatFeed",
+                        "sr_reviewed": True
+                    }
+                }
+            ],
+            "score": [
+                {
+                    "value": 40,
+                    "reported_source": {
+                        "name": "phishstats",
+                        "reported_time": 1741004066.368284,
+                        "confidence": "medium",
+                        "type": "ThreatFeed",
+                        "sr_reviewed": False
+                    }
+                },
+                {
+                    "value": 80,
+                    "reported_source": {
+                        "name": "phishtank",
+                        "reported_time": 1742871812.11985,
+                        "confidence": "high",
+                        "type": "ThreatFeed",
+                        "sr_reviewed": True
+                    }
+                }
+            ]
+        },
+        "presence_index": {},
+        "mitigation_rules": [],
+        "first_crawled": 1740971020.637223,
+        "last_crawled": 1742871812.119882,
+        "mitre_ttp": [],
+        "tlp": "amber",
+        "whitelisted_check": True,
+        "internal_raw_osint": False,
+        "internal_allow_sync": True,
+        "associated_threat_campaigns": [],
+        "is_deployable": True,
+        "dark_feed": False,
+        "sr_intel": False,
+        "status": "online",
+        "uri": "/",
+        "host": {
+            "value": "47.90.171.145",
+            "type": "ipv4",
+            "category": "ip",
+            "port": None
+        },
+        "larted": None,
+        "open_ports": [],
+        "files_downloaded": [],
+        "http_response": {
+            "status_code": None,
+            "response_len": None,
+            "content_type": "",
+            "filename": ""
+        },
+        "shortened": {
+            "is_shorten": None,
+            "final_location": {
+                "url": {}
+            },
+            "redirection_chain": []
+        },
+        "url_content_categorization": [],
+        "urls_part_of_body": [],
+        "artifact_validation": [
+            {
+                "benign": False,
+                "whitelisted": False,
+                "is_deployable": True,
+                "domain_rank": None,
+                "date": 1742871812.300783,
+                "compromised": False,
+                "is_fp": False,
+                "forcefully_malicious": None,
+                "source": "whitelisting_service"
+            },
+            {
+                "benign": False,
+                "whitelisted": False,
+                "is_deployable": True,
+                "domain_rank": None,
+                "date": 1741004066.468148,
+                "compromised": False,
+                "is_fp": False,
+                "forcefully_malicious": None,
+                "source": "whitelisting_service"
+            },
+            {
+                "benign": False,
+                "whitelisted": False,
+                "is_deployable": True,
+                "domain_rank": None,
+                "date": 1740971020.730626,
+                "compromised": False,
+                "is_fp": False,
+                "forcefully_malicious": None,
+                "source": "whitelisting_service"
+            }
+            ]}}
+
+
+after_elastic_data = {'name': 'https://47.90.171.145/', 'displayName': 'https://47.90.171.145/', 'type': 'url', 'created_at': 1745058207, 'updated_at': 1742871812, 'entity': ['url', 'artifact'], 'tag': [], 'source': ['phishtank', 'phishstats'], 'sources_count': 2, 'strike_id': [], 'first_seen': 1740967260.2, 'last_seen': 1741003253.431954, 'is_deployable': True, 'kb_verdict': 'malicious', 'kb_score': 80, 'cve': [], 'category': [], 'targeted_organization': [], 'targets_sector': [], 'targeted_industry': [], 'targets_region': [], 'targeted_country': [], 'attack_origin': [], 'source_type': ['ThreatFeed'], 'tlp': ['amber'], 'url': ['https://47.90.171.145/'], 'ip': ['47.90.171.145']}
 # topic  = "elastic"
+topic = "after_elastic"
 # topic= "registered_user_thre"      # for adding relation
-topic = "registered_user__intel_"    #   for enrichment
+# topic = "registered_user__intel_"    #   for enrichment
 if __name__ == "__main__":
 
     # for k in range(150):
     #     for i in range(3):
     registered_user = object
-    response = producer.send(topic,new_enrich)
+    response = producer.send(topic,after_elastic_data)
     print(response.get())
     time.sleep(5)

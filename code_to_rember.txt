@@ -1,0 +1,138 @@
+import React, {Component} from 'react';
+import {Mutation} from "react-apollo";
+import {UPDATE_DOMAIN} from "../../graphql/mutations";
+import Loading from "../Shared/Loading";
+import Error from "../Shared/Error";
+import Form from "react-jsonschema-form-bs4";
+import {DomainSchema, DomainUISchema} from "./DomainForm";
+import {GET_PENDING_LIST} from "../../graphql/queries";
+import {parse} from "../../Root";
+import {convert_date} from '../utils';
+import AsyncTypeaheadField from "../AsyncTypeaheadField";
+
+class DomainEdit extends Component
+{
+    state = {
+        domain: null,
+        sourcesMap: {}
+    };
+    schema = DomainSchema;
+    uiSchema = DomainUISchema;
+
+    componentDidMount()
+    {
+        const domain = this.props.location.state.domain;
+        const sourcesMap = {};
+        console.log("domain:", domain);
+        domain.sources.forEach(source => {
+            sourcesMap[source.name] = {name : source.name , srid : source.srid}; 
+        });
+
+        this.setState({
+            domain: {
+                uid: parse(domain.uid),
+                name:domain.name,
+                fp:domain.fp,
+                approved:domain.approved,
+                updatedAt: convert_date(domain.updatedAt),
+                createdAt: convert_date(domain.createdAt),
+                score: domain.score,
+                confidence: domain.confidence,
+                firstSeen: convert_date(domain.firstSeen),
+                lastSeen: convert_date(domain.lastSeen), 
+                malwares: domain.malwares.map(data => data.name),
+                tags: domain.tags.map(data => data.name),
+                threatActors: domain.threatActors.map(data => data.name),
+                verdict: domain.verdict,
+                sources: domain.sources.map(data => data.name),
+                sources_srid: domain.sources.map(data => data.srid)
+        },
+        sourcesMap
+    });     
+    }
+
+    onChange = (e) => {
+        const newFormData = { ...e.formData };
+        console.log("formmm in first time", e.formData)
+        // If sources have changed, update sources_srid based on the selected sources
+        if (newFormData.sources) {
+          const sourcesMap = this.state.sourcesMap;
+          const updatedSrids = newFormData.sources.map((sourceName) => {
+            // Check if the sourceName exists in the sourcesMap (from initial data or previous selections)
+            if (sourcesMap[sourceName]) {
+              return sourcesMap[sourceName].srid;
+            }
+            // If not found, it might be a new selection; we'll handle this in AsyncTypeaheadField
+            return "";
+          });
+
+        this.setState({
+            domain: {
+              ...this.state.domain, // Spread the existing domain object to preserve other fields
+              ...newFormData, // Spread the newFormData to update other fields
+              sources_srid: updatedSrids // Explicitly set sources_srid with your own data
+            }
+          }) 
+        console.log("form data", this.state.domain)
+        }
+      };
+
+
+    onSubmit = (e, Create) => {
+        const domain = this.state.domain
+        const sources = []
+        for (let i = 0; i < domazin.sources.length; i++) {
+            const sourceName = domain.sources[i];
+            const sourceSrid = domain.sources_srid[i]
+            const source = {name : sourceName , srid : sourceSrid}
+            console.log("source", source)
+            sources.push(source)
+        }
+        
+        domain.sources = sources
+        const {sources_srid,  ...submissionDomain } = {...domain};
+        console.log("after updationg domain")
+        Create({
+            variables: {
+                input: submissionDomain
+            }
+        });
+    };
+
+
+    render()
+    {
+        const attr = {...(this.state.domain)};
+
+        return (
+            <Mutation mutation={UPDATE_DOMAIN}
+                      variables={{input: this.state.domain}}
+                      refetchQueries={() =>
+                      {
+                          return [{
+                              query: GET_PENDING_LIST,
+                              variables: {published: false}
+                          }];
+                      }}
+                      onCompleted={() => this.props.history.push('/publishrequestlist')}>
+                {(Create, {loading, error, called, client}) =>
+                {
+                    if (loading) return <Loading/>;
+                    if (error) return <Error error={error}/>;
+                    return (
+                        <Form
+                            schema={this.schema}
+                            uiSchema={this.uiSchema}
+                            fields={{asyncTypeahead: AsyncTypeaheadField}}
+                            formData={attr}
+                            onChange={this.onChange}
+                            onSubmit={e => this.onSubmit(e, Create)}
+                        />
+                    )
+                }}
+            </Mutation>
+        );
+    }
+}
+
+export default DomainEdit;

@@ -1,0 +1,74 @@
+Q:- What is PSIRT?
+ANS : PSIRT stands for Product Security Incident Response Team.
+    It is a specialized team within an organization that is responsible 
+    for managing and responding to security incidents related to the organization's 
+    products. The PSIRT works to identify, analyze, and mitigate vulnerabilities and 
+    threats to ensure the security and integrity of the products offered by the
+    organization. They also communicate with customers and stakeholders about security 
+    issues and provide guidance on best practices for product security.
+    
+    Maturity Levels:
+        The capabilities of a PSIRT can vary depending on its maturity level, ranging from
+        basic to more advanced capabilities.
+        
+
+SIRT (Security Incident Response Team) - Also commonly referred to as CSIRT (Computer Security Incident Response Team) or sometimes simply IRT (Incident Response Team).
+
+A SIRT/CSIRT is responsible for managing and responding to any security incident that 
+affects an organization's internal IT infrastructure, networks, systems, and data.
+
+
+A PSIRT is a specialized team that focuses exclusively on security vulnerabilities and 
+incidents related to the products or services that an organization develops, sells, or offers to its customers.
+
+
+
+Q:- What is a Patch Tuesday?
+ANS : Patch Tuesday is a term used to refer to the second Tuesday of each month when Microsoft releases
+      security updates and patches for its software products. This practice was established by Microsoft 
+      to provide a predictable schedule for IT administrators and users to apply critical security updates 
+      to their systems. 
+      Patch Tuesday typically includes updates for Windows operating systems, Microsoft Office, and other 
+      Microsoft software products. The goal is to help organizations maintain the security and stability 
+      of their systems by addressing known vulnerabilities in a timely manner.
+ 
+    Realtionship between the psirt and patch Tuesday:
+
+    A PSIRT is the team within a company (e.g., Microsoft's PSIRT, Adobe's PSIRT) that identifies, analyzes, 
+    and develops fixes for security vulnerabilities in their products.
+    Patch Tuesday is the scheduled day when many of these fixes, developed by the PSIRT and engineering teams,
+     are publicly released to customers.
+
+
+Q:- What are advisories?
+Ans:- In the context of cybersecurity, advisories are formal documents or notifications that provide detailed 
+        information about security vulnerabilities, threats, or incidents. Their main purpose is to inform individuals, 
+        organizations, and the broader cybersecurity community about risks and provide guidance on how to mitigate them
+Who issues advisories?
+    Advisories are issued by various entities, including:
+
+    Software and Hardware Vendors:
+                                    Companies like Microsoft, Apple, Cisco, Adobe, Oracle, etc., release advisories for vulnerabilities found 
+                                in their own products. These are often issued by their Product Security Incident Response Teams (PSIRTs).
+    Government Cybersecurity Agencies: 
+                                    Organizations like CISA (Cybersecurity and Infrastructure Security Agency) in the U.S
+    ,                                ACSC (Australian Cyber Security Centre), NCSC (National Cyber Security Centre) in the UK,
+    Security Research Organizations:
+    CERTs (Computer Emergency Response Teams): 
+                    National or sectoral CERTs (like US-CERT, JPCERT/CC) often aggregate and disseminate advisories from various sources to their constituents.
+
+
+
+Q:- What is the advisories feed?
+Ans:- An advisories feed (often referred to as a security advisories feed or vulnerability intelligence feed) is a continuous, 
+      automated stream of information about newly discovered or updated cybersecurity vulnerabilities, threats, and sometimes related incidents.
+
+        Think of it like a news ticker for security flaws. Instead of manually checking individual vendor websites or government security portals 
+        for new advisories, an advisories feed aggregates this information and delivers it in a structured, often machine-readable, format.
+
+        How Advisories Feeds Work:
+
+            Sources: Advisories feeds pull data from a wide variety of sources, including:
+
+                Vendor PSIRTs: Product Security Incident Response Teams from software and hardware companies 
+                            (e.g., Microsoft, Cisco, Adobe, Apple) publish advisories about vulnerabilities in their own products.

@@ -1,0 +1,272 @@
+[
+  {
+    "index": "cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_artifact*",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "intelligence_kb_artifact*",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_rule*",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "cb6846a5-5d77-4100-a649-58bbce04c3f0_intelligence_vulnerability_cve",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "intelligence_kb_cve",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "intelligence_kb_malware",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "intelligence_kb_threat_actor",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "intelligence_kb_tool",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "intelligence_kb_ransom",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  },
+  {
+    "index": "intelligence_kb_rule_*",
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "multi_match": {
+              "fields": [
+                "malware.keyword"
+              ],
+              "query": "emotet"
+            }
+          }
+        ]
+      }
+    },
+    "sort": [
+      {
+        "updated_at": {
+          "order": "desc"
+        }
+      }
+    ],
+    "track_total_hits": true,
+    "from": 0,
+    "size": 25
+  }
+]
