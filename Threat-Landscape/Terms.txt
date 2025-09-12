@@ -37,7 +37,7 @@ ANS : Patch Tuesday is a term used to refer to the second Tuesday of each month 
     A PSIRT is the team within a company (e.g., Microsoft's PSIRT, Adobe's PSIRT) that identifies, analyzes, 
     and develops fixes for security vulnerabilities in their products.
     Patch Tuesday is the scheduled day when many of these fixes, developed by the PSIRT and engineering teams,
-     are publicly released to customers.
+    are publicly released to customers.
 
 
 Q:- What are advisories?
