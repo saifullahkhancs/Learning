@@ -1,0 +1,12 @@
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\bin\Debug\net10.0\chatbot.Domain.deps.json
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\bin\Debug\net10.0\chatbot.Domain.dll
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\bin\Debug\net10.0\chatbot.Domain.pdb
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\chatbot.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\chatbot.Domain.AssemblyInfoInputs.cache
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\chatbot.Domain.AssemblyInfo.cs
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\chatbot.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\chatbot.Domain.sourcelink.json
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\chatbot.Domain.dll
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\refint\chatbot.Domain.dll
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\chatbot.Domain.pdb
+C:\Users\hi\Desktop\Saif\Learning\chatbot\chatbot.Domain\obj\Debug\net10.0\ref\chatbot.Domain.dll
