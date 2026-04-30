@@ -168,3 +168,25 @@ Employee.office_name = "pqr privat limited"
 # either inside the class definition or outside the class definition
 e1.show()
 
+
+#    Class Method
+# Defined with the @classmethod decorator.
+# Takes cls (the class itself) as the first argument instead of self.
+# Often used for alternative constructors or operations that affect the class as a whole.
+
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def from_string(cls, data_str):
+        name, age = data_str.split("-")
+        return cls(name, int(age))
+
+# Using the class method as an alternative constructor
+s1 = Student("Ali", 21)
+s2 = Student.from_string("Sara-22")
+
+print(s1.name, s1.age)   # Output: Ali 21
+print(s2.name, s2.age)   # Output: Sara 22
