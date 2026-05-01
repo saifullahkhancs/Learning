@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hi\\Desktop\\Saif\\Learning\\chatbot\\chatbot.Domain\\chatbot.Domain.csproj": {}
+    "C:\\Users\\lenovo\\Desktop\\Saiff\\Learning\\chatbot\\chatbot.Domain\\chatbot.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hi\\Desktop\\Saif\\Learning\\chatbot\\chatbot.Domain\\chatbot.Domain.csproj": {
+    "C:\\Users\\lenovo\\Desktop\\Saiff\\Learning\\chatbot\\chatbot.Domain\\chatbot.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hi\\Desktop\\Saif\\Learning\\chatbot\\chatbot.Domain\\chatbot.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Saiff\\Learning\\chatbot\\chatbot.Domain\\chatbot.Domain.csproj",
         "projectName": "chatbot.Domain",
-        "projectPath": "C:\\Users\\hi\\Desktop\\Saif\\Learning\\chatbot\\chatbot.Domain\\chatbot.Domain.csproj",
-        "packagesPath": "C:\\Users\\hi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hi\\Desktop\\Saif\\Learning\\chatbot\\chatbot.Domain\\obj\\",
+        "projectPath": "C:\\Users\\lenovo\\Desktop\\Saiff\\Learning\\chatbot\\chatbot.Domain\\chatbot.Domain.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lenovo\\Desktop\\Saiff\\Learning\\chatbot\\chatbot.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
