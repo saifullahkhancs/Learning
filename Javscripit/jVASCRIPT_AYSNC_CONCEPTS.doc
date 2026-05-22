@@ -55,3 +55,36 @@ basically setTimeout is a built-in JavaScript function that allows you to execut
 
 
 
+
+
+******** Promises *********
+
+A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+Eventual completion means that the promise will eventually be resolved or rejected, but it may not happen immediately.
+
+A promise can be in one of three states:
+1. Pending: The initial state of a promise, where it is neither resolved nor rejected.
+2. Resolved: The state of a promise when it has been successfully completed and has a resulting value.
+3. Rejected: The state of a promise when it has been completed with an error or failure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
