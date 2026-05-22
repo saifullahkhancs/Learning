@@ -1,0 +1,57 @@
+ Javascript is synchronus and single threaded
+
+other multithreaded languages are Java, C#, Python, etc
+
+ Asynchronous programming allows us to perform long-running tasks without blocking the main thread of execution.
+ This is particularly important in JavaScript, which is single-threaded, meaning it can only execute one task at a time.
+
+
+ **** Blocking code and Non-blocking code ****
+
+ Blocking code is code that prevents the execution of other code until it has completed.
+
+ Non-blocking code, on the other hand, allows other code to execute while it is still running. 
+
+This is achieved through the use of callbacks, promises, and async/await syntax in JavaScript.
+
+
+Task Queue:- 
+          The task queue is a data structure that holds tasks that are waiting to be executed. 
+          When the main thread is idle, it will check the task queue for any pending tasks and execute them in order.    
+          When an asynchronous operation is initiated, such as a network request or a timer, it is added to the task queue. Once the main thread has completed its current task, it will check the task queue and 
+          execute any pending tasks.
+
+
+Promises:- 
+          A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. 
+          Promises provide a cleaner and more readable way to handle asynchronous code compared to callbacks. 
+          They allow you to chain multiple asynchronous operations together and handle errors more effectively.
+
+Q:- Why promises are called high priority tasks/queue?
+A:- Promises are often considered high priority tasks because they are designed to handle asynchronous operations that may take some time to complete, such as network requests or file I/O. 
+When a promise is created, it is added to the microtask queue, which has a higher priority than the regular task queue.
+
+How to make javscript code asynchronous?
+There are several ways to make JavaScript code asynchronous:
+1. Callbacks: You can use callbacks to execute a function after an asynchronous operation has completed. 
+   For example, you can use the setTimeout function to execute a callback after a specified delay.
+2. Promises: You can use promises to handle asynchronous operations in a more structured way. 
+   Promises allow you to chain multiple asynchronous operations together and handle errors more effectively.
+3. Async/Await: You can use async/await syntax to write asynchronous code that looks and behaves like synchronous code.
+    The async keyword is used to declare a function as asynchronous, and the await keyword is used to wait for a promise to resolve before continuing with the execution of the code. 
+    This makes it easier to read and understand asynchronous code, as it eliminates the need for nested callbacks or complex promise chains.
+
+set timeout example using callbacks
+basically setTimeout is a built-in JavaScript function that allows you to execute a function after a specified delay.
+
+
+******** fetch api ********
+ fetch() api is latest in JavaScript for making network requests. 
+ It returns a promise that resolves to the response of the request.
+
+ it works on the task queue and is non-blocking, 
+ basicall it allows you to create a high priority task that will be executed as soon as the current task is completed,
+ meaning it allows other code to execute while waiting for the response.
+
+
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Event</title>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <ul id="images">
+        <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+        <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+        <li><a id="google" href="https.google.com">Google</a></li>
+    </ul>
+</body>
+
+<script>
+
+// inline onclick event approach     (not good approach to use)
+
+// for example we can add onclick event to the image tag like this
+// <img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop" onclick="alert('you clicked on the image')">
+// but this approach is not good because it mixes the HTML and JavaScript code together and it is not reusable and it is not maintainable.
+//  It is better to use the addEventListener method to add event
+
+// 2nd approach .onclick event approach (not good approach to use)
+
+// we can add onclick event to the image tag like this
+
+// document.getElementById('owl').onclick = function() {
+//     alert('you clicked on the owl image');
+// }
+
+// we can use that but it gives little features and it is not reusable and it is not maintainable. 
+// It is better to use the addEventListener method to add event
+
+
+
+document.getElementById('owl').addEventListener('click', function() {
+    alert('you clicked on the owl image');
+});
+
+// third paramter of addEventListener method is useCapture which is a boolean value that indicates whether the event should be captured or not.
+// if useCapture is true, the event will be captured and it will be executed before the event is propagated to the target element.
+//  if useCapture is false, the event will be propagated to the target element and then it will be executed.
+
+
+
+// ********** other approaches *********
+
+// attachEvent()
+// jquery .on() method
+
+
+
+// ********** Evenet Object **********
+
+// document.getElementById('owl').addEventListener('click', function(event) {
+//     console.log(event);
+//  });
+
+
+    // others properties of event object are
+    // event.type :- gives the type of the event that was triggered. For example, if the event is a click event, the type would be "click".
+    // event.defaultPrevented  :- gives a boolean value that indicates whether the default action of the event has been prevented or not.
+    // event.timeStamp  :- gives the time when the event was triggered in milliseconds since January 1, 1970, 00:00:00 UTC.
+    // // event.target
+    // event.currentTarget
+    // event.eventPhase
+    // event.bubbles
+    // event.cancelable
+    
+    // event.isTrusted
+   
+    // event.relatedTarget :- gives the secondary target for the event, if there is one. For example, in a mouseover event, the relatedTarget would be the element that the mouse pointer is coming from, while the target would be the element that the mouse pointer is going to.
+
+
+    // interview related  
+
+    // event.clientX :- gives the horizontal coordinate of the mouse pointer relative to the viewport when the event was triggered.
+    // event.clientY :- gives the vertical coordinate of the mouse pointer relative to the viewport when the event was triggered.
+    // event.screenX :- gives the horizontal coordinate of the mouse pointer relative to the screen when the event was triggered.
+    // event.screenY :- gives the vertical coordinate of the mouse pointer relative to the screen when
+    // event.pageX :- gives the horizontal coordinate of the mouse pointer relative to the whole document when the event was triggered.
+    // event.pageY :- gives the vertical coordinate of the mouse pointer relative to the whole document when the event was triggered.
+
+
+    // keysboard events
+
+    // event.key :- gives the value of the key that was pressed when the event was triggered. For example, if the "a" key was pressed, the value would be "a".
+    // event.altKey :- gives a boolean value that indicates whether the Alt key was pressed when the event was triggered.
+    // event.ctrlKey :- gives a boolean value that indicates whether the Ctrl key was pressed when
+    // event.shiftKey :- gives a boolean value that indicates whether the Shift key was pressed when the event was triggered.
+    // event.keycode :- 
+
+
+
+ //  ******* event propagation *******
+ // event propagation is the process by which an event travels through the DOM tree. There are three phases of event propagation: capturing phase, target phase, and bubbling phase.
+ // capturing phase :- in this phase, the event is captured by the ancestors of the target element, starting from the root element and going down to the target element. The event is executed in this phase if the useCapture parameter of the addEventListener method is set to true.
+ // target phase :- in this phase, the event is executed on the target element
+ // .bubbling phase :- in this phase, the event is propagated back up the DOM tree, starting from the target element and going up to the root element. The event is executed in this phase if the useCapture parameter of the addEventListener method is set to false.
+
+ // two main usees event bubling and event capturing 
+
+ // default which is false which lies in event bubling
+
+ // event bubbling mean top to bottom apporoach
+    // here when owl is clicked first owl intiate then images
+ 
+    // document.getElementById('images').addEventListener('click', function(event) {
+    // console.log('you clicked on the images list');
+    // });
+
+    // document.getElementById('owl').addEventListener('click', function(event) {
+    //     console.log('you clicked on the owl image');
+    // });
+    
+// when capturing is true then it is bottom to top approach
+
+//    document.getElementById('images').addEventListener('click', function(event) {
+//     console.log('you clicked on the images list');
+//     }, true);
+
+//     document.getElementById('owl').addEventListener('click', function(event) {
+//         console.log('you clicked on the owl image');
+//     }, true  );
+
+
+
+
+// event.stopPropagation() method is used to stop the propagation of the event in the bubbling phase. It prevents the event from being propagated to the ancestors of the target element.
+// document.getElementById('owl').addEventListener('click', function(event) {
+//     console.log('you clicked on the owl image');
+//     event.stopPropagation();
+// });
+
+// event.preventDefault();
+// event.preventDefault() method is used to prevent the default action of the event from being executed. For example, if the event is a click event on a link, the default action would be to navigate to the link's href attribute. By using event.preventDefault(), we can prevent this navigation from happening.
+
+document.getElementById('google').addEventListener('click', function(event) {
+    console.log('you clicked on the google link');
+    event.preventDefault();
+});
+
+
+document.querySelector('#images').addEventListener('click', function(event) {
+    console.log('you clicked on the images list');
+    // const item = event.target.parentNode
+    // sometime accidental  click on the list remove all the list items so to avoid that we can check if the target element is an image or not 
+    if(event.target.tagName === 'IMG') {
+        let item = event.target.parentNode;
+
+        item.remove();
+    }
+
+}, false);
+
+
+
+
+</script>
+</html>
