@@ -71,17 +71,82 @@ A promise can be in one of three states:
 
 
 
+  ************** fetch api **************
+it is a global funnction that provides an easy and modern way to make network requests in JavaScript.
+fetch() api is latest in JavaScript for making network requests. 
+ It returns a promise that resolves to the response of the request.
+
+ it works on the task queue and is non-blocking, 
+ basicall it allows you to create a high priority task that will be executed as soon as the current task is completed,
+ meaning it allows other code to execute while waiting for the response.
+
+
+
+Q:-  if fetch/promise return the status code then how it will return in reolve and reject?
+   Answer:- When a fetch request is made, it returns a promise that resolves to the response of the request.
+   The response object contains various properties, including the status code of the response.
+   If the fetch request is successful and the response status code is in the range of 200-299, 
+   then promise will be resolved with the response object.
+
+   If the fetch request fails or the response status code is outside the range of 200-299, 
+   then the promise will be rejected with an error object that contains information about the failure, including the status code.
+
+   SO in summary, the status code of the response is included in both the resolved and rejected cases of a fetch request, 
+   allowing you to handle different scenarios based on the status code.
+
+
+
+A fetch promise can only rejects when a network erro is enccounteres (which is usually a pwhen there is no internet
+ connection or the server is down or permission issue or similar like cors issue).
+
+   If the server responds with a status code that indicates an error (such as 404 or 500),
+   the fetch promise will still resolve, but the response object will have an ok property set to false.
+   You can check the status code and handle it accordingly in the resolved case of the promise.
 
 
 
 
+ ****************  special que / micro task que / fetch que ***************
+
+The microtask queue, also known as the special queue or fetch queue, is a separate queue that holds tasks that are scheduled to run after the current task has completed but before the next task in the regular task queue is executed.
+When a promise is resolved or rejected, the associated callback functions are added to the microtask queue
+instead of the regular task queue.
+This means that the callbacks will be executed as soon as the current task is completed, before any other tasks in the regular task queue are executed.
+The microtask queue has a higher priority than the regular task queue, which is why promises are often considered high priority tasks in JavaScript.
+
+
+
+*******    Abort controller interface ********
+
+The AbortController interface is a built-in JavaScript API that allows you to abort or cancel an ongoing asynchronous operation, such as a fetch request.
+It provides a way to signal that an operation should be aborted, allowing you to stop it before it completes.
+To use the AbortController, you can create an instance of it and then pass its signal property to the fetch request.
+Here's an example of how to use the AbortController with a fetch request:
+```javascript
+const controller = new AbortController();
+const signal = controller.signal;
+
+fetch(url, {
+  signal: signal
+})
 
 
 
 
+JavaScript is basically a prototype-based language, 
+which means that objects can inherit properties and methods from other objects.
+In JavaScript, you can create a new object that inherits from an existing object using the Object.create() method.
+Here's an example of how to use Object.create() to create a new object that inherits from an existing object:
 
 
 
+     
+
+Everthing tin the javscript is object, even functions/arrays are objects in JavaScript.
+
+Array ------parent------>>  Object -------parent------>>  null
+
+object can inherit properties and methods from other objects(parents), which allows for code reuse and the creation of complex data structures.
 
 
 
