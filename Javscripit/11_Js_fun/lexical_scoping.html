@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body>
+    
+    <script>
+        function init() {
+            var name = "Mozilla"; // name ek local variable hai jo init ke scope mein hai
+            function displayName() { // displayName ek inner function hai, jo closure create karta hai
+                console.log(name); // displayName ko name variable ka access hai, kyunki wo closure ke through uske scope mein hai
+            }
+            displayName(); // displayName function ko call karte hain
+        }
+        init(); // init function ko call karte hain
+
+
+
+        function outer(){
+            let username = "hitesh"
+
+            function inner(){
+                console.log("inner" ,username)
+
+            // lexical scoping:
+            // it is a scoping method in which inner function can access the variable 
+            // of outer function but outer function cannot access the variable of inner function
+            }
+            inner()
+        }
+        outer()
+
+        console.log("outer",username) // error, username outer function ke scope mein nahi hai
+    
+    // closure property
+
+
+    function makeFun() {
+        const name = "Mozialla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName; // displayName function ko return karte hain, jisse closure create hota hai
+    }
+
+    // scope of the function is not given but memory referencing 
+    // and lexical scoping is given to the function so it had the variable access
+
+    const myFun = makeFun(); // makeFun function ko call karte hain, jisse displayName function return hota hai
+    myFun(); // displayName function ko call karte hain, jisse name variable ka value print hota hai, 
+    // kyunki myFun ek closure hai jo name variable ko access kar sakta hai
+    
+    
+    
+    </script>
+
+</body>
+</html>

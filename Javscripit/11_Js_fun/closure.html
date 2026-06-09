@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+
+
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    
+</body>
+
+<script>
+        document.getElementById("orange").addEventListener("click", function() {
+            console.log("Orange button clicked");
+            document.body.style.backgroundColor = "orange";
+        });
+
+        document.getElementById("green").addEventListener("click", function() {
+            console.log("Green button clicked");
+        });
+
+        // Q:- if there are 100 buttons then what happened
+
+        // we defined generic function
+
+        function clickHandler(color){
+       // intial step     document.body.style.backgroundColor = `${color}`;
+        
+       // we use another function to return the function with the color parameter
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`;
+        }
+        // use of closure to access the color variable which is in the scope of clickHandler function 
+        // and it is not accessible outside of clickHandler function but it is accessible to the 
+        // inner function which is returned by clickHandler function because of closure property
+        }
+
+        document.getElementById("orange").onclick= clickHandler("orange");
+
+        // at intial it will execute automatically and without clicking 
+        // it will change the color to orange and green becuase it is executable function and it is not a reference to the function
+        document.getElementById("green").onclick= clickhadler("green");
+        
+
+
+        // lexical scoping and closure
+        // lexical scoping is a scoping method in which inner function can access the variable of outer function but outer function cannot access the variable of inner function    
+        // closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables and parameters, even after the outer function has returned.
+        // closure is created when a function is defined inside another function and the inner function references variables from the outer function.
+        //  The inner function retains access to these variables even after the outer function has finished executing, 
+        // allowing for powerful programming patterns and data encapsulation.
+
+</script>
+
+</html>
