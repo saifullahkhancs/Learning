@@ -1,24 +1,18 @@
-# import requests 
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
 import asyncio
 import json
-import asyncio
 from logger import get_logger
 from _kafka import Consumer
 from aiokafka import ConsumerRecord
 import config
-from elasticsearch import Elasticsearch,helpers
+from shared.elasticsearch_utils import create_es_client
 
 logger = get_logger(__name__ , config.DEBUG)
 loop = asyncio.get_event_loop()
-es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
-                   basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
-try:
-    if es.ping():
-        print("Connected to Elasticsearch!")
-    else:
-        print("Failed to connect to Elasticsearch.")
-except Exception as e:
-    print(f"Error connecting to Elasticsearch: {e}")
+es = create_es_client(password="Sw9FS-lCn=lcRFe2vho4")
 consumer = Consumer(config.KAFKA_BOOTSTRAP_SERVERS , loop=loop)
 @consumer.consume([config.TOPIC] , group_id=config.KAFKA_INTERNAL_GROUP)
 async def process_logs(message: ConsumerRecord):
