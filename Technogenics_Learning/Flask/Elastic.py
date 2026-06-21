@@ -1,3 +1,4 @@
+import os
 from http.client import responses
 from math import trunc
 import logging
@@ -213,4 +214,4 @@ def delete_all(index):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=os.environ.get("FLASK_DEBUG", "false").lower() == "true")

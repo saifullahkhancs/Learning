@@ -1,6 +1,7 @@
 # import requests 
 import asyncio
 import json
+import os
 import asyncio
 from logger import get_logger
 from _kafka import Consumer
@@ -8,10 +9,15 @@ from aiokafka import ConsumerRecord
 import config
 from elasticsearch import Elasticsearch,helpers
 
+ES_HOST = os.environ.get("ES_HOST", "localhost")
+ES_PORT = int(os.environ.get("ES_PORT", "9200"))
+ES_USER = os.environ.get("ES_USER", "elastic")
+ES_PASSWORD = os.environ.get("ES_PASSWORD", "")
+
 logger = get_logger(__name__ , config.DEBUG)
 loop = asyncio.get_event_loop()
-es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
-                   basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
+es = Elasticsearch([{'host': ES_HOST, 'port': ES_PORT, 'scheme': 'http'}],
+                   basic_auth=(ES_USER, ES_PASSWORD))
 try:
     if es.ping():
         print("Connected to Elasticsearch!")

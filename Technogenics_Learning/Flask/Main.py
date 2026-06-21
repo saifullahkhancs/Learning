@@ -1,11 +1,18 @@
+import os
 from http.client import responses
 from math import trunc
 import logging
 from flask import Flask, redirect, url_for , request, render_template
 from elasticsearch import Elasticsearch
+
+ES_HOST = os.environ.get("ES_HOST", "localhost")
+ES_PORT = int(os.environ.get("ES_PORT", "9200"))
+ES_USER = os.environ.get("ES_USER", "elastic")
+ES_PASSWORD = os.environ.get("ES_PASSWORD", "")
+
 app = Flask(__name__)
-es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
-basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
+es = Elasticsearch([{'host': ES_HOST, 'port': ES_PORT, 'scheme': 'http'}],
+basic_auth=(ES_USER, ES_PASSWORD))
 
 @app.route('/')
 def hello_world():
@@ -59,4 +66,4 @@ def login():
 if __name__ == '__main__':
    # app.run(debug=True,  host='0.0.0.0', port=5000,  )
 
-   app.run(debug=True)
+   app.run(debug=os.environ.get("FLASK_DEBUG", "false").lower() == "true")

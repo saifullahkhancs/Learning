@@ -6,6 +6,7 @@ from sqlalchemy.future import select
 from database import async_session
 from core.security import (
     create_access_token,
+    create_refresh_token,
     generate_5_digit_code,
     hash_password,
     verify_password,
@@ -42,7 +43,9 @@ async def register(user_in: UserRegister, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=400, detail="User already exists")
 
     # Mock email send for now
-    print(f"Verification code for {user.email}: {verification_code}")
+    # TODO: send verification code via email instead of logging
+    import logging
+    logging.getLogger(__name__).info("Verification code generated for %s", user.email)
     return {"message": "Verification code sent to email"}
 
 
@@ -72,7 +75,7 @@ async def login(credentials: UserLogin, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=403, detail="Please verify your email first")
 
     access_token = create_access_token({"sub": user.email})
-    refresh_token = "mock_refresh_7_days"
+    refresh_token = create_refresh_token({"sub": user.email})
 
     return {
         "access_token": access_token,
