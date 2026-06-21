@@ -10,8 +10,8 @@ def json_deserializer(data: bytes):
         logger.debug(f'\nDeserializing: {data}')
         return json.loads(data.decode('utf-8'))
     except json.JSONDecodeError as e:
-        logger.exception(f'{e}')
-        return {}
+        logger.exception(f'Failed to deserialize JSON: {e}')
+        raise ValueError(f'Invalid JSON data: {e}') from e
     except Exception as e:
-        logger.exception(f'{e}')
-        return {}
+        logger.exception(f'Unexpected deserialization error: {e}')
+        raise

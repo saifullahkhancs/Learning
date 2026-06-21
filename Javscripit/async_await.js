@@ -5,8 +5,7 @@
     console.log(data);
     console.log("other code execution")
     } catch(err){
-        console.log("something went wrong ");
-        console.log(err)
+        console.error("Fetch failed:", err);
     }
  }
 

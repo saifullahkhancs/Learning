@@ -1,3 +1,4 @@
+import logging
 import secrets
 from datetime import datetime, timedelta
 import hashlib
@@ -28,7 +29,8 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
         prehashed = _get_clean_prehash(plain_password)
         # Check password against stored hash bytes
         return bcrypt.checkpw(prehashed, hashed_password.encode("utf-8"))
-    except Exception:
+    except (ValueError, TypeError) as e:
+        logging.getLogger(__name__).warning(f"Password verification failed due to invalid input: {e}")
         return False
 
 def generate_5_digit_code() -> str:

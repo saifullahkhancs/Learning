@@ -5,7 +5,7 @@ import os
 
 
 class Settings(BaseSettings):
-    DATABASE_URL: str = os.getenv("DATABASE_URL", None)
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "")
     JWT_SECRET: str = ""
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 15
@@ -16,3 +16,9 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+if not settings.JWT_SECRET:
+    raise ValueError(
+        "JWT_SECRET is not configured. Set it in .env or as an environment variable. "
+        "Refusing to start with an empty secret."
+    )

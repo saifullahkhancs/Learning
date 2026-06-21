@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 import json
 import uvicorn
@@ -6,18 +6,20 @@ from bson import ObjectId
 import logging
 from models import LogSearch
 from elasticsearch import Elasticsearch
+from elasticsearch.exceptions import ConnectionError as ESConnectionError, TransportError
 
-
+logger = logging.getLogger(__name__)
 
 es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
                    basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
 try:
     if es.ping():
-        print("Connected to Elasticsearch!")
+        logger.info("Connected to Elasticsearch!")
     else:
-        print("Failed to connect to Elasticsearch.")
+        raise ESConnectionError("Elasticsearch ping returned False")
 except Exception as e:
-    print(f"Error connecting to Elasticsearch: {e}")
+    logger.error(f"Error connecting to Elasticsearch: {e}")
+    raise SystemExit(f"Cannot start without Elasticsearch: {e}") from e
 
 app  = FastAPI( debug=True)
 
@@ -86,8 +88,12 @@ def  log_search(body : LogSearch ) :
         resp = es.search(index=index , query= query)
         print(resp['hits']['hits'])
         return JSONResponse(content=resp['hits']['hits'])
+    except (ESConnectionError, TransportError) as e:
+        logger.error(f"Elasticsearch error during log search: {e}")
+        raise HTTPException(status_code=503, detail=f"Elasticsearch unavailable: {str(e)}")
     except Exception as e:
-        return JSONResponse({"error" : e})
+        logger.exception(f"Unexpected error during log search: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
 
 

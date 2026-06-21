@@ -6,7 +6,7 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
     console.log(jasonedData);
 })
 .catch( (error) => {
-    console.log("ohh no something wrong");
+    console.error("Fetch failed:", error);
 })
 
 .finally( ()=> {

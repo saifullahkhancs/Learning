@@ -7,24 +7,35 @@ import json
 
 from flask import Flask, redirect, url_for , request, render_template , jsonify
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
                    basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
 
 try:
     if es.ping():
-        print("Connected to Elasticsearch!")
+        logger.info("Connected to Elasticsearch!")
     else:
-        print("Failed to connect to Elasticsearch.")
+        raise ConnectionError("Elasticsearch ping returned False")
 except Exception as e:
-    print(f"Error connecting to Elasticsearch: {e}")
+    logger.error(f"Error connecting to Elasticsearch: {e}")
+    raise SystemExit(f"Cannot start without Elasticsearch: {e}") from e
 
 app = Flask(__name__)
 
 @app.route('/<index>')
 def start(index):
-    resp = es.search(index=index)
-    print(resp['hits']['hits'])
-    return jsonify(resp['hits']['hits']), 200
+    try:
+        resp = es.search(index=index)
+        return jsonify(resp['hits']['hits']), 200
+    except NotFoundError:
+        return jsonify({"error": f"Index '{index}' not found"}), 404
+    except (TransportError, ConnectionError) as e:
+        return jsonify({"error": f"Elasticsearch error: {str(e)}"}), 503
+    except Exception as e:
+        logger.exception(f"Unexpected error searching index '{index}'")
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route("/indexes")
@@ -47,69 +58,85 @@ def get_indexes():
 
 @app.route('/post', methods=['POST'])
 def add_books():
-
-    data =  request.json  # Get JSON data from the request
-    
-    if not data:
-        return jsonify({'error': 'No data provided'}), 400
-    
-    index_name  = "intelligence_kb_artifact_object"
-    if (len(data) == 1):
-        # Check if the 'index' key exists and its value is not empty
-        index = data.get('index') if data.get('index') else index_name
+    try:
+        data =  request.json  # Get JSON data from the request
         
-        # Check if 'document' key exists and is neither None nor empty
-        if not data.get('document'):
-            return jsonify({'error': 'No value provide provided'}), 400
-
-
-        res = es.index(index=index , body=data['document'])
-
-        return jsonify(res.body);
-    else:
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+        
+        index_name  = "intelligence_kb_artifact_object"
+        if (len(data) == 1):
+            # Check if the 'index' key exists and its value is not empty
+            index = data.get('index') if data.get('index') else index_name
             
-        res = es.bulk(operations=data)
-        return jsonify(res.body);
+            # Check if 'document' key exists and is neither None nor empty
+            if not data.get('document'):
+                return jsonify({'error': 'No value provide provided'}), 400
+
+
+            res = es.index(index=index , body=data['document'])
+
+            return jsonify(res.body);
+        else:
+                
+            res = es.bulk(operations=data)
+            return jsonify(res.body);
+    except (TransportError, ConnectionError) as e:
+        return jsonify({"error": f"Elasticsearch error: {str(e)}"}), 503
+    except Exception as e:
+        logger.exception("Error in add_books")
+        return jsonify({"error": str(e)}), 500
 
 
 
 @app.route('/update/<index>', methods=['POST'])
 def update(index):
-    # Define the query to find documents with TLP (case insensitive)
-    query = {
-        "query": {
-            "bool": {
-                "should": [
-                    {"term": {"tlp": "WHITE"}},
-                ]
+    try:
+        # Define the query to find documents with TLP (case insensitive)
+        query = {
+            "query": {
+                "bool": {
+                    "should": [
+                        {"term": {"tlp": "WHITE"}},
+                    ]
+                }
             }
         }
-    }
 
-    # Search for documents matching the query
-    search_resp = es.search(index=index, body=query)
+        # Search for documents matching the query
+        search_resp = es.search(index=index, body=query)
 
-    # Prepare bulk update actions
-    actions = []
-    for doc in search_resp['hits']['hits']:
-        doc_id = doc['_id']
-        actions.append({
-            "update": {
-                "_index": index,
-                "_id": doc_id,
-            }
-        })
-        actions.append({
-            "doc": {
-                "tlp": "white"  # Set TLP to lowercase "white"
-            }
-        })
+        # Prepare bulk update actions
+        actions = []
+        for doc in search_resp['hits']['hits']:
+            doc_id = doc['_id']
+            actions.append({
+                "update": {
+                    "_index": index,
+                    "_id": doc_id,
+                }
+            })
+            actions.append({
+                "doc": {
+                    "tlp": "white"  # Set TLP to lowercase "white"
+                }
+            })
 
-    # Execute bulk update if there are actions to perform
-    if actions:
-        es.bulk(body=actions)
+        # Execute bulk update if there are actions to perform
+        if actions:
+            bulk_resp = es.bulk(body=actions)
+            if bulk_resp.get('errors'):
+                logger.error(f"Bulk update had errors: {bulk_resp}")
+                return jsonify({"error": "Some updates failed", "details": bulk_resp}), 207
 
-    return jsonify({"updated_count": len(actions)}), 200
+        return jsonify({"updated_count": len(actions) // 2}), 200
+    except NotFoundError:
+        return jsonify({"error": f"Index '{index}' not found"}), 404
+    except (TransportError, ConnectionError) as e:
+        return jsonify({"error": f"Elasticsearch error: {str(e)}"}), 503
+    except Exception as e:
+        logger.exception(f"Error updating index '{index}'")
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/updatetlp/<index>', methods=['POST'])
 def updatetlp(index):
