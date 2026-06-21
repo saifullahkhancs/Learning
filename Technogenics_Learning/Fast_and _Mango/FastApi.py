@@ -16,7 +16,8 @@ client =  MongoClient(MONGO_DETAIL)
 database = client.Test
 student_collection = database.get_collection("Students")
 
-app  = FastAPI( debug=True)
+import os
+app  = FastAPI( debug=os.environ.get("DEBUG", "false").lower() == "true")
 
 @app.get("/")
 def start():

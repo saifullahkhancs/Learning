@@ -1,3 +1,5 @@
+import os
+
 from elasticsearch import Elasticsearch,helpers
 from elasticsearch.exceptions import TransportError, ConnectionError, NotFoundError
 from http.client import responses
@@ -7,8 +9,13 @@ import json
 
 from flask import Flask, redirect, url_for , request, render_template , jsonify
 
-es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
-                   basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
+ES_HOST = os.environ.get("ES_HOST", "localhost")
+ES_PORT = int(os.environ.get("ES_PORT", "9200"))
+ES_USER = os.environ.get("ES_USER", "elastic")
+ES_PASSWORD = os.environ.get("ES_PASSWORD", "")
+
+es = Elasticsearch([{'host': ES_HOST, 'port': ES_PORT, 'scheme': 'http'}],
+                   basic_auth=(ES_USER, ES_PASSWORD))
 
 try:
     if es.ping():
@@ -177,4 +184,4 @@ def delete_all(index):
         return jsonify({"error": str(e)}), 500 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=os.environ.get("FLASK_DEBUG", "false").lower() == "true")

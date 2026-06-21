@@ -1,0 +1,39 @@
+# Environment and secrets
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# .NET
+bin/
+obj/
+
+# Node
+node_modules/
+
+# Virtual environments
+312/

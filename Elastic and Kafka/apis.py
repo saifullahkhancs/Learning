@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 import json
@@ -8,9 +10,13 @@ from models import LogSearch
 from elasticsearch import Elasticsearch
 
 
+ES_HOST = os.environ.get("ES_HOST", "localhost")
+ES_PORT = int(os.environ.get("ES_PORT", "9200"))
+ES_USER = os.environ.get("ES_USER", "elastic")
+ES_PASSWORD = os.environ.get("ES_PASSWORD", "")
 
-es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
-                   basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
+es = Elasticsearch([{'host': ES_HOST, 'port': ES_PORT, 'scheme': 'http'}],
+                   basic_auth=(ES_USER, ES_PASSWORD))
 try:
     if es.ping():
         print("Connected to Elasticsearch!")
@@ -19,7 +25,7 @@ try:
 except Exception as e:
     print(f"Error connecting to Elasticsearch: {e}")
 
-app  = FastAPI( debug=True)
+app  = FastAPI( debug=os.environ.get("DEBUG", "false").lower() == "true")
 
 
 
