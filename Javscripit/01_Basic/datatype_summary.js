@@ -1,6 +1,6 @@
 // Premitive data types
 
-// 7 tyopes: String , Number, Boolean, null, undefined, symbol, bigint
+// 7 types: String , Number, Boolean, null, undefined, symbol, bigint
 
 
 
