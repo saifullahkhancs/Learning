@@ -1,9 +1,13 @@
 //  ******** DOM ********
 
-// DOM it stands for Document Object Model. It is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as a tree of nodes, where each node represents an element, attribute, or piece of text in the document.    
+// DOM it stands for Document Object Model. It is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. 
+// The DOM represents the document as a tree of nodes, where each node represents an element, attribute, or piece of text in the document.    
 
-//      window is the global object in the browser environment. It represents the browser window and provides access to various properties and methods for interacting with the browser and the document. The window object is the top-level object in the DOM hierarchy, and all other objects are properties of it.   
-//      document is a property of the window object that represents the HTML document loaded in the browser. It provides access to the elements and content of the web page, allowing you to manipulate and interact with them using JavaScript. The document object is a key part of the DOM and is used to access and modify the structure, style, and content of the web page.
+//      window is the global object in the browser environment. It represents the browser window and provides access to various properties and methods for interacting with the browser and the document. 
+//      The window object is the top-level object in the DOM hierarchy, and all other objects are properties of it.   
+//      document is a property of the window object that represents the HTML document loaded in the browser. 
+//      It provides access to the elements and content of the web page, allowing you to manipulate and interact with them using JavaScript.   
+//      The document object is a key part of the DOM and is used to access and modify the structure, style, and content of the web page.
 
 
 // <!DOCTYPE html> 
