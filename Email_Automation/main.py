@@ -1,7 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 
 from api.router import router as api_router
 from core.config import settings
@@ -9,7 +8,7 @@ from core.config import settings
 app = FastAPI(title="Email Automation API")
 
 # CORS Middleware
-if settings.cors_origins:
+if hasattr(settings, "cors_origins") and settings.cors_origins:
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.cors_origins,
@@ -20,9 +19,6 @@ if settings.cors_origins:
 
 # API Router
 app.include_router(api_router, prefix="/api")
-
-# Serve Frontend - this must come after API routes
-app.mount("/", StaticFiles(directory="frontend/dist", html=True), name="static")
 
 if __name__ == "__main__":
     uvicorn.run(

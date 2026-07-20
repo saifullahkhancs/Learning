@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
 from core.config import settings
-from models.user import Base, User, PasswordResetToken
+from models.user import Base
 from models.job_template import JobTemplate
 
 engine = create_async_engine(settings.DATABASE_URL, echo=settings.DEBUG)

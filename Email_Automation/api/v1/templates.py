@@ -7,7 +7,6 @@ from pydantic import BaseModel, EmailStr
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
-from database import async_session
 from models.job_template import JobTemplate
 
 
@@ -38,20 +37,18 @@ async def get_template_by_type(session: AsyncSession, job_type: str) -> Optional
     return result.scalars().first()
 
 
-async def list_job_types():
+def list_job_types():
     return {"job_types": [job_type.value for job_type in JobType]}
 
 
-async def list_templates():
-    async with async_session() as session:
-        result = await session.execute(select(JobTemplate))
-        jobs = result.scalars().all()
+async def list_templates(session: AsyncSession):
+    result = await session.execute(select(JobTemplate))
+    jobs = result.scalars().all()
     return {"templates": [template_to_dict(job, include_context=False) for job in jobs]}
 
 
-async def get_template(job_type: str):
-    async with async_session() as session:
-        job = await get_template_by_type(session, job_type)
+async def get_template(session: AsyncSession, job_type: str):
+    job = await get_template_by_type(session, job_type)
 
     if not job:
         raise HTTPException(
@@ -62,9 +59,8 @@ async def get_template(job_type: str):
     return template_to_dict(job)
 
 
-async def download_cv(job_type: str):
-    async with async_session() as session:
-        job = await get_template_by_type(session, job_type)
+async def download_cv(session: AsyncSession, job_type: str):
+    job = await get_template_by_type(session, job_type)
 
     if not job:
         raise HTTPException(
@@ -80,6 +76,7 @@ async def download_cv(job_type: str):
 
 
 async def create_template(
+    session: AsyncSession,
     type: JobType = Form(...),
     title: str = Form(...),
     context: str = Form(...),
@@ -93,23 +90,22 @@ async def create_template(
 
     cv_bytes = await cv_pdf.read()
 
-    async with async_session() as session:
-        existing = await get_template_by_type(session, type.value)
-        if existing:
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail=f"Job type '{type.value}' already exists. Use PATCH to update it.",
-            )
-
-        job = JobTemplate(
-            type=type.value,
-            title=title,
-            context=context,
-            cv_bytes=cv_bytes,
-            filename=cv_pdf.filename or "cv.pdf",
+    existing = await get_template_by_type(session, type.value)
+    if existing:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=f"Job type '{type.value}' already exists. Use PATCH to update it.",
         )
-        session.add(job)
-        await session.commit()
+
+    job = JobTemplate(
+        type=type.value,
+        title=title,
+        context=context,
+        cv_bytes=cv_bytes,
+        filename=cv_pdf.filename or "cv.pdf",
+    )
+    session.add(job)
+    await session.commit()
 
     return {
         "message": "Template created successfully",
@@ -119,6 +115,7 @@ async def create_template(
 
 async def patch_template(
     job_type: str,
+    session: AsyncSession,
     title: Optional[str] = Form(None),
     context: Optional[str] = Form(None),
     cv_pdf: Optional[UploadFile] = File(None),
@@ -129,35 +126,34 @@ async def patch_template(
             detail="Provide at least one field to update: title, context, or cv_pdf.",
         )
 
-    async with async_session() as session:
-        job = await get_template_by_type(session, job_type)
-        if not job:
+    job = await get_template_by_type(session, job_type)
+    if not job:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Job type '{job_type}' not found.",
+        )
+
+    updated_fields = []
+
+    if title is not None:
+        job.title = title
+        updated_fields.append("title")
+
+    if context is not None:
+        job.context = context
+        updated_fields.append("context")
+
+    if cv_pdf is not None:
+        if cv_pdf.content_type != "application/pdf":
             raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"Job type '{job_type}' not found.",
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="File must be a PDF",
             )
+        job.cv_bytes = await cv_pdf.read()
+        job.filename = cv_pdf.filename or job.filename
+        updated_fields.append("cv_pdf")
 
-        updated_fields = []
-
-        if title is not None:
-            job.title = title
-            updated_fields.append("title")
-
-        if context is not None:
-            job.context = context
-            updated_fields.append("context")
-
-        if cv_pdf is not None:
-            if cv_pdf.content_type != "application/pdf":
-                raise HTTPException(
-                    status_code=status.HTTP_400_BAD_REQUEST,
-                    detail="File must be a PDF",
-                )
-            job.cv_bytes = await cv_pdf.read()
-            job.filename = cv_pdf.filename or job.filename
-            updated_fields.append("cv_pdf")
-
-        await session.commit()
+    await session.commit()
 
     return {
         "message": "Template updated successfully",
