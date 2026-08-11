@@ -31,21 +31,26 @@ const resolvers = {
   Tactic: {
     has: async (tactic, { limit = 10 }, { driver }) => {
       const session = driver.session();
-      const query = `
-        MATCH (tact:Tactic {srid: $tacticSrid})-[rel:HAS]->(tech:Technique)
-        RETURN tech, rel
-        LIMIT $limit
-      `;
+      try {
+        const query = `
+          MATCH (tact:Tactic {srid: $tacticSrid})-[rel:HAS]->(tech:Technique)
+          RETURN tech, rel
+          LIMIT $limit
+        `;
 
-      const result = await session.run(query, {
-        tacticSrid: tactic.srid,
-        limit: limit, // Specify the limit for the number of techniques
-      });
+        const result = await session.run(query, {
+          tacticSrid: tactic.srid,
+          limit: limit, // Specify the limit for the number of techniques
+        });
 
-      session.close();
-
-      // Process the result to return the limited techniques associated with the tactic
-      return result.records.map(record => record.get('tech').properties);
+        // Process the result to return the limited techniques associated with the tactic
+        return result.records.map(record => record.get('tech').properties);
+      } catch (error) {
+        console.error('Error fetching techniques for tactic:', tactic.srid, error);
+        throw error;
+      } finally {
+        await session.close();
+      }
     },
   },
 };

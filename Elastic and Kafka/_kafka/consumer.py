@@ -48,15 +48,18 @@ class Consumer:
             logger.info('Consuming messages')
             async for message in consumer:
                 logger.info('Received message')
-                if is_coroutine:
-                    await callback(message)
-                else:
-                    await run_in_threadpool(callback, message)
-                logger.info('Processed message')
-                await consumer.commit()
-                logger.info('Committed message')
+                try:
+                    if is_coroutine:
+                        await callback(message)
+                    else:
+                        await run_in_threadpool(callback, message)
+                    logger.info('Processed message')
+                    await consumer.commit()
+                    logger.info('Committed message')
+                except Exception as e:
+                    logger.error(f'Error processing message at offset {message.offset}: {e}', exc_info=True)
         except Exception as e:
-            logger.error(f'{e}', exc_info=True)
+            logger.critical(f'Fatal consumer error, shutting down: {e}', exc_info=True)
         finally:
             logger.info('Stopping Kafka consumer')
             await consumer.stop()

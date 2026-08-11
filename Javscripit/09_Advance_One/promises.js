@@ -148,7 +148,7 @@ async function consumePromise(){
     console.log(response);
     }
     catch(error) {
-        console.log("error handled gracefully");
+        console.error("Promise rejected:", error);
     }
 
 };

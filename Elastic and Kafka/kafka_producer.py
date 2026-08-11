@@ -12,6 +12,7 @@ try:
     producer = Producer(producer_conf)
 except Exception as e:
     print(f"Error connecting to kafka: {e}")
+    raise SystemExit(f"Cannot start without Kafka: {e}") from e
 
 def acked(err, msg):
     if err is not None:

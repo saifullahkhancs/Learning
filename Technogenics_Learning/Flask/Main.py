@@ -9,14 +9,15 @@ basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
 
 @app.route('/')
 def hello_world():
-   # return 'Hello World'
-   responses = es.ping()
-   print(responses)
-   if es.ping():
-      return "Connected to Elasticsearch!"
-   else:
-      return "Could not connect to Elasticsearch."
-   return render_template('login.html')
+   try:
+      responses = es.ping()
+      if responses:
+         return "Connected to Elasticsearch!"
+      else:
+         return "Could not connect to Elasticsearch.", 503
+   except Exception as e:
+      logging.error(f"Elasticsearch health check failed: {e}")
+      return f"Elasticsearch error: {str(e)}", 503
 @app.route('/hello/<name>')
 def hello_name(name):
    return f'Hello {name}'
@@ -46,12 +47,15 @@ def user(name):
 @app.route('/login' , methods= ['GET', 'POST'])
 def login():
    if request.method == 'POST':
-      user = request.form['username']
+      user = request.form.get('username')
+      if not user:
+         return "Username is required", 400
       logging.info(user)
-      print(user , " this is the information printed")
       return redirect(url_for('hello_guest', guest=user))
    else:
       user = request.args.get('username')
+      if not user:
+         return "Username query parameter is required", 400
       return redirect(url_for('hello_guest', guest=user))
 
 

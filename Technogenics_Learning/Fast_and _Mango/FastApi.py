@@ -1,5 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure, InvalidOperation
 import json
 from pymongo.collection import Collection 
 from motor.motor_asyncio import AsyncIOMotorClient # type: ignore
@@ -7,7 +8,10 @@ import motor
 from models import Student , StudentResponce
 import uvicorn
 from bson import ObjectId
+from bson.errors import InvalidId
 import logging
+
+logger = logging.getLogger(__name__)
 
 
 # mongodb://localhost:27017/
@@ -36,11 +40,15 @@ def post_student(student :Student ):
 
 @app.get("/get-student/{id}")
 def  get_student(id : str):
+    try:
+        obj_id = ObjectId(id)
+    except (InvalidId, TypeError):
+        raise HTTPException(status_code=400, detail=f"Invalid student ID format: {id}")
 
-    print("asd")
-   
-    student =  student_collection.find_one({"_id" : ObjectId(id) })
-    student["_id"] = str(student["_id"])  # Convert ObjectId to string
+    student = student_collection.find_one({"_id": obj_id})
+    if student is None:
+        raise HTTPException(status_code=404, detail=f"Student with id '{id}' not found")
+    student["_id"] = str(student["_id"])
     return student
 
 
@@ -64,13 +72,17 @@ def get_all() -> list[StudentResponce]:
 
 @app.delete("/delete/{id}")
 def delete(id : str):
-    result = student_collection.find_one_and_delete({"_id" : ObjectId(id) })
-    # result.id = str(result["_id"])
+    try:
+        obj_id = ObjectId(id)
+    except (InvalidId, TypeError):
+        raise HTTPException(status_code=400, detail=f"Invalid student ID format: {id}")
+
+    result = student_collection.find_one_and_delete({"_id" : obj_id })
+    if result is None:
+        raise HTTPException(status_code=404, detail=f"Student with id '{id}' not found")
     responce = StudentResponce(**result)
     responce.id = str(result["_id"])
-    logging.info("this is first logging" , result)
-    print(responce)
-
+    logger.info(f"Deleted student: {responce.id}")
 
     return responce
     
