@@ -1,38 +1,6 @@
-import json
-from kafka import KafkaProducer
-import time
+from shared.kafka_utils import create_producer
 
-
-def json_serializer(data):
-    return json.dumps(data).encode("utf-8")
-
-import logging
-
-# Configure logging for Kafka library
-logger = logging.getLogger('kafka')
-logger.setLevel(logging.INFO)  # Set the desired log level
-
-# Create a console handler and set its level
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.DEBUG)  # Set the desired log level
-
-# Create a formatter and add it to the console handler
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-console_handler.setFormatter(formatter)
-
-# Add the console handler to the Kafka logger
-logger.addHandler(console_handler)
-
-
-
-producer = KafkaProducer(
-    bootstrap_servers='localhost:9092',
-    # api_version=(0, 11, 5),
-    value_serializer=json_serializer,
-    # sasl_plain_username='tg-user1',
-    # sasl_plain_password='tg-pass1', sasl_mechanism='PLAIN',
-    # security_protocol='SASL_PLAINTEXT'
-)
+producer = create_producer(bootstrap_servers='localhost:9092')
 
 
 # Example batch of events

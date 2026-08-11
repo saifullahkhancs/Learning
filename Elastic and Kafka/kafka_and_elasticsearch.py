@@ -1,22 +1,14 @@
-from elasticsearch import Elasticsearch,helpers
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
 from elasticsearch.exceptions import TransportError, ConnectionError, NotFoundError
-from http.client import responses
-from math import trunc
-import logging
 import json
 
 from flask import Flask, redirect, url_for , request, render_template , jsonify
+from shared.elasticsearch_utils import create_es_client
 
-es = Elasticsearch([{'host': 'localhost', 'port': 9200 ,  'scheme': 'http'}],
-                   basic_auth=("elastic", "Sw9FS-lCn=lcRFe2vho4"))
-
-try:
-    if es.ping():
-        print("Connected to Elasticsearch!")
-    else:
-        print("Failed to connect to Elasticsearch.")
-except Exception as e:
-    print(f"Error connecting to Elasticsearch: {e}")
+es = create_es_client(password="Sw9FS-lCn=lcRFe2vho4")
 
 app = Flask(__name__)
 
