@@ -17,10 +17,13 @@ print(find(decimal_number))
 # by "Sharad_Bhardwaj"
 
 # another way to do the same thing
-def decToBinary(n):
+def decToBinary(n):          #   25 ,,,,   12  ,,, 6 ,,, 3 ,,, 1
 	if n > 1:
-		decToBinary(n//2)
-	print(n % 2, end = '')
+		decToBinary(n//2)    #   12 ,,,    6 ,,,, 3 ,,, 1
+	print(n % 2, end = '')   #   first n=25 print(1)  ,,,, 2nd n=12 print(0)  ,,,, 3rd n=6 print(0)  ,,,, 4th n=3 print(1)  ,,,, 5th n=1 print(1)
+
+	# so the answer was 11001
+	# it will become  2^4 + 2^3 + 2^0 = 16 + 8 + 1 = 25
 
 number= 25
 decToBinary(number)
