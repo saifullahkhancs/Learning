@@ -5,3 +5,5 @@ print(a(5,3))
 
 area = lambda a,b: a*b
 print(area(3,5))
+
+
